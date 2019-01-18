@@ -22,7 +22,7 @@ All rights reserved.
  *
  * Copyright © 2019 by Christian 'Tipplin' Kurs - Germany
  * 
- ******************************************************************************
+ *
  * 
  * English
  * 
@@ -47,8 +47,6 @@ All rights reserved.
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *******************************************************************************/
- 
- 
  
  Search for new Developers for my Project.
  
