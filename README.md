@@ -15,6 +15,7 @@ kurschristian@gmail.com
 
 All rights reserved.
 
+----
 
 
 /*********************** Developer Disclaimer *********************************
@@ -53,7 +54,7 @@ All rights reserved.
  
  Nice to have you ! at begin !
  
- ----
+ 
  
  
  
