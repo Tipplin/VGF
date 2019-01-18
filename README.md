@@ -15,7 +15,7 @@ kurschristian@gmail.com
 
 All rights reserved.
 
-----
+
 
 /*********************** Developer Disclaimer *********************************
  *
@@ -47,7 +47,7 @@ All rights reserved.
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *******************************************************************************/
  
- ----
+ 
  
  Search for new Developers for my Project.
  
