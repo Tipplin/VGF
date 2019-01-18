@@ -9,4 +9,6 @@ Christian 'Tipplin' Kurs - Germany -
 
 Project-Founder and Maintainer Christian "TIPPO" Kurs
 
+https://www.kurschristian@gmail.com
+
 All rights reserved.
