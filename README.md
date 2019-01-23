@@ -7,7 +7,7 @@ Many Classes, Methods, Properties for use in your Project-Solution for Applicati
 Authored by Copyright © 2019 and  Visual Galaxy Framework Community Kernel Developer Team,
 Christian 'Tipplin' Kurs - Germany - 
 
-Project-Founder and Maintainer Christian "TIPPO" Kurs
+Project-Founder and Maintainer Christian "Tipplin" Kurs
 
 Have fun with me, take a e-mail to me:
 
