@@ -10,10 +10,11 @@ Application Framework for great Applications
 - Project-Founder and Maintainer Christian 🧑 "Tipplin" 🧑 Kurs
 - Have fun with me, take a e-mail to me:
 - kurschristian@gmail.com
+- 🧑 Search for new Developers for my Project.
+- 🧑 Nice to have you ! at begin !
 ----
-All rights reserved.
-----
-🧑 Search for new Developers for my Project.
-🧑 Nice to have you ! at begin !
+#### Copyright © 2019 by  Visual Galaxy Framework Community Kernel Developer Team
+#### Portions Copyright © 2019 by Microsoft Corporation.
+#### All rights reserved .
 ---- 
  
