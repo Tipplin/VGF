@@ -7,15 +7,15 @@
 //-----------------------------------------------------------------------------
 // Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
 //-----------------------------------------------------------------------------
-// Part				:	VGF.Application
+// Part				         :	VGF.Application
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2019
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
 // by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2019 by Microsoft Corporation GmbH.
+// Portions Copyright © 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 //
 // For same secured Assemblies set inside internal for class, Methods...
@@ -41,13 +41,13 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2019
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 // all rights reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //
-// This software is Copyright © 2019 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -66,22 +66,24 @@
 // and entities on the Bureau of Export Administration Entity List or
 //involved with missile technology or nuclear, chemical or biological weapons).
 //
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
 // VFGCore
 // written by 		
-//						Christian "TIPPO" Kurs
-//						Nettweg 1
-//				  -G -  53498 Bad Breisig
+//						Christian "Tipplin" Kurs
+//						Ahornweg 1
+//				  -G -  53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
-// 				voice                   :	02633 - 470736  
-//					international phone :	00-49-2633-470736
+// 				voice               :
+//					international phone :	
 //					Skype               :
-//					e-mail				:	Christian.Kurs@gmail.de
-//					community Website	:	http://www.vgfx.org/community/tippo
+//					e-mail              :	kurschristian@gmail.com
+//     e-mail              : christian.kurs@gmx.net
+//					community Website   :	
+//     own website         :
 //										
 //-----------------------------------------------------------------------------
 // This software is supplied as is. Use it at your own  RISK !!!!.
@@ -94,18 +96,18 @@
 //				NO fee for NON-Commercial use.
 //				our Community Website:
 // 
-//						http://www.vgfx.org/community/project/vgf/
+//				under construction
 //
 //				Honest Business Users, to use our compiled Versions, 
 //				please call us to send you our Business Licenses.
 //				or our Business Website:
-//				www.vgf.com/business/vgf/License
+//				
 //
 //-----------------------------------------------------------------------------
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2018 by Christian 'TIPPO' Kurs - Germany
+ * Copyright © 2020 by Christian 'Tipplin' Kurs - Germany
  * 
  ******************************************************************************
  * 
@@ -254,10 +256,12 @@
 // and entities on the Bureau of Export Administration Entity List or
 // involved with missile technology or nuclear, chemical or biological weapons)
 //-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
-
-
+// All System Directories about .NET Framework 4.8
+//
+//
+//-----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -266,7 +270,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-
+//
+// Own Directory Visual.Galaxy.Framework
+//
 using static Visual.Galaxy.Framework.NativeWindows.VGFNativeWindowsDLL;
 
 /*
