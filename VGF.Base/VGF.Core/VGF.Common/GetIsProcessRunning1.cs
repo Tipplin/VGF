@@ -5,7 +5,7 @@
 /// </summary>
 /// <param name="processname">the processname</param>
 /// <returns>true if the process runns otherwise false</returns>
-private bool CheckIfAProcessIsRunning(string processname)
+private bool VGFCheckIfAProcessIsRunning(string processname)
 {
    return Process.GetProcessesByName(processname).Length > 0;            
 }
