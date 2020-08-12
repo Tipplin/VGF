@@ -3,7 +3,7 @@
 // Project	    : Visual.Galaxy.Framework
 //
 //-----------------------------------------------------------------------------
-// Programmer	: Christian "TIPPO" Kurs - 
+// Programmer	: Christian "Tipplin" Kurs - 
 //				: Visual .NET C# / C++ Developer
 //              : Project-Founder and Maintainer
 //-----------------------------------------------------------------------------
@@ -14,10 +14,10 @@
 // Use of copyrighted content by Microsoft
 // For more Information see by Microsoft.
 //-----------------------------------------------------------------------------
-// Copyrights © 2019 by Christian "TIPPO" Kurs
-// Portions of Copyrights © 2019 by Microsoft Corporation 
+// Copyrights © 2020 by Christian "TIPPO" Kurs
+// Portions of Copyrights © 2020 by Microsoft Corporation 
 //-----------------------------------------------------------------------------
-// Main-Author: Christian 'TIPPO' Kurs
+// Main-Author: Christian 'Tipplin' Kurs
 //-----------------------------------------------------------------------------
 // Disclaimer:
 //-----------------------------------------------------------------------------
@@ -146,7 +146,7 @@
 // and entities on the Bureau of Export Administration Entity List or
 // involved with missile technology or nuclear, chemical or biological weapons)
 //-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
@@ -176,37 +176,6 @@ using System.DirectoryServices;
 using System.Diagnostics;
 using System.ComponentModel;
 using System.Windows.Forms;
-
-/*
- * Guilty implemented Windows Operation System Assemblies
- * 
- * C:\Windows\System32\WinMetadata
- * 
- * Windows.AI.winmd
- * Windows.ApplicationModel.winmd
- * Windows.UI.winmd
- * 
- * the same by System Directives, call Reference Manager search C:\Windows\System32\WinMetadata
- * click and ok insert Windows Assembly into Project-Solution.
- * (most Assemblies written in Visual C#)
- * 
- * Next Windows 2020 > make Modular, Modules Unit Shell, Kernel and soo...
- * Only update the Module, Unit Module then test as Test Unit.
- * more and more .NET with Visual C++ and Visual C#.
- * Tipplin:
- * ? Windows Operation System in 128 BIT, tribute to Big Data 2020 with Factor 17.
- * New SDK 18922 - 2020 - 20h1 - many 128 BIT Functions and struct's.
- * 
- * 
- * 
- * 
- */
-
-
-
-
-
-
 
 //-----------------------------------------------------------------------------
 // In this Project-Solution you use in all other namespaces and .cs files 
@@ -281,9 +250,6 @@ namespace Visual.Galaxy.Framework.Utility
         internal static MEMORYSTATUSEX mse;
 
         
-
-
-
         /// <summary>
         /// Make Langauage ID
         /// </summary>
@@ -381,7 +347,10 @@ namespace Visual.Galaxy.Framework.Utility
         {
             if ((0xffff0000 & ErrorCode) == 0)
             {
-                // our MessageBox
+                //
+                // our MessageBox from Library: Visual.Function.Library short VFL.dll written in native C/C++,
+                // STYLES is an Enumerator for Button, Icon, SetForeground (the Dialog), AppModal or TaskModal or SystemModal written in C#.
+                //
                 VFLMsgBox("This is an HRESULT !, NOT an ErrorCode", "Exception in VGFMakeHRFromErrorCode", STYLES.OkCancel | STYLES.Critical | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
                 return 0;
             }
@@ -438,7 +407,7 @@ namespace Visual.Galaxy.Framework.Utility
         /// }
         /// 
         /// ----------------------------------------------------------------------
-        /// Prefined Message in our Visual Function Library written in C.
+        /// Prefined Message in our Visual Function Library - VFL.dll written in C
         /// TextID from 1 to 24. Text as CHAR array.
         ///-----------------------------------------------------------------------
         public static void VGFStartUpMessage()
@@ -546,8 +515,10 @@ namespace Visual.Galaxy.Framework.Utility
         } // End of Method::VGFAppGetClassName
 
         ///------------------------------------------------------------
-        /// Lock your Workstation, push only 
-        /// unlock with LogIn Dialog
+        /// Lock your Workstation, 
+        /// (Windows 10 Professional is an Workstation)
+        /// push only 
+        /// unlock with NEW LogIn Dialog
         ///------------------------------------------------------------
         public static bool VGFLockWorkstation()
         {
@@ -658,7 +629,7 @@ namespace Visual.Galaxy.Framework.Utility
         {
 
             // Specify the directories you want to manipulate.
-            DirectoryInfo di = new DirectoryInfo(DirectoryName);
+            var di = new DirectoryInfo(DirectoryName);
 
             // Check is Directory exists ? if false, then create new with DirectoryName !.
             if (di.Exists)
@@ -768,13 +739,9 @@ namespace Visual.Galaxy.Framework.Utility
             // StringBuilder is faster as string, and have automatic expand!
             // if string greather as 16 chars is standard in StringBuilder();
             // higest is integer value - int32
-            StringBuilder sb = new StringBuilder(255, 1024);
+            var sb = new StringBuilder(255, 1024);
 
             GetUserNameEx(EXTENDED_NAME_FORMAT.NameDnsDomain, sb, sb.Capacity);
-
-
-
-
 
             // must be convert to string, while StringBuilder is Object.
             return sb.ToString();
@@ -1527,7 +1494,7 @@ namespace Visual.Galaxy.Framework.Utility
         public static int VGFShowOpenFileDialog(string directory)
         {
             Stream myStream;
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            var openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = directory;
 
@@ -1610,10 +1577,14 @@ namespace Visual.Galaxy.Framework.Utility
             try
             {
 
-                // SleepEx from Windows with Operator Asterics, so you call after the milliseconds and Method or MessageBox
+                // SleepEx from Windows with Operator Asterics, 
+                // so you call after the milliseconds and Method or MessageBox
+                // Operator asterics is an: uint uint.operator*(uint left, uint right)
                 SleepEx(2000 * VFLMsgBox("Have Fun !", "PTB Clock", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal), false);
-
+                //
                 // Start Process with the Microsoft-Edge Webbrowser and Website
+                // NEW Microsoft Edge Webbrowser is an seperate App in \dir C:\Program Files (x86)\Microsoft\Edge\msedge.exe
+                // directly call
                 Process.Start("microsoft-edge:https://uhr.ptb.de/");
                 
                 // new option return bool as string here true as string, must be change in Method-declaration bool to string.
