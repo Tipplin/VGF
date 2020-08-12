@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Creator and Author Tippo at 02.06.2019 10:55 -->
+<!-- Section Dependencies for all Assembly buy into Visual Galaxy Framework -->
+<!-- Use the Class ConfigurationManager for insert, delete, change it. -->
+<dependency>
+  <AssemblyID1>
+    <import>Visual.Security.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID1>
+  <AssemblyID2>
+  <import>Assembly="Visual.Operation.System.dll"
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </import>
+  </AssemblyID2>
+  <AssemblyID3>
+  <import>Visual.Registry.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID3>
+  <import>Visual.License.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  <AssemblyID4>
+  <import>Visual.Form.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID4>
+  <import>Visual.Exception.Engine.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  <AssemblyID5>
+  <import>Visual.Virtual.Engine.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID5>
+  <AssemblyID6>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID6>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  <AssemblyID7>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID7>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  <AssemblyID8>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID8>
+  <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  <AssemblyID9>
+    <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID9>
+  <AssemblyID10>
+    <import>Visual.R.Library.dll</import>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+  </AssemblyID10>
+
+
+
+
+</dependency>
