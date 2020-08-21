@@ -19,7 +19,7 @@
 //-----------------------------------------------------------------------------
 //
 // For same secured Assemblies set inside internal for class, Methods...
-// for use in Visual Galaxy Framework, 
+// for use in Visual Galaxy Framework,
 // give free with:
 //
 // [InternalsVisibleAttribute("Visual.Galaxy.Framework", 
@@ -56,7 +56,7 @@
 // and is subject to that software license agreement.
 //
 //-----------------------------------------------------------------------------
-// Microsoft make Restrictions of Export for following Countries:
+// NOTE: Microsoft make Restrictions of Export for following Countries:
 // ----------------------------------------------------------------------------
 // This software is subject to the U.S. Export Administration Regulations and 
 // other U.S.law, and may not be exported or re-exported to certain countries
@@ -244,19 +244,6 @@
  *
  *****************************************************************************/
 
- //-----------------------------------------------------------------------------
-// Microsoft make Restrictions of Export for following Countries:
-// ============================================================================
-// This software is subject to the U.S. Export Administration Regulations and 
-// other U.S.law, and may not be exported or re-exported to certain countries
-// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
-// or
-// to persons or entities prohibited from receiving U.S.exports
-// (including Denied Parties, Specially Designated Nationals,
-// and entities on the Bureau of Export Administration Entity List or
-// involved with missile technology or nuclear, chemical or biological weapons)
-//-----------------------------------------------------------------------------
-// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 // All System Directories about .NET Framework 4.8
 //
@@ -270,10 +257,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-//
-// Own Directory Visual.Galaxy.Framework
-//
+#region static classes in Visual Galaxy Framework for use here:
+
 using static Visual.Galaxy.Framework.NativeWindows.VGFNativeWindowsDLL;
+
+//
+using static Visual.Galaxy.Framework.Application.VGFApplication;
+
+// VGFCore - All Global Constants, Variables, Instances
+// here public static string message
+// NOTE ! Because of ambiguity set vgfmessage - the same message constant as vosmessage in Visual.Operation.System.dll
+using static Visual.Galaxy.Framework.Core.VGFCore;
+
+#endregion
+
+
+#region Directives from other Assemblies for Visual Galaxy Framework
 
 /*
  * set for native Methods from native Dll's.
@@ -282,7 +281,6 @@ using static Visual.Galaxy.Framework.NativeWindows.VGFNativeWindowsDLL;
  * Class UnsafeNativeMethods with Stackwalk and internal Security check.
  * 
 */
-
 using static Visual.Operation.System.Native.NativeMethods;
 
 // Microsoft C/C++ Runtime Library Functions
@@ -293,13 +291,8 @@ using static Visual.Operation.System.Native.UnsafeNativeMethods;
 
 //
 using static Visual.Operation.System.Internal.InternalUtilities.VOSInternalUtilities;
-//
-using static Visual.Galaxy.Framework.Application.VGFApplication;
 
-// VGFCore - All Global Constants, Variables, Instances
-// here public static string message
-// NOTE ! Because of ambiguity set vgfmessage - the same message constant as vosmessage in Visual.Operation.System.dll
-using static Visual.Galaxy.Framework.Core.VGFCore;
+#endregion
 
 
 
@@ -461,18 +454,6 @@ namespace Visual.Galaxy.Framework.Application
                     // Operator Vertical Bar |
                     // OS-MessageBox from VFL.dll - pure C Functions.
                     //------------------------------------------------------
-                    // Windows 10 have 3D Icons for use, 
-                    // use Security Shield Icon in green, red and yellow
-                    // With Permission from Microsoft can use the Windows 10
-                    // icons, extract with 7Zip in imageres.dll 
-                    // under Resources, open dll with 7Zip see binary files,
-                    // All Windows 10 Resources in imageres.dll, marked all
-                    // icons and extract to a Folder.
-                    //------------------------------------------------------
-                    // Permitted by Microsoft
-                    // You must include the following statement: 
-                    // "Used with permission from Microsoft."
-                    //------------------------------------------------------
                     VFLMsgBox(vgfmessage, "VGFAddAutoStartApplication", STYLES.OkOnly | STYLES.Exclamation | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
                 }
 
@@ -529,78 +510,7 @@ namespace Visual.Galaxy.Framework.Application
             } // end of using
 
         } // end of method::VGFGetAutoStartApplicationPath
-
-        /*
-        /// <summary>
-        /// Get Special Folder
-        /// </summary>
-        /// <param name="folder">Set Folder</param>
-        /// <param name="folderPath">Set Folder Path</param>
-        /// <!-- Author TIPPO -->
-        ///     The Special Folder in Windows 10 are many! ca. 90 Folder!
-        ///     View in this Class and Enumerator:
-        ///     Environment.SpecialFolder.enumFoldername
-        ///     on CodeProject one Developer have a complete View over Windows 10 Folders
-        /// 
-        /// <!-- Author TIPPO -->
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <returns>
-        /// 
-        /// </returns>
-        public static bool VGFGetSpecialFolder(Environment.SpecialFolder folder, out string folderPath)
-        {
-
-            string msg;
-
-            try
-            {
-                switch (folder)
-                {
-
-
-
-                    //------------------------------------------------------------
-                    // NOTE ! in Windows Operation System more than this 3 Folder,
-                    // 100 Folders.
-                    //------------------------------------------------------------
-                    // Private Folders can secure with sign $ and ~
-                    // C:\~privateFolder, so is not visible in Windows Explorer
-                    // Create new partition with dispart as private Partition,
-                    // and secured/crypt, 
-                    // so only you can use this Partition no other.
-                    // for secret documents and more...
-                    // ! you can use diskpart after install and primary partition
-                    // without lost datas.
-                    //------------------------------------------------------------
-                    // \shared Folders always public.
-                    //------------------------------------------------------------
-                    case Environment.SpecialFolder.MyMusic:
-                    case Environment.SpecialFolder.MyPictures:
-                    case Environment.SpecialFolder.MyVideos:
-                        folderPath = Environment.GetFolderPath(folder);
-                        return !string.IsNullOrWhiteSpace(folderPath);
-
-                    default:
-                        break;
-
-                } // end of switch
-                
-            }
-            catch(SystemException ex)when(ex is NotImplementedException)
-            {
-                msg = string.Format("The handling for special folder '{0}' is'nt implemented yet", folder);
-
-
-                VFLMsgBox(msg, "VGFGetSpecialFolder - Exception", STYLES.OkOnly | STYLES.Exclamation | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
-                NRMExit(EXIT_CODES.ERROR_UNKNOWN_PROPERTY);
-            }
-
-        } // end of method::VGFGetSpecialFolder
-        */
-
-
+        
         /// <summary>
         /// Register App into Windows Operation System for Restart
         /// </summary>
