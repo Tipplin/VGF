@@ -9,14 +9,10 @@
 // Part         : VGF.Assembly
 //              :
 //-----------------------------------------------------------------------------
-// Use with permission from Microsoft Corporation
-// Use of copyrighted content by Microsoft
-// For more Information see by Microsoft.
+// Copyrights © 2020 by Christian "TIPPO" Kurs
+// Portions of Copyrights © 2020 by Microsoft Corporation 
 //-----------------------------------------------------------------------------
-// Copyrights © 2019 by Christian "TIPPO" Kurs
-// Portions of Copyrights © 2019 by Microsoft Corporation 
-//-----------------------------------------------------------------------------
-// Main-Author: Christian 'TIPPO' Kurs
+// Main-Author: Christian 'Tipplin' Kurs
 //-----------------------------------------------------------------------------
 // Disclaimer:
 //-----------------------------------------------------------------------------
@@ -151,15 +147,6 @@ using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.Configuration;
 
-/*
- * other namespace here the Windows namespaces
- * using Windows.AI; and so...
- * 
- * same Windows Operation System Assemblies stand in \Windows\System32\WinMetas\
- * Windows.AI.winmd - same as an .NET Assembly
- * Windows.UI.winmd
- * 
- */
 
 //-----------------------------------------------------------------------------
 //
@@ -206,30 +193,71 @@ namespace Visual.Galaxy.Framework.Assembly
     /// <!-- Author TIPPO -->
     /// <remarks>
     /// Assembly Informations - Properties from Class AssemblyInfo in AssemblyInfo.cs
-    /// Late Binding and Loading - LoadAssembly
-    /// AddAssembly to Project/App
-    /// 
-    /// 
+    /// Used by Helper Functions to access information from Assembly Attributes
+    /// ! ATTENTION ! insert directive System - using System; is Object Base
+    /// for Type
+    /// private readonly Type CurrentAssTyp;
+    /// <summary>
+    /// (System.Type) CurrentAssTyp assign to class VGFAssemblyInfo
+    /// </summary>
+    /// <!-- Author TIPPO -->
+    /// Class Constructor VGFAssemblyInfo
+    /// <!-- Author TIPPO -->
+    /// <remarks>
+    /// Initialize Field CurrentAssTyp with Typedeclaration and typeof(objectname).
+    /// </remarks>
+    /// public VGFAssemblyInfo()
+    /// {
+    ///     CurrentAssTyp = typeof(VGFAssemblyInfo);
+    ///    
+    /// }
+    ///
+    /// <summary>
+    /// Get simple Name of Assembly
+    /// </summary>
+    /// public string VGFAsmName
+    /// {
+    ///     get
+    ///     {
+    ///         return CurrentAssTyp.Assembly.GetName().Name.ToString();
+    ///     }
+    /// } 
     /// </remarks>
     public static class VGFAssembly
     {
 
             /*********************************************************************************
-             * Globals can you set here!
-             * instances, variables
-             * 
+             * Globals can you set here in class head!
+             * instances, variables, instancevariables like
+             * public static VGFAssemblyInfo vai = new VGFAssemblyInfo();
+             * set classname VGF.Core as directive in Solution, 
+             * so have directly access on class
+             * vai.propertymember
+             *
              * NOTE! without access modi, means public, protected, internal, private protected
              * the instance is private, is standard in C#.
              * but don't forget 'private' is degree of protection.
              *********************************************************************************
+             *
+             * Make different names for Class AssemblyInfo, if not the compiler make error message,
+             * set first letter the short Assemblyname:
+             * VGF = Visual Galaxy Framework   = VGFAssemblyInfo
+             * VSL = Visual Security Library   = VSLAssemblyInfo
+             * VEE = Visual Exception Engine   = VEEAssemblyInfo
+             * VFL = Visual Form Library       = VFLAssemblyInfo
+             * VRL = Visual Resource Library   = VRLAssemblyInfo 
+             *
+             *
              */
-            
-            
-
-
-
-
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
             /// <summary>
             /// Get Fullname of VGF Assembly
             /// </summary>
@@ -242,11 +270,12 @@ namespace Visual.Galaxy.Framework.Assembly
             /// this Class is not normally !.
             /// </remarks>
             /// <returns>
-            /// 
+            /// returned the full assembly name
             /// </returns>
             public static string VGFGetAssemblyName()
             {
-                // instancevariable Property
+                //
+                // instancevariable is vai
                 //           vai.AsmFQName
                 return vai.VGFAsmFQName;
             }
