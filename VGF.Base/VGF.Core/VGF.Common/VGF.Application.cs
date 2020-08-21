@@ -272,7 +272,7 @@ using static Visual.Galaxy.Framework.Core.VGFCore;
 #endregion
 
 
-#region Directives from other Assemblies for Visual Galaxy Framework
+#region Directives from other Assembly Visual Operation System here for use:
 
 /*
  * set for native Methods from native Dll's.
@@ -593,8 +593,11 @@ namespace Visual.Galaxy.Framework.Application
 
             try
             {
-
-                // user allow quit the Application
+                /*
+                 * User allow quit the Application
+                 * if false set, the app can't be closed !, 
+                 * please set an task, sleep for end the running process for this and then give info to User can closed the App !
+                */
                 if (LockApp == true)
                 {
                     LockApp = System.Windows.Forms.Application.AllowQuit;
