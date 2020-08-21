@@ -11,11 +11,11 @@
 //-----------------------------------------------------------------------------
 // Base Class       :	VGF.NativeDLL
 //-----------------------------------------------------------------------------
-// Copyright © 2018
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
 // by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2018 by Microsoft Corporation GmbH.
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 // Warning:
 // ----------------------------------------------------------------------------
@@ -37,7 +37,7 @@
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //-----------------------------------------------------------------------------
-// This software is Copyright © 2018 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -46,7 +46,7 @@
 // and is subject to that software license agreement.
 //
 //-----------------------------------------------------------------------------
-// Microsoft make Restrictions of Export for following Countries:
+// NOTE: Microsoft make Restrictions of Export for following Countries:
 // --------------------------------------------------------------
 // This software is subject to the U.S. Export Administration Regulations and 
 // other U.S.law, and may not be exported or re-exported to certain countries
@@ -57,7 +57,7 @@
 // and entities on the Bureau of Export Administration Entity List or
 // involved with missile technology or nuclear, chemical or biological weapons)
 //-----------------------------------------------------------------------------
-// © 1982 - 2018 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 /*********************************************************************************
@@ -72,7 +72,7 @@
  * This is our Main Website:
  * https://www.vgfc.org/community
  *--------------------------------------------------------------------------------
- * my name is: Christian 'TIPPO' Kurs - Visual.NET C# / C++ Developer:
+ * my name is: Christian 'Tipplin' Kurs - Visual.NET C# / C++ Developer:
  * this is my website with a lot of information and more....
  * https://www.vgfc.org/community/developer/tippo
  *--------------------------------------------------------------------------------
@@ -194,166 +194,6 @@ using static Visual.Operation.System.Native.UnsafeNativeMethods;
 namespace Visual.Galaxy.Framework.NativeWindows
 {
 
-
-    /*
-     * Windows Operation System 10 - NEW SDK 18272 - 06.11.2018 -
-     * Feedback List
-     * 
-     * include
-     * WinUser.h
-     * 
-     * 
-     * NEW in WinUser.h following defines and comic Functions
-     #if defined(_M_CEE)
-#undef SendMessage
-__inline
-LRESULT
-SendMessage(
-    HWND hWnd,
-    UINT Msg,
-    WPARAM wParam,
-    LPARAM lParam
-    )
-{
-#ifdef UNICODE
-    return SendMessageW(
-#else
-    return SendMessageA(
-#endif
-        hWnd,
-        Msg,
-        wParam,
-        lParam
-        );
-}
-#endif   _M_CEE 
-
-
-#undef DrawText
-    __inline
-int
-DrawText(
-    HDC hdc,
-    LPCTSTR lpchText,
-    int cchText,
-    LPRECT lprc,
-    UINT format
-    )
-{
-#ifdef UNICODE
-    return DrawTextW(
-#else
-    return DrawTextA(
-#endif
-        hdc,
-    lpchText,
-    cchText,
-    lprc,
-    format
-        );
-}
-#endif   _M_CEE 
-    
-    
-   
-    #if defined(_M_CEE)
-#undef MessageBox
-__inline
-int
-MessageBox(
-    HWND hWnd,
-    LPCTSTR lpText,
-    LPCTSTR lpCaption,
-    UINT uType
-    )
-{
-
-//Is this an wrong definition in SDK 18272 - Function MessageBoxW( ?
-// and MessageBoxA without datatypes ?
-#ifdef UNICODE
-    return MessageBoxW(
-#else
-    return int MessageBoxA(
-    hWnd,
-    lpText,
-    lpCaption,
-    uType
-        );
-#endif
-}
-
-#if defined(_M_CEE)
-#undef GetMessage
-__inline
-BOOL
-GetMessage(
-    LPMSG lpMsg,
-    HWND hWnd,
-    UINT wMsgFilterMin,
-    UINT wMsgFilterMax
-    )
-{
-#ifdef UNICODE
-    return GetMessageW(
-#else
-    return GetMessageA(
-#endif
-        lpMsg,
-        hWnd,
-        wMsgFilterMin,
-        wMsgFilterMax
-        );
-}
-#endif  _M_CEE 
-
-
-
-
-
-
-
-
-
-----------------------------------------------
-- Windows OS Flags for ExitWindowsEx()
-- New Flags at next Windows 10 SDK 18272
-- New Flags at next Windows 10 2020 SDK 18945
-
-----------------------------------------------
-#define EWX_LOGOFF                  0x00000000
-#define EWX_SHUTDOWN                0x00000001
-#define EWX_REBOOT                  0x00000002
-#define EWX_FORCE                   0x00000004
-#define EWX_POWEROFF                0x00000008
-#define EWX_FORCEIFHUNG             0x00000010
-#define EWX_QUICKRESOLVE            0x00000020 NEW Flag
-#define EWX_RESTARTAPPS             0x00000040 NEW Flag
-#define EWX_HYBRID_SHUTDOWN         0x00400000
-#define EWX_BOOTOPTIONS             0x01000000 NEW Flag
-
-NTFS - Filesystem new Flag case sensety
-
-
-NEW Windows 10 SDK 18272 - 06.11.2018
-Windows Developer marked with macros !:
-
-when old Functions, Flags removed/depreated/rearchitected
-
-_When_((uFlags&(EWX_POWEROFF|EWX_SHUTDOWN|EWX_FORCE))!=0, __drv_preferredFunction("InitiateSystemShutdownEx", "Legacy API. Rearchitect to avoid Reboot"))
-
-BOOL WINAPI ExitWindowsEx( _In_ UINT uFlags, _In_ DWORD dwReason);
-------------------------------------------------------------------
-dwReason any Reasons: 
-MajorReason Application
-MinorReason Securityfix, Bugfix, Quickfix
-BOOL WINAPI ExitWindowsEx(EWX_REBOOT, Application | Quickfix);
-
-*/
-
-
-
-    // TIPPO_UNDONE - uncomplete Methods from WCF - DON'T USE IT!
-
     /// <summary>
     /// Class VGFNativeWindows
     /// Like Microsoft Guideline for native Methods:
@@ -433,9 +273,10 @@ BOOL WINAPI ExitWindowsEx(EWX_REBOOT, Application | Quickfix);
 
         static class UnsafeNativeMethods
         {
-
-            Same as Windows Operation System Headerfile versionhelper.h for C/C++
-            --------------------------------------------------------------------------------------
+        
+            // Take Function froms PresentationNative.dll as versionhelpers but the
+            // Same as Windows Operation System Headerfile versionhelper.h for C/C++
+            // -----------------------------------------------------------------------------------
             [SecurityCritical, SuppressUnmanagedCodeSecurity]
             [DllImport(DllImport.PresentationNative, CallingConvention = CallingConvention.Cdecl)]
             [return: MarshalAs(UnmanagedType.I1)]
@@ -528,18 +369,8 @@ BOOL WINAPI ExitWindowsEx(EWX_REBOOT, Application | Quickfix);
 
         }
 
-        internal static class DllImport
-        {
-
-            internal const string Shell32 = "shell32.dll";
-            internal const string PresentationNative = "PresentationNative.dll";
-            internal const string Wininet = "Wininet.dll";
-            internal const string Ole32 = "ole32.dll";
-            internal const string User32 = "user32.dll";
-            internal const string NInput = "ninput.dll";
-        }
-
-    */
+    */    
+    
 
     
 
