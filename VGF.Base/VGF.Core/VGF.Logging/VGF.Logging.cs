@@ -4,7 +4,7 @@
 //------------------------------------------------------
 // Programmer	: Christian "TIPPO"
 //------------------------------------------------------
-// Part	        : Logging
+// Part	        : VGFLogger
 //------------------------------------------------------
 // Base Class	: Core
 //
@@ -33,10 +33,17 @@ using System.Diagnostics;
 using System.Security;
 using System.Security.Permissions;
 
+#region static classes from Visual Galaxy Framework for use them here:
+// Internal Utilities, means Methodcalls at Runtime for checks:
+// Windows Operation System Versions, Memory, Storage, 
+// Windows Membership, Accounts,
+
+using static Visual.Galaxy.Framework.Core.VGFCore;
+
+#endregion
 
 
-
-
+#region static classes from Visual Operation System Assembly for use them here:
 
 // use Operation System Functions
 using static Visual.Operation.System.Native.NativeMethods;
@@ -58,11 +65,7 @@ using static Visual.Operation.System.Base.VOSInternalBase;
 // use Style for MessageBox
 using static Visual.Operation.System.Internal.InternalUtilities.VOSInternalUtilities;
 
-// Internal Utilities, means Methodcalls at Runtime for checks:
-// Windows Operation System Versions, Memory, Storage, 
-// Windows Membership, Accounts,
-
-using static Visual.Galaxy.Framework.Core.VGFCore;
+#endregion
 
 
 //------------------------------------------------------
@@ -82,253 +85,30 @@ namespace Visual.Galaxy.Framework.Logging
         /// <summary>
         /// 
         /// </summary>
-        internal enum VGFLoggingEventType
+        internal enum VGFLogEventType
         {
-            Invalid = -1,
-            CustomEvent,
-            BuildErrorEvent,
-            BuildFinishedEvent,
-            BuildMessageEvent,
-            BuildStartedEvent,
-            BuildWarningEvent,
-            ProjectFinishedEvent,
-            ProjectStartedEvent,
-            TargetStartedEvent,
-            TargetFinishedEvent,
-            TaskStartedEvent,
-            TaskFinishedEvent,
-            TaskCommandLineEvent
+            VGFLogInvalidEvent = -1,
+            VGFLogCustomEvent,
+            VGFLogErrorEvent,
+            VGFLogFinishedEvent,
+            VGFLogMessageEvent,
+            VGFLogStartedEvent,
+            VGFLogWarningEvent
         }
 
         /// <summary>
         /// 
         /// </summary>
-        [Serializable]
-        internal enum LogLevel
+        internal enum VGFLogLevel
         {
-            Trace = 0,
-            Info = 5,
-            Status = 20,
-            Warning = 40,
-            Error = 50,
-            Panic = 100
+            VGFLogTrace = 0,
+            VGFLogInfo = 5,
+            VGFLogStatus = 20,
+            VGFLogWarning = 40,
+            VGFLogError = 50,
+	    VGFLogTotalPanic = 100
         }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private static TraceSource TraceSource;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public const string EventLogSource = "Automatic Versions";
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static TraceListenerCollection Listeners => TraceSource.Listeners;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        static VGFLogger()
-        {
-            TraceSource = new TraceSource("VGFVersions")
-            {
-                Switch = new SourceSwitch("DefaultSwitch")
-                {
-                    Level = SourceLevels.All
-                }
-            };
-            TraceSource.Listeners.Add(new EventLogTraceListener("VGFVersions")
-            {
-                Filter = new EventTypeFilter(SourceLevels.Verbose)
-            });
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFAssert(bool condition, string message, params object[] args)
-        {
-            if (!condition)
-            {
-                VGFError(message, args);
-                throw new ApplicationException(message);
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ex"></param>
-        public static void VGFError(SystemException ex)
-        {
-            VGFWriteEvent(TraceEventType.Error, ex.ToString());
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFError(string message, params object[] args)
-        {
-            VGFWriteEvent(TraceEventType.Error, message, args);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFWarning(string message, params object[] args)
-        {
-            VGFWriteEvent(TraceEventType.Warning, message, args);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFInfo(string message, params object[] args)
-        {
-            VGFWriteEvent(TraceEventType.Information, message, args);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFLog(string message, params object[] args)
-        {
-            VGFWriteEvent(TraceEventType.Verbose, message, args);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFLog(TraceEventType type, string message, params object[] args)
-        {
-            VGFWriteEvent(type, message, args);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="data"></param>
-        public static void VGFLog(object data)
-        {
-            VGFWriteData(TraceEventType.Verbose, data);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="data"></param>
-        public static void VGFLog(TraceEventType type, object data)
-        {
-            VGFWriteData(type, data);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFLogIf(bool condition, string message, params object[] args)
-        {
-            if (condition)
-            {
-                VGFWriteEvent(TraceEventType.Verbose, message, args);
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="type"></param>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        public static void VGFLogIf(bool condition, TraceEventType type, string message, params object[] args)
-        {
-            if (condition)
-            {
-                VGFWriteEvent(type, message, args);
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="data"></param>
-        private static void VGFWriteData(TraceEventType type, params object[] data)
-        {
-            try
-            {
-                TraceSource.TraceData(type, 0, data);
-                TraceSource.Flush();
-            }
-            catch
-            {
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
-        private static void VGFWriteEvent(TraceEventType type, string message, params object[] args)
-        {
-            try
-            {
-                if (VGFShouldLogVerbose())
-                {
-                    TraceSource.TraceEvent(type, 0, message, args);
-                    TraceSource.Flush();
-                }
-            }
-            catch
-            {
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private static bool VGFShouldLogVerbose()
-        {
-            return false;
-        }
-    
-
-
-
-
-
-
-
-
-
-
-
+	
         /// <summary>
         /// 
         /// </summary>
@@ -337,7 +117,7 @@ namespace Visual.Galaxy.Framework.Logging
         {
             try
             {
-                StreamWriter logfile = new StreamWriter(FrameworkLogFile, true);
+                var logfile = new StreamWriter(FrameworkLogFile, true);
 
                 logfile.WriteLine("LogDate: {0} - LogTime: {1}", dt.ToLongDateString(), dt.ToLongTimeString());
                 logfile.WriteLine("Frameworkname:\t {0}\n", vai.AsmName);
