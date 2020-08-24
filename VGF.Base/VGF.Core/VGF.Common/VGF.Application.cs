@@ -7,7 +7,7 @@
 //-----------------------------------------------------------------------------
 // Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
 //-----------------------------------------------------------------------------
-// Part				         :	VGF.Application
+// Part				:	VGF.Application
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
@@ -80,10 +80,10 @@
 // 				voice               :
 //					international phone :	
 //					Skype               :
-//					e-mail              :	kurschristian@gmail.com
-//     e-mail              : christian.kurs@gmx.net
+//					e-mail              : kurschristian@gmail.com
+//                  e-mail              : christian.kurs@gmx.net
 //					community Website   :	
-//     own website         :
+//                  own website         :
 //										
 //-----------------------------------------------------------------------------
 // This software is supplied as is. Use it at your own  RISK !!!!.
@@ -334,12 +334,15 @@ namespace Visual.Galaxy.Framework.Application
 
         
         
-
+        var root = User ? Microsoft.Win32.Registry.CurrentUser : Microsoft.Win32.Registry.LocalMachine;
 
         /// <summary>
         /// constant for Autostart Registry Key with sign @ for unicode UTF16 - CLR internal UTF16 in/out
         /// </summary>
-        internal const string AUTOSTART_REGISTRY_KEY = @"Software\Microsoft\Windows\CurrentVersion\Run";
+        internal const string VGF_AUTOSTART_REGISTRY_KEY = @"Software\Microsoft\Windows\CurrentVersion\Run";
+
+
+
 
         #endregion
 
@@ -436,11 +439,11 @@ namespace Visual.Galaxy.Framework.Application
         /// <returns></returns>
         public static bool VGFAddAutoStartApplication(string ApplicationPath, string RegisterName, bool User)
         {
-
+        
             var root = User ? Microsoft.Win32.Registry.CurrentUser : Microsoft.Win32.Registry.LocalMachine;
-            
+        
             // Open the Key with write Access
-            using(var key = root.OpenSubKey(AUTOSTART_REGISTRY_KEY, true))
+            using(var key = root.OpenSubKey(VGF_AUTOSTART_REGISTRY_KEY, true))
             {
                 if(key == null)
                 { 
@@ -475,7 +478,7 @@ namespace Visual.Galaxy.Framework.Application
         {
             var root = User ? Microsoft.Win32.Registry.CurrentUser : Microsoft.Win32.Registry.LocalMachine;
             // Open the Key with write Access
-            using (var key = root.OpenSubKey(AUTOSTART_REGISTRY_KEY, true))
+            using (var key = root.OpenSubKey(VGF_AUTOSTART_REGISTRY_KEY, true))
             {
                 if (key == null)
                 {
@@ -503,7 +506,7 @@ namespace Visual.Galaxy.Framework.Application
 
             var root = User ? Microsoft.Win32.Registry.CurrentUser : Microsoft.Win32.Registry.LocalMachine;
             // Open the Key with write Access
-            using (var key = root.OpenSubKey(AUTOSTART_REGISTRY_KEY))
+            using (var key = root.OpenSubKey(VGF_AUTOSTART_REGISTRY_KEY))
             {
                 return key == null ? null: key.GetValue(RegisterName) as string;
                 
