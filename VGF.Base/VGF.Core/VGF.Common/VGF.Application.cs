@@ -331,11 +331,7 @@ namespace Visual.Galaxy.Framework.Application
         // Avantage for Global Here in the Class Head
 
         #region ### VGFApplication - Constants ###
-
         
-        
-        var root = User ? Microsoft.Win32.Registry.CurrentUser : Microsoft.Win32.Registry.LocalMachine;
-
         /// <summary>
         /// constant for Autostart Registry Key with sign @ for unicode UTF16 - CLR internal UTF16 in/out
         /// </summary>
