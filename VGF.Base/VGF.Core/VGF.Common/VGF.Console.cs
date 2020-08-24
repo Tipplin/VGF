@@ -7,15 +7,15 @@
 //-----------------------------------------------------------------------------
 // Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
 //-----------------------------------------------------------------------------
-// Part				:	VGF.Console
+// Part			:	VGF.Console
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2019
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
 // by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2019 by Microsoft Corporation GmbH.
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 //
 // For same secured Assemblies set inside internal for class, Methods...
@@ -41,13 +41,13 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2018
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 // all rights reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //
-// This software is Copyright © 2018 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -66,22 +66,22 @@
 // and entities on the Bureau of Export Administration Entity List or
 //involved with missile technology or nuclear, chemical or biological weapons).
 //
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
 // VFGCore
 // written by 		
 //						Christian "TIPPO" Kurs
-//						Nettweg 1
-//				-G -  53498 Bad Breisig
+//						Ahornweg 1
+//				     -G - 53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
-// 				voice                   :	02633 - 470736  
-//					international phone :	00-49-2633-470736
+// 				     voice               :	  
+//					international phone :	
 //					Skype               :
-//					e-mail				:	Christian.Kurs@gmail.de
-//					community Website	:	http://www.vgfc.org/community/tippo
+//					e-mail			:	kurschristian@gmail.com
+//					community Website	:	
 //										
 //-----------------------------------------------------------------------------
 // This software is supplied as is. Use it at your own  RISK !!!!.
@@ -94,18 +94,18 @@
 //				NO fee for NON-Commercial use.
 //				our Community Website:
 // 
-//						http://www.vgfc.org/community/project/vgf/
+//						
 //
 //				Honest Business Users, to use our compiled Versions, 
 //				please call us to send you our Business Licenses.
 //				or our Business Website:
-//				www.vgf.com/business/vgf/License
+//				
 //
 //-----------------------------------------------------------------------------
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2019 by Christian 'TIPPO' Kurs - Germany
+ * Copyright © 2020 by Christian 'TIPPO' Kurs - Germany
  * 
  ******************************************************************************
  * 
@@ -157,9 +157,6 @@
  * IN KEINEM FALL HAFTEN DIE AUTOREN ODER COPYRIGHT-INHABER FÜR ANSPRÜCHE, 
  * SCHADEN ODER ANDERE HAFTUNG.
  * 
- * WENN SIE AUSSCHLIESSLICH EINES VERTRAGS, TORTES ODER ANDERWEITIG SIND, 
- * HERAUSGEGEBEN, ABER ODER IN VERBINDUNG MIT DER SOFTWARE 
- * ODER DIE NUTZUNG ODER ANDERE ABKOMMEN IN DER SOFTWARE.
  * 
  * ----------------------------------------------------------------------------
  *
@@ -253,7 +250,7 @@
 // and entities on the Bureau of Export Administration Entity List or
 // involved with missile technology or nuclear, chemical or biological weapons)
 //-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 /*
