@@ -312,9 +312,9 @@ namespace Visual.Galaxy.Framework.Application
     /// <summary>
     /// Class VGFApplication
     /// </summary>
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// Class Application with Information, Settings, Security, AccessSystem
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// <remarks>
     /// Use Class Application from System.Windows.Form (inside 300 classes)
     /// Class Application, Battery, MessageBox, Controls, SystenInformation
@@ -426,9 +426,9 @@ namespace Visual.Galaxy.Framework.Application
         /// <summary>
         /// Add Application to Autostart
         /// </summary>
-        /// <!-- Author TIPPO -->
-        /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// Start your Favorite Application automatic.
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <param name="ApplicationPath">Set Application Path</param>
         /// <param name="RegisterName">Set Register Name</param>
         /// <param name="User">Set User</param>
@@ -467,7 +467,10 @@ namespace Visual.Galaxy.Framework.Application
         /// <summary>
         /// Remove Application from Autostart
         /// </summary>
-        /// <param name="RegisterName"></param>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        ///
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <param name="RegisterName">most Applicationname</param>
         /// <param name="User"></param>
         /// <returns></returns>
         public static bool VGFRemoveAutoStartApplication(string RegisterName, bool User)
@@ -494,6 +497,9 @@ namespace Visual.Galaxy.Framework.Application
         /// <summary>
         /// Get Autostart Application Path
         /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        ///
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <param name="RegisterName">Set Registername</param>
         /// <param name="User">Set User - true/false</param>
         /// <returns></returns>
@@ -514,9 +520,9 @@ namespace Visual.Galaxy.Framework.Application
         /// Register App into Windows Operation System for Restart
         /// </summary>
         /// <param name="ApplicationName">Set Application Name</param>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// Windows 10 have a internal table for Applications
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <remarks>
         /// OS-Function: RegisterApplicationWindows(LPSTR ApplicationName);
         /// If registered, so for use by Reboot and shutdown,
@@ -536,6 +542,9 @@ namespace Visual.Galaxy.Framework.Application
         /// <summary>
         /// Get Application Companyname
         /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// 
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <returns></returns>
         public static string VGFApplicationCompanyName()
         {
@@ -548,6 +557,9 @@ namespace Visual.Galaxy.Framework.Application
         /// <summary>
         /// Get Application Productname
         /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// Windows 10 have a internal table for Applications
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <returns></returns>
         public static string VGFApplicationProductName()
         {
@@ -561,9 +573,9 @@ namespace Visual.Galaxy.Framework.Application
         /// Application Lock by Running Operation
         /// </summary>
         /// <param name="LockApp"></param>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// use Class Application for specials
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <remarks>
         /// Property AllowQuit means, if a Operation now running, 
         /// but User will close the Application you can lock it.
