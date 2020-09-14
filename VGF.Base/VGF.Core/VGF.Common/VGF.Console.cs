@@ -18,13 +18,6 @@
 // Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 //
-// For same secured Assemblies set inside internal for class, Methods...
-// for use in Visual Galaxy Framework, 
-// give free with:
-//
-// [InternalsVisibleAttribute("Visual.Galaxy.Framework", 
-// AllInternalsVisible = true)]
-//
 // ============================================================================
 // Warning:  
 // ============================================================================
@@ -72,7 +65,7 @@
 //-----------------------------------------------------------------------------
 // VFGCore
 // written by 		
-//						Christian "TIPPO" Kurs
+//						Christian "TIPPLIN" Kurs
 //						Ahornweg 1
 //				     -G - 53177 Bonn
 //						Germany - Allemagne - Duitsland
@@ -291,6 +284,9 @@ namespace Visual.Galaxy.Framework.Console
     /// <summary>
     /// Class VGFConsole
     /// </summary>
+    /// <!-- Author 🧑TIPPLIN 🧑-->
+    /// Class VGFConsole is in Progress !
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     public static class VGFConsole
     {
 
