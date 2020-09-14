@@ -188,9 +188,9 @@ namespace Visual.Galaxy.Framework.Assembly
     /// <summary>
     /// Assembly Visual.Galaxy.Framework.dll
     /// </summary>
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// Specials Infos about Assembly Visual.Galaxy.Framework
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// <remarks>
     /// Assembly Informations - Properties from Class AssemblyInfo in AssemblyInfo.cs
     /// Used by Helper Functions to access information from Assembly Attributes
@@ -200,9 +200,9 @@ namespace Visual.Galaxy.Framework.Assembly
     /// <summary>
     /// (System.Type) CurrentAssTyp assign to class VGFAssemblyInfo
     /// </summary>
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// Class Constructor VGFAssemblyInfo
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// <remarks>
     /// Initialize Field CurrentAssTyp with Typedeclaration and typeof(objectname).
     /// </remarks>
@@ -249,21 +249,14 @@ namespace Visual.Galaxy.Framework.Assembly
              *
              *
              */
-        
-        
-        
-        
-        
-        
-        
-        
+       
         
             /// <summary>
             /// Get Fullname of VGF Assembly
             /// </summary>
-            /// <!-- Author Tipplin -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// 
-            /// <!--Author Tipplin -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <remarks>
             /// The Information come from AssemblyInfo.cs
             /// with Class VGFAssemblyInfo and Properties
@@ -283,6 +276,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly Copyright
             /// </summary>
+            /// <!-- Author 🧑TIPPLIN 🧑-->
+            /// 
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <returns>
             /// 
             /// </returns>
@@ -294,6 +290,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly current Version Number
             /// </summary>
+            /// <!-- Author 🧑TIPPLIN 🧑-->
+            /// 
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <returns></returns>
             public static string VGFGetAssemblyVersion()
             {
@@ -303,9 +302,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly Company Name
             /// </summary>
-            /// <!-- Author TIPPO -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// Specials Infos about Visual.Galaxy.Framework.dll
-            /// <!-- Author TIPPO --> 
+            /// <!-- Author 🧑TIPPLIN 🧑--> 
             /// <returns>
             /// 
             /// </returns>
@@ -317,6 +316,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly Product Name
             /// </summary>
+            /// <!-- Author 🧑TIPPLIN 🧑-->
+            /// 
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <returns></returns>
             public static string VGFGetAssemblyProductName()
             {
@@ -326,6 +328,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly Description
             /// </summary>
+            /// <!-- Author 🧑TIPPLIN 🧑-->
+            /// 
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <returns></returns>
             public static string VGFGetAssemblyDescription()
             {
@@ -335,6 +340,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Get VGF Assembly Title Name
             /// </summary>
+            /// <!-- Author 🧑TIPPLIN 🧑-->
+            /// 
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <returns></returns>
             public static string VGFGetAssemblyTitleName()
             {
@@ -346,9 +354,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Assembly Visual.Operation.System.dll
             /// </summary>
-            /// <!-- Author TIPPO -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// Specials Infos about Assembly Visual.Operation.System.dll
-            /// <!-- Author TIPPO -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <remarks>
             /// Assembly infos about Visual.Operation.System.dll
             /// </remarks> 
@@ -359,6 +367,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get Fullname of Visual Operation System Assembly
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyName()
                 {
@@ -368,6 +379,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VOS Assembly Copyright 
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyCopyright()
                 {
@@ -377,6 +391,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VOS Assembly current Version Number.
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyVersion()
                 {
@@ -386,6 +403,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get by Visual Operation System Assembly the Company Name
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyCompanyName()
                 {
@@ -395,6 +415,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VOS Assembly Product Name
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyProductName()
                 {
@@ -404,6 +427,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VOS Assembly Description
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyDescription()
                 {
@@ -413,6 +439,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VOS Assembly Title Name
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VOSGetAssemblyTitleName()
                 {
@@ -429,9 +458,9 @@ namespace Visual.Galaxy.Framework.Assembly
             /// <summary>
             /// Assembly Visual.Security.Library.dll
             /// </summary>
-            /// <!-- Author TIPPO -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// Specials Infos about Assembly Visual.Security.Library.dll
-            /// <!-- Author TIPPO -->
+            /// <!-- Author 🧑TIPPLIN 🧑-->
             /// <remarks>
             /// Assembly infos about Visual.Security.Library.dll
             /// </remarks> 
@@ -440,6 +469,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get Fullname of VSL Assembly
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyName()
                 {
@@ -449,6 +481,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VSL Assembly Copyright 
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyCopyright()
                 {
@@ -458,6 +493,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VSL Assembly current Version Number
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyVersion()
                 {
@@ -476,6 +514,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VSL Assembly Product Name
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyProductName()
                 {
@@ -485,6 +526,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VSL Assembly Description
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyDescription()
                 {
@@ -494,6 +538,9 @@ namespace Visual.Galaxy.Framework.Assembly
                 /// <summary>
                 /// Get VSL Assembly Title Name
                 /// </summary>
+                /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
                 /// <returns></returns>
                 public static string VSLGetAssemblyTitleName()
                 {
@@ -514,13 +561,16 @@ namespace Visual.Galaxy.Framework.Assembly
 
 
     /// <summary>
-    /// 
+    /// Some Methods as Helpers to an Assembly
     /// </summary>
     public class VGFAssemblyHelper
     {
         /// <summary>
         /// Load an Assembly Lazy with given Assemblyname
         /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+                /// 
+                /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <param name="AssemblyName"></param>
         /// <returns></returns>
         public string VGFLoadAssemblyLazy(string AssemblyName)
@@ -542,8 +592,11 @@ namespace Visual.Galaxy.Framework.Assembly
         }
 
         /// <summary>
-        /// 
+        /// Internal Methods for the Assembly VGF.dll - Visual.Galaxy.Framework
         /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// Internals for Assembly, test or proof some relevant Settings.
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         internal static class VGFThisAssembly
         {
             /// <summary>
