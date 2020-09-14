@@ -7,23 +7,16 @@
 //-----------------------------------------------------------------------------
 // Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
 //-----------------------------------------------------------------------------
-// Part				:	VGF.Convert
+// Part			:	VGF.Convert
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2019
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2019 by Microsoft Corporation GmbH.
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
-//
-// For same secured Assemblies set inside internal for class, Methods...
-// for use in Visual Galaxy Framework, 
-// give free with:
-//
-// [InternalsVisibleAttribute("Visual.Galaxy.Framework", 
-// AllInternalsVisible = true)]
 //
 // ============================================================================
 // Warning:  
@@ -41,13 +34,13 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2018
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 // all rights reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //
-// This software is Copyright © 2019 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -66,22 +59,22 @@
 // and entities on the Bureau of Export Administration Entity List or
 //involved with missile technology or nuclear, chemical or biological weapons).
 //
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
 // VFGCore
 // written by 		
 //						Christian "TIPPO" Kurs
-//						Nettweg 1
-//				-G -  53498 Bad Breisig
+//						Ahornweg 1
+//				     -G - 53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
-// 				voice                   :	02633 - 470736  
-//					international phone :	00-49-2633-470736
+// 				     voice               :
+//					international phone :
 //					Skype               :
-//					e-mail				:	Christian.Kurs@gmail.de
-//					community Website	:	http://www.vgfc.org/community/tippo
+//					e-mail			:	kurschristian@gmail.com
+//					community Website	:
 //										
 //-----------------------------------------------------------------------------
 // This software is supplied as is. Use it at your own  RISK !!!!.
@@ -94,18 +87,18 @@
 //				NO fee for NON-Commercial use.
 //				our Community Website:
 // 
-//						http://www.vgfc.org/community/project/vgf/
+//						
 //
 //				Honest Business Users, to use our compiled Versions, 
 //				please call us to send you our Business Licenses.
 //				or our Business Website:
-//				www.vgf.com/business/vgf/License
+//				
 //
 //-----------------------------------------------------------------------------
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2019 by Christian 'TIPPO' Kurs - Germany
+ * Copyright © 2020 by Christian 'TIPPLIN' Kurs - Germany
  * 
  ******************************************************************************
  * 
@@ -241,19 +234,7 @@
  * CONNESSIONE CON IL SOFTWARE OPPURE L'USO O ALTRE RACCOLTE DEL SOFTWARE.
  *
  *****************************************************************************/
-//-----------------------------------------------------------------------------
-// Microsoft make Restrictions of Export for following Countries:
-// ============================================================================
-// This software is subject to the U.S. Export Administration Regulations and 
-// other U.S.law, and may not be exported or re-exported to certain countries
-// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
-// or
-// to persons or entities prohibited from receiving U.S.exports
-// (including Denied Parties, Specially Designated Nationals,
-// and entities on the Bureau of Export Administration Entity List or
-// involved with missile technology or nuclear, chemical or biological weapons)
-//-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+
 //-----------------------------------------------------------------------------
 
 /*
@@ -312,8 +293,8 @@ using Visual.Operation.System.Internal.InternalUtilities;
 
 
 //-----------------------------------------------------------------------------
-//
-//
+// namespace Visual.Galaxy.Framework.Converting
+//-----------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------
 namespace Visual.Galaxy.Framework.Converting
