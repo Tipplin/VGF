@@ -74,7 +74,7 @@
 // written by 		
 //						Christian "TIPPO" Kurs
 //						Ahornweg 1
-//				    -G -  53177 Bonn
+//				     -G - 53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
 // 				     voice               :	  
@@ -307,13 +307,15 @@ using Visual.Operation.System.Internal.InternalUtilities;
 
 
 
-
+//
+// Common Language Runtime - Class VGFCLRRuntime In Progress !
+//
 namespace Visual.Galaxy.Framework.CLRRuntime
 {
     /// <summary>
     /// Class VGFCLRRuntime
     /// </summary>
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// Common Language Runtime have exported Functions.
     /// Query CLR Version and more...
     /// The CLR Team is seperatly with own Projectteam and Versions, not .NET Framework Versions.
@@ -322,7 +324,7 @@ namespace Visual.Galaxy.Framework.CLRRuntime
     /// but the CLR Team test it and old parts of .NET Framework doesnt work with them.
     /// remove the Feature Struct Constructor pure, the Struct Constructor with Parameters works!.
     /// In Visual C# 7.0
-    /// <!-- Author TIPPO -->
+    /// <!-- Author 🧑TIPPLIN 🧑-->
     /// <remarks>
     /// 
     /// </remarks>
