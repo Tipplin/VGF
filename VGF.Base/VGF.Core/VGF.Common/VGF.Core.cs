@@ -6,13 +6,13 @@
  * 
  * ----------------------------------------------------------------------------
  * Programmer       :	Project-Founder and 
- *                  :   Main-Author Christian 🧑 "Tipplin" 🧑 Kurs
+ *                  :   Main-Author Christian 🧑 "TIPPLIN" 🧑 Kurs
  *                  :
  *                  :
  *                  :
  *                  :
  * ----------------------------------------------------------------------------
- * Part				:	VGF.Core
+ * Part		    : VGF.Core
  * ----------------------------------------------------------------------------
  * Base Class       :	
  * ----------------------------------------------------------------------------
@@ -40,193 +40,13 @@
  * ;
  * ;---------------------------------------------------------------------------
  * ;
+ * ;
  * ----------------------------------------------------------------------------
- * IMPORTANT: 
- * ==========
- * As is normal with builds early in the development cycle, 
- * these builds may contain bugs that might be painful for.
- * 
- * At 2020 we migrate this Project to .NET Core 3.0/3.1 
- * later to NEW Framework .NET 5 in Nov 2020 all in ONE !
- * 
- * Development Info:
- * 1. Microsoft Skip Head by Windows Development at Time, 
- * change the current Builds to 
- * Active Development Branch by MS Windows Engineers in develop for Fast Ring
- * -- means the Buildnumbers
- * -- 
+ * Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
  * ----------------------------------------------------------------------------
- * -- Windows 10 - 20h1- 2004 - May Update - Build 19041.264 - Final Release  -
- * -- 27.Mai.2020 - Service End on 14.12.2021 -
+ * by Head-Author: Christian 🧑 "TIPPLIN" 🧑 Kurs - 👀 Visual C# Developer - 👀
  * ----------------------------------------------------------------------------
- * -- NOTE: only the Revisionnumber change to higher after Bugs, 
- * -- Security issues, Automatic Microsoft Registry Entry is UBR in 
- * -- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
- * -- BuildLabEx - Windows Compiled Date and Time here: 22.05.2020 at 14:35
- * -- 19635.1.amd64fre.mn_release.200522-1435
- * ----------------------------------------------------------------------------
- * 
- * 
- * 2. Windows goes modular with an Shell Update Agent.
- * 
- * 3. Windows Operation System now written in C and Rust,
- * -- C++ make problems by safety and security parts.(secure leaks)
- * -- all security parts in Windows now written Rust.
- * -- INFO: 
- * -- RustFest in Barcelona with 2 Microsoft Windows Developer more Info.
- * -- YouTube Video - make own Rust - Microsoft Verona - Rust adpotion
- * ----------------------------------------------------------------------------
- * NOTE for Developers:
- * 2020: Visual C# and Java together in this Project, fork IKVM.NET/Java.NET
- * C# Class: and Inherit Java Class
- * private class SaveAssemblyShutdownHook : java.lang.Thread
- * 
- * 
- * 
- * ----------------------------------------------------------------------------
- * WICHTIG: Wie bei Builds zu Beginn des Entwicklungszyklus üblich, 
- * können diese Builds Fehler enthalten, die möglicherweise schmerzhaft sind
- * ----------------------------------------------------------------------------
- * NOTE: 
- * This project supports Only 64 BIT System, while 32 BIT Area goes End.
- * Same Vendors not supports 32 BIT next Time, 
- * real is IBM (all systems 64BIT, IBM old AS/400-OS/400 in 128 BIT written.
- * Father was Frank Solti, rebranding IBM i System -
- * Microsoft NT 4.0 in 64BIT written - Father Dave Cutler - 
- * now what going on? more 128BIT Structs, Enums, 
- * Functions in Windows 10 18945 SDK - 
- * I thing about Big Data comes 2020 with Factor 17 - 
- * Cray Exascale have 1 Quintillion double Prescision)
- * Nvidia, Apple,
- * ----------------------------------------------------------------------------
- * camelCase defintion: 
- * company.project.layer.commponent
- * \company\ndp\source\projectname\filename\filename.cs
- * --------new development
- * 
- * C:\Program Files (x86)\Reference Assemblies
- * \Microsoft\Framework\.NETFramework\v4.8
- * 
- * ----------------------------------------------------------------------------
- * Local time in Europe/Germany are different at seconds,
- * while US have make an leap second at 2018 - 1 minute have now 60 seconds.
- * 03:00:60 -> 03:01:00
- * 
- * Linux and Windows Time Clock have problems by local time,
- * differents UTC, Greenvich
- * ----------------------------------------------------------------------------
- * Change Project-Solution by .NET Framework 4.7.2 to 4.8.03752 Release, 
- * same by Visual Operation System Library - Windows 10 SDK 18362.0 Release Fix
- * Have skip Build by Microsoft OS Update to 2020 - 
- * OS-Build 18985.1 Insider Prelease Stable.
- * this Build have new Libraries, more networking: NIS.dll - ConnectToServer -
- * more Functions in Windows Libraries: shell32, user32, ntdll, kernel32...
- * Windows Sandbox now is stable ! two UI's WinForm and 
- * WPF Form with new Control Titlebar with resizes.
- * Windows Terminal all in one UI, Powershell, cmd, Linux bash
- * 
- * 
- * ----------------------------------------------------------------------------
- * Update Visual Studio 2019 Version 16.4.5 - 11.02.2020
- * Version 16.4 Final, Revision 5 with Bugfixes
- * ----------------------------------------------------------------------------
- * INFO: 
- * 2020 in Novembre come .NET Framework 5 one Platform for all Platforms.
- * 
- * ----------------------------------------------------------------------------
- * Tippo Tip in Visual Studio 2019:
- * ----------------------------------------------------------------------------
- * marked the Classname and then push on F12, complete Class Declaration view.
- * ----------------------------------------------------------------------------
- * right side at buttom sign Bell jar, if gray color no Feature, if color red
- * new feature or bugfixes with new Build or Revision.
- * ----------------------------------------------------------------------------
- * NEW ! For Visual C# Developers:
- * -----------------------------
- * Enumerator with only 1 char: (more not allowed !)
- * enum
- * {
- *      Euro = '€',
- *      Dollar = '$'
- * }
- * ----------------------------------------------------------------------------
- * NEW ! Visual C# 8.0 parts of features are NOT run under .NET Framework,
- * .NET Core 3.0 later .NET 5.0 (November 2020)
- * ----------------------------------------------------------------------------
- * For Support your Application by Customer and Exceptionhandlung:
- * ----------------------------------------------------------------------------
- * Visual Studio Remote Debugger install on Customer System and active
- * the Windows Tool: 
- * ----------------------------------------------------------------------------
- * psr.exe is the Problem System Recorder, all useraction
- * Exception is occured, so have optimal Handling.
- * ----------------------------------------------------------------------------
- * For pure Windows Problems like crash dumps .dmp files, use the better
- * Windows Debugger load in and show clear Information or load your .EXE
- * and show what he loads at native Libraries or .NET Assemblies,
- * 
- * Close ❌ Application, Windows automatic call Function NTTerminate()
- * 
- * ----------------------------------------------------------------------------
- * Change Assemblyname.config Section GC in this File:
- * ----------------------------------------------------------------------------
- * Runtime Block, GCWorkstation to GCServer on a 64 System and 64BIT .NET !
- * VeryLargeObjects and VeryLargeHeaps, NUMA,
- * 
- * ----------------------------------------------------------------------------
- * Visual C# 8.0
- * https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8
- * 
- * 
- * 
- * ----------------------------------------------------------------------------
- * New ‼ Windows 10 Terminal
- * -------------------------
- *  
- *  Scott Hanselman and Terminal Developer Team
- *  https://mybuild.techcommunity.microsoft.com/sessions/77293#top-anchor
- *  
- *  NEW Windows 10 Terminal
- *  make your own settings:
- *  open in \Dir
- *  profiles.json 
- *  
- *  own prompt as fix
- *  Fonts goes open source
- *  Powerline is Font Extentions - unicode -  branch symbol 
- *  GLFS not be into Fonts
- *  
- *  Video game runs under Windows Terminal Old Tennis Game
- *  
- *  Windows 10 Terminal - Menubar
- *  Powershell
- *  Ubuntu
- *  Azure Cloud Shell
- *  
- *  Settings
- *  Feedback
- *------------------------------------------------------------------------------
- *  Urban Traffic Control System have 5 Million Line of Code
- *  Luxury Car 120 Millions Line of Code
- *  
- *  Scott Hanselman
- *  next Visual Studio
- *  INT PREVIEW -  Preview
- *  122 - boold sugar
- * 
- * 
- * ----------------------------------------------------------------------------
- * Windows Operation System 10 with fix Build 18362 and running Revision,
- * at Time Revision .145 - 25.05.2019 - after cleanup bugs. 
- * NOTE: 
- * Registry Key for OS-Revision is UBR as Hexdecinal value, increment by
- * Microsoft.
- * ----------------------------------------------------------------------------
- * Copyright © 2019 by  Visual Galaxy Framework Community Kernel Developer Team
- * ----------------------------------------------------------------------------
- * by Head-Author: Christian 🧑 "TIPPO" 🧑 Kurs - 👀 Visual C# Developer - 👀
- * ----------------------------------------------------------------------------
- * Portions Copyright © 2019 by Microsoft Corporation GmbH.
+ * Portions Copyright © 2020 by Microsoft Corporation GmbH.
  * ----------------------------------------------------------------------------
  * 
  * We are currently looking for collaborators. 
@@ -242,29 +62,7 @@
  * ============================================================================
  * 
  * Developer Tippo 🧑 - 🚧 WARNING 🚧 - :
- * 
  * ----------------------------------------------------------------------------
- * ! Brand NEW ! First Microsoft Store in Europe Open in London at 11.07.2019
- * at Regent Street and Oxford Street.
- * 
- * Microsofts Flagshipstore Oxford Circus in London at 21,932 square feet 
- * on three floors, near Regent Street by Apple Store.
- * 
- * Microsoft is planning to include immersive video walls, 
- * a community theater, workshops, training areas, and 
- * even an “Answer Desk” for tech support. 
- * 
- * The site will also include Microsoft’s range of Surface hardware, 
- * Xbox consoles, and devices from other PC makers. 
- * Visitors will also be able to try devices like Microsoft’s HoloLens, 
- * alongside the company’s other Mixed Reality (VR) headsets that are available
- * 
- * old plan: Berlin, Hamburg, München, Köln
- * ----------------------------------------------------------------------------
- * Change Windows 10 Operation System at 21.05.2019 - Official -
- * to new OS-Build 18356.116 Final Release - March Update 2019, 
- * But note, Microsoft increment by Cleanup's the Revisionnumber,
- * at Time .145 25.05.2019 - Build 18362.145 -
  * ----------------------------------------------------------------------------
  * Tippo Tip:
  * At Time to Time the System Clock the system time after in seconds and 
@@ -275,486 +73,7 @@
  * open Windows Settings goes to Time and Language,
  * stand an Time Server for Time synchronization, click it.
  * Time Server for Windows: time.windows.com
- * ---------------------------------------------------------------------------- 
- * Microsoft SQL Server 2008 and SQL Server Server 2008 R2
- * will no longer be supported by Microsoft at Juli 2019.
- * ----------------------------------------------------------------------------
- * ----------------------------------------------------------------------------
- * ----------------------------------------------------------------------------
- * ! NEW ! Microsoft Windows 10 Edition Ultra Home which presumably offers up 
- * some extra perks without a full Pro upgrade.
- * ----------------------------------------------------------------------------
- * Dell announced its next XPS 13 2-in-1, and the big news is that it includes 
- * Intel's upcoming 10th-gen 'Ice Lake' processors.
- * It's particularly important because previously, the XPS 13 2-in-1 lineup 
- * used a Y-series processor, which was 5W in the last generation.
- * That means that there's a massive performance boost in the new model.
- * ----------------------------------------------------------------------------
- * Windows 10 Pro for Workstations will include the ReFS file system; 
- * persistent memory; faster file sharing using SMB Direct; 
- * and support for new hardware configurations, including server-grade 
- * Intel Xeon or AMD Opteron processors with up to four CPUs 
- * and "massive" memory, up to 6 terabytes. 
- * Today, Windows 10 is limited to two CPU and 2 TB configurations.
- *
- * Microsoft's original Windows 10 line-up included 
- * three embedded/Internet of Things (IoT) versions, 
- * plus six other Windows 10 editions: 
- * Home, Mobile, Pro, Enterprise, Education, Mobile Enterprise. 
- * 
- * Microsoft subsequently added Windows 10 S, 
- * which officials describe as a "mode" of Windows 10 Pro, to this list.
- * 
- * There are also two subscription versions of Windows 10 now, 
- * Windows 10 Enterprise E3 and E5.
- * 
- * ----------------------------------------------------------------------------
- * Intel:
- * Intel unveils 10th Gen Intel Core processors and Project Athena
- * And the company showed off its first-ever gaming processor 
- * with an all-core turbo of 5GHz.
- * 
- * The 10th Gen Intel Core chips are shipping now, 
- * but computers with the chips won’t be available until the holiday season.
- * 
- * The 10th Gen Intel Core Processors will bring high-performance 
- * artificial intelligence processing to scale with 
- * 
- * Intel Deep Learning Boost (Intel DL Boost), or 
- * special instructions aimed at streamlining AI processing.
- * 
- * The processors are built on the company’s 10-nanometer 
- * manufacturing process technology, new Sunny Cove core architecture, 
- * and its new Gen11 graphics engine.
- * 
- * 10th Gen Intel Core processors will range from Intel Core i3 to 
- * Intel Core i7, with up to four cores and eight threads,
- * up to 4.1GHz max turbo frequency, and up to 1.1GHz graphics frequency.
- * 
- * Intel is targeting the 10th Gen Intel Core processors at 
- * thin-and-light laptops and convertible 2-in-1s.
- * 
- * Intel DL Boost will deliver an estimated 2.5 
- * times improvement in AI performance for low-latency workloads.
- * 
- * Intel Iris Plus Graphics
- * The new graphics architecture delivers up to one teraflop of vector compute
- * for heavy duty inference workloads to enhance creativity, productivity,
- * and entertainment on highly mobile thin-and-light laptops.
- * 
- * For low-power AI usages on the PC, 
- * Intel Gaussian Network Accelerator (GNA) is built into the SoC.
- * 
- * Intel also said its Gen11 graphics architecture 
- * will be known as Intel Iris Plus graphics, 
- * which doubles performance compared to Gen9 graphics.
- * 
- * It also has 2 times HEVC encode and lets you watch 
- * 4K HDR in a billion colors.
- * And it will let gamers play thousands of titles in 1080p resolution.
- * 
- *-----------------------------------------------------------------------------
- * Intel Rapid Storage for Intel Processor as download Intel Download Center:
- * ----------------------------------------------------------------------------
- * see your Processor and download them, is better !
- * ----------------------------------------------------------------------------
- * Intel Microcodes input into Processor Chipset
- * Intel Tool Processor Diagnose all Information about System and Processor,
- * over the Link: HTML report about your Computer.
- *-----------------------------------------------------------------------------
- * RAID 0, 1, 5 and 10 - RAID 1 for Recovery
- * Intel® Rapid Storage-Technologie liefert erweiterte Verwaltungsfunktionen 
- * und detaillierte Statusinformationen für Serial-ATA-AHCI, 
- * PCIe-NVMe sowie RAID-Subsysteme. 
- * ----------------------------------------------------------------------------
- * INTEL Beschreibungen in deutsch:
- * Die Anwendung wird von den folgenden Betriebssystemen und 
- * Hardwarekomponenten unterstützt:
- * 
- * Unterstützte Betriebssysteme
- * ----------------------------------------------------------------------------
- * Microsoft Windows* 10 64-Bit-Edition
- * Microsoft Windows* Server 2016 64-Bit-Edition
- * 
- * Microsoft Windows* 7 32-Bit-Edition**
- * Microsoft Windows* 7 64-Bit-Edition**
- * 
- * Microsoft Windows* 8.1 32-Bit-Edition**
- * Microsoft Windows* 8.1 64-Bit-Edition**
- * 
- * Wird für die Intel® Prozessorreihe der siebten Generation nicht unterstützt.
- * Unterstützte Intel® Chipsets
- * -----------------------------------------------------------------------------
- * Lesen Sie sich die Readme-Datei durch, 
- * die mit der Software installiert wurde, 
- * oder besuchen Sie den Intel Online-Support, 
- * um mehr über die vollen Systemanforderungen und
- * die RAID-BIOS-Konfiguration zu erfahren.
- * -----------------------------------------------------------------------------
- * Intel® Chipsatz der 200er-Reihe, SATA-AHCI/RAID-Controller-Modelle
- * -----------------------------------------------------------------------------
- * E/A-ATA-AHCI/RAID-Controller der Plattform der Intel® Core 
- * Prozessorreihe der siebten Generation
- * -----------------------------------------------------------------------------
- * SATA-AHCI/RAID-Controller der Intel® Chipsatzreihe der 100er/C230er-Reihe
- * -----------------------------------------------------------------------------
- * E/A-SATA-AHCI/RAID-Controller der Plattform der 
- * Intel® Core Prozessorreihe der sechsten Generation
- * -----------------------------------------------------------------------------
- * Das Intel® Rapid Storage-Technologie-Softwarepaket enthält 
- * hochleistungsfähige PCIe-, SATA-, Caching- und 
- * RAID-Funktionen für geeignete Betriebssysteme.
- * -----------------------------------------------------------------------------
- * Lesen Sie die Systemanforderungen und die Readme-Datei, 
- * die mit der Software installiert wurde, bevor Sie Ihr System konfigurieren
- * und die Supportebene für die Funktionen einrichten. 
- * 
- * Sie können außerdem die Intel Support Website besuchen, 
- * um mehr über die vollständigen Systemanforderungen und 
- * die RAID BIOS Konfiguration zu erfahren. 
- * ------------------------------------------------------------------------------
- * (Optane/RAID)-fähige Systeme
- * ------------------------------------------------------------------------------
- * RAID (Redundant Array of Independent Drives) bezeichnet 
- * eine Reihe von unabhängigen Festplatten, 
- * die zu einem logischen Laufwerk zusammengefasst werden.
- * 
- * Der Hauptzweck dieser Technologie ist die 
- * Steigerung der Speichersystemleistung, der Datensicherheit und der erhöhten Fehlertoleranz.
- * 
- * Diese Technologie unterstützt die folgenden Funktionen:
- * Intel® Rapid Recover-Technologie
- * Diese Technologie liefert volle Datenredundanz, 
- * indem Daten vom festgelegten Quelllaufwerk 
- * (d. h. der Master-Festplatte) auf das festgelegte Ziellaufwerk
- * (d. h. die Wiederherstellungsfestplatte) kopiert werden. 
- * Datenaktualisierungen von Wiederherstellungs-Volumes 
- * können fortlaufend oder auf Anforderung erfolgen.
- * 
- * Systembeschleunigung mit Intel® Optane™ Technologie
- * Dank dieser Technologie können Computersysteme bei der Verwendung 
- * von PCIe-NVMe-Geräten mit Intel Optane-Technologie als Cache-Volume 
- * beschleunigt werden.
- * 
- * Wenn sie mit einer langsameren Festplatte mit hoher 
- * Kapazität kombiniert wird, profitiert der Nutzer von einem schnelleren System.
- * 
- * Die Leistung entspricht dabei fast der von PCIe-NVMe-SSDs 
- * unter Verwendung von sowohl Block- als auch Datei-Caching-Techniken. 
- * 
- * Intel® Smart Response-Technologie
- * Dank dieser Technologie können Computersysteme bei der Verwendung 
- * von SATA oder PCIe-SSDs als Cache beschleunigt werden.
- * 
- * Wenn sie mit einer langsameren Festplatte 
- * mit hoher Kapazität kombiniert wird, 
- * profitiert der Nutzer von einem schnelleren 
- * Systemspeicher mit hoher Kapazität.
- * Die Leistung entspricht dabei fast der von SSDs. 
- * 
- * Intel® Rapid RAID
- * -----------------
- * Diese Technologie gibt Ihnen Gelegenheit, 
- * RAID 0-, RAID 1-, RAID 5- und RAID 10-Volumes 
- * auf Desktop- und mobilen Plattformen zu erstellen.
- * 
- * Daten werden über zwei oder mehr Festplatten verteilt, 
- * um Datenredundanz zu bieten oder die Datenspeicherleistung zu steigern.
- * 
- * Intel® Matrix RAID Technology
- * -----------------------------
- * Diese Technologie ermöglicht die Erstellung 
- * zweier unabhängiger RAID-Volumes auf einem einzigen Array.
- * 
- * Das erste Volume beansprucht einen Teil des Arrays und 
- * lässt Platz für das zweite Volume.
- * 
- * Das Array kann je nach Volume-Typ zwischen zwei und sechs Festplatten enthalten.
- * 
- * Native Command Queuing (NCQ)
- * ----------------------------
- * NCQ ist eine Funktion, die es Festplatten ermöglicht, 
- * mehr als einen Befehl gleichzeitig entgegenzunehmen.
- * Sofern Sie diese Funktion mit einer oder 
- * mehreren Festplatten mit NCQ-Unterstützung verwenden, 
- * steigt die Speicherleistung in randomisierten Arbeitslasten, 
- * da die Festplatte in der Lage ist, die Befehlsreihenfolge intern zu optimieren.
- * 
- * Hotplug
- * -------
- * Diese Funktion, die auch "Hot-Swap" genannt wird, 
- * ermöglicht das Entfernen und Einfügen von Festplatten 
- * bei eingeschaltetem Computer und laufendem Betriebssystem.
- * 
- * Hotplugging wird beispielsweise beim Austausch einer ausgefallenen externen Festplatte verwendet.
- * 
- * Festplatten mit mehr als zwei Terabyte (2 TB)
- * Diese Funktion bietet Unterstützung für Festplattten und 
- * SSDs (Solid-State-Festplatten) mit einer Kapazität von mehr als 2 TB,
- * die als Pass-through-Geräte (verfügbar) angegeben oder 
- * in einer RAID-Konfiguration verwendet werden.
- * 
- * Energie- und Leistungseinstellungen
- * -----------------------------------
- * Mit diesen Funktionen können Sie die Energie- und 
- * Leistungseinstellungen des Systems an Ihre Anforderungen anpassen.
- * 
- * Link Power Management (LPM):
- * ----------------------------
- * Verwalten Sie den Stromverbrauch Ihrer SATA-Geräte 
- * während der Leerlaufzeit, wenn keine I/O-Aktivität vorliegt oder 
- * wenn Geräte fehlen oder nicht verwendet werden.
- * 
- * Mit den Einstellungen für den flüchtigen Volume-Cache 
- * können Sie für jedes RAID-Volume in Ihrem 
- * Speichersystem Cache-Richtlinien konfigurieren.
- * 
- * Schreibcachepuffer-Leerung: Konfigurieren Sie die 
- * Windows* Schreibcachepuffer-Leerung, um die Leistung zu erhöhen.
- * 
- * Cache-Modus:
- * ------------
- * Konfigurieren Sie einen Cache-Modus für flüchtiges 
- * Volume-Cache auf einem Array, 
- * um eine optimale Leistung zu erzielen.
- * 
- * Volume-Migration
- * ----------------
- * Diese Funktion unterstützt die Systemdatenkonvertierung 
- * in eine hochleistungsfähige oder 
- * datenschützende RAID-Konfiguration.
- * 
- * Volumegröße erhöhen
- * -------------------
- * Diese Funktion ermöglicht es Ihnen, 
- * die Datenspeicherkapazität eines Volumes zu erhöhen,
- * indem Sie 100% des verfügbaren Array-Speicherplatzes nutzen oder 
- * zum vorhandenen Volume eine oder mehr Festplatten hinzufügen.
- * 
- * Unsere Applikation unterstützt auch die folgenden Funktionen:
- * Kennwortgeschützte Festplatten
- * Diese Funktion bietet die höchste Datensicherheit und 
- * den besten Schutz für die Daten auf Ihren Festplatten 
- * durch Einsatz eines Kennworts, 
- * was unberechtigten Benutzern den Zugriff verweigert.
- * 
- * TRIM
- * ----
- * Diese Funktion unterstützt alle Pass-Through 
- * Solid-State-Festplatten (SSDs) in Ihrem Speichersystem, 
- * die die ATA-8 Protokollanforderungen erfüllen.
- * 
- * Ebenso werden SSDs in einem RAID 0-Array unterstützt.
- * Diese Funktion optimiert Schreibvorgänge, reduziert die Geräteabnutzung 
- * und belässt den verfügbaren Speicherplatz auf den Geräten so groß wie möglich.
- * 
- * ODD Leistungsoptimierung
- * ------------------------
- * Diese Funktion ermöglicht, dass ein unbenutztes optisches Laufwerk (ODD) 
- * automatisch ausgeschaltet wird, wenn sich im Laufwerk keine Medien wie eine CD, 
- * eine DVD oder ein Blu-Ray* Datenträger befinden und das Laufwerkfach geschlossen ist.
- * 
- * Das ODD kann wieder vom Betriebsystem, einer Interaktion vom Nutzer oder 
- * durch Drücken der Auswurf-Taste eingeschaltet werden.
- * 
- * ODD-Leistungsoptimierung ist besonders nützlich für mobile Computer, 
- * da die Akkulebensdauer negativ beeinträchigt wird, 
- * wenn ODD eingeschaltet und im Leerlaufzustand ist.
- * 
- * Diese Aktion steht nur mit folgender Systemkonfiguration zur Verfügung:
- * Intel® 6 Serie Chipset oder höher, kompatible Motherboards und kompatible ODDs. 
- * Weitere Informationen zu den Kompatibiliätsanforderungen 
- * finden Sie in den SATA-Spezifikationen unter   www.sata-io.org
- * 
- * Für Slotlaufwerke gilt die Laufwerkfachbedingung nicht.
- * 
- * PCIe-SSD-Unterstützung
- * ----------------------
- * Der RST-Treiber unterstützt den Anschluss von drei Single-Pass-Through-PCIe-SSDs, 
- * vorausgesetzt, alle folgenden Bedingungen treffen zu:
- * Die Plattform unterstützt die Intel Remapping-Technologie für PCIe-SSDs.
- * 
- * Das mit UEFi kompatible BIOS unterstützt die Intel Remapping-Technologie für PCIe SSDs.
- * Das System befindet sich im RAID-Modus, Intel RST-Modus oder 
- * 
- * Intel RST Premium-Modus 
- * -----------------------
- * (abhängig von der Plattform und dem Chipsatz des Modells).
- * 
- * Die angeschlossene PCIe SSD unterstützt die NVM Express 1.0- oder 
- * AHCI-Spezifikation für Host-Controller-Schnittstellen.
- * 
- * Die Erstellung von Cache-Volumes auf dem PCIe-SSD unter 
- * Verwendung der Intel® Smart Response-Technologie oder 
- * die Systembeschleunigung mit Intel® Optane Technologie wird unterstützt. 
- * 
- * AHCI-fähige Systeme
- * -------------------
- * AHCI (Advanced Host Controller Interface) 
- * ist eine Schnittstellenspezifikation, 
- * die es dem Speichertreiber automatisch ermöglicht, 
- * erweiterte SATA-Funktionen wie Native Command Queuing (NCQ) und 
- * Native Hot Plug auf den an Ihren Computer 
- * angeschlossenen Festplatten zu aktivieren. 
- * 
- * Die folgenden Funktionen werden von AHCI-fähigen Systemen unterstützt:
- * ----------------------------------------------------------------------------
- * Native Command Queuing (NCQ)
- * Hotplug
- * Festplatten mit mehr als zwei Terabyte (2 TB)
- * Energie- und Leistungseinstellungen
- * Kennwortgeschützte Festplatten
- * ODD Leistungsoptimierung
- * 
- * ----------------------------------------------------------------------------
- * Visual Studio 2019 Final Release 02.04.2019 - Project-Solution now!
- * (Version 16.0.3)
- * Lot of new ! Pass uff, he cancel all addins like x.vsix !, 
- * all 2017 or older not compatibel with 2019, make Error Message!.
- * (.vsix = visual studio extension) by Tools, Programming Languages,
- * Point extras is now only Installer.
- * Point Extension is only .vsix's over Visual Studio Marketplace:
- * here are FREE (without paid), FREE TRIAL (Testversion), PAID (Money)...
- * 
- * Have any Question to Windows/Visual Studio:
- * send me a mail!
- * In Summer ?! make MVP Windows 10 for Tippo!
- * 
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * !
- * ! SDK Blog make same Idea, more comments and samples (is commentout)
- * ! Windows 10 May Update OS-Build 18362 - 1903 - 19H1 -, 
- * !
- * ! have send blog Search Bar in Taskbar,
- * ! have set menuitem timeline show/zeitachse anzeigen, is double!.
- * ! create menuitems only documents, project-solutions, last work
- * ! Windows Sandbox make error, whats happen?
- * ! --------------------------------------------------------------------------
- * ! For all others:
- * ! --------------------------------------------------------------------------
- * ! Make sure actived the Microsoft Defender Firewall 
- * ! in Windows 10 Professional, is much better as before!
- * ! --------------------------------------------------------------------------
- * ! Make sure you are an Administrator or avantage User, one mistake at sets
- * ! in Firewall, and he can blocked everytime this.
- * ! Windows 10 Firewall for private network, domain network and public network
- * ! (Administrator set at install or later in Security Tool)
- * ! --------------------------------------------------------------------------
- * ! Windows 10 Firewall make optimal Security:
- * ! Firewall and Network Protection:
- * ! --------------------------------------------------------------------------
- * ! Domain
- * ! show active
- * ! Private
- * ! show active - Router like Gigacube or others
- * ! Public
- * ! show active
- * ! --------------------------------------------------------------------------
- * ! For Developer:
- * ! --------------------------------------------------------------------------
- * ! Kernel Integration Protection on/off,
- * ! but can set ONLY Administrator.
- * ! Is protect to injection bad code.
- * ! --------------------------------------------------------------------------
- * ! Data Protection
- * !
- * ! --------------------------------------------------------------------------
- * ! Ransom Protection
- * !
- * !
- * ! -------------------------------------------------------------------------- 
- * ! New! is AMSI.dll - 
- * ! Anti Malware Scan Interface for Windows 10 May Update 2019 -OS-Build 18362 
- * ! For Developer's: AMSI API. - amsi.h in SDK 18362
- * ! AmsiResultIsMalware
- * ! AmsiResultIsBlockedByAdmin
- * ! --------------------------------------------------------------------------
- * ! Info:
- * ! -----
- * ! Windows 10 Defender Anti Virus Scanner is now 
- * ! equavalent Commerical Anti Virus Scanners and 
- * ! have now an Anti Virus Malware Scanner,
- * ! and Anti Trojan Engine.
- * ! 
- * ! make sure! click update botton option Windows Update
- * ! every day Microsoft make update for new Defender Modules,
- * ! more and more bad Virus and Malware, Trojans.
- * ! 
- * ! Tippo download on CodeProject an .zip, directly answer from Windows Defender
- * ! part Anti Trojan Engine, Danger inside Trojan in .zip:
- * ! directly remove or quarantine the .zip file !.
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * !
- * ! Tippo Tip by new update set anytime over scan options full check all Files
- * ! and running app's on harddrive, but the check can run very long (hours)
- * !
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * ! 
- * ! Tippo Tip make from time to time, proof the random access memory RAM 
- * ! on Computer, Microsoft make tip, one part or more can broken,
- * ! system-tool on command line: mdsched.exe
- * ! bank 0, bank 1, bank 2, bank 3 are the parts of random access memory. 
- * ! But by 32BIT System only Bank 0 and Bank 1 for use, while more Adress
- * ! Processes can't use! - Standard RAM by 32BIT is 3.5 Gigabyte not more!
- * ! 64BIT to ultimo ! theoretically 16 Terabyte.
- * !
- * ! Windows 10 Professional Edition allowed by 
- * ! 2 Terabyte (RAM)random access memory.
- * ! Windows 10 Professional for Workstation Edition 4 Terabyte 4 Processors.
- * ! Windows 10 Professional Edition is a Workstation with Users and Groups,
- * ! Windows 10 is Multi User System now, one User or more on one Computer. 
- * ! Windows 10 make for each User an Account, Security ID,
- * ! On Screen LogOn any User insert User Photo.
- * !----------------------------------------------------------------------------
- * ! Network Libraries: 
- * ! (Windows 10 Professional as Clients, while is an Workstation)
- * ! ---------------------------------------------------------------------------
- * ! Windows Server - Windows 10 (for Access to Server) Client Library
- * ! but note!, you must have an Client Access License (CAL) for use them.
- * ! On Windows 10 Professional you can install the Windows Server
- * !
- * ! Windows Terminal Server public APIs - SDK 18362 - WTSAPI32.H
- * ! wlanapi.h
- * ! Definitions and data strcutures for wlan auto config client side API.
- * !
- * !
- * !
- * !
- * !
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * ----------------------------------------------------------------------------
- * Change for Assemblies the .suffixes as little save:
- * System-tool assoc.exe - association New FileSystem in Windows 10
- * .suffix=appname
- * .accdb=Access.Application.16 
- * is Microsoft Access Version 16 (Office365 64BIT)
- * see Microsoft have change .suffix from .mdb to .accdb (access database)
- * ----------------------------------------------------------------------------
- * Special!
- * Microsoft Free Suffixes: create your own .suffixes !. <Limit 255 chars:
- * appname.appinfotext
- * 
- * Microsoft Editor: save under- filetype- all files - 
- * coding - 
- * Ansi
- * UTF8
- * UTF8 with BOM - Binary Object Model
- * UTF16-LE - Low Endian
- * UTF16-BE - Big Endian
- * or better
- * UTF8 (For German developers == 'German Umlauts')
- * If not, come Message from System about German Umlauts,
- * Filetext in nirvana without German Umlauts.
- * 
- * Microsoft Editor Spell Checking in Germany use the German Dictionary File.
- * Bing Search directly
- * ----------------------------------------------------------------------------
- * Windows 10
- * system-tool: assoc.exe - association
- * .library=.dll
- * .vgfl=.dll
- * .system=.dll
- * ============================================================================
+ *  
  * 
  * ============================================================================
  * Warning:
@@ -773,14 +92,14 @@
  * Please see the documentation supplied with 
  * the VGF Libraries for further details.
  * 
- * Authored by Copyright © 2019 by 
+ * Authored by Copyright © 2020 by 
  * Visual Galaxy Framework Community Kernel Developer Team.
  * All rights reserved.
  * 
  * May be redistributed for free, but may not be sold without 
  * the author's explicit permission.
  * 
- * This software is Copyright © 2019 by VGF-Technologies at VGF-KernelTeam
+ * This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
  * You may only use this software if you are an 
  * authorized licensee of an VGF developer tools product.
  * 
@@ -799,30 +118,30 @@
  * and entities on the Bureau of Export Administration Entity List or
  * involved with missile technology or nuclear, chemical or biological weapons)
  * ----------------------------------------------------------------------------
- * © 1982 - 2018 Microsoft Corporation.All rights reserved.
+ * © 1982 - 2020 Microsoft Corporation.All rights reserved.
  * ----------------------------------------------------------------------------
  * Same sourcecode by Microsoft, so we marked with Copyright !.
- * © 1982 - 2018 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
+ * © 1982 - 2020 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
  * Copyright © and Tradewark by Microsoft Windows, Windows Logo, Visual Studio
  * ----------------------------------------------------------------------------
  * DON'T CHANGE OR DELETE ANYTHING IN SECTION !!!.
  * ----------------------------------------------------------------------------
  * VFGCore written by
  *                      Christian 🧑 "TIPPO" 🧑 Kurs
- *                      Nettweg 1
- *                      - G -  53498 Bad Breisig
+ *                      Ahornweg 1
+ *               - G -  53177 Bonn
  *                      Germany - Allemagne - Duitsland
  * ----------------------------------------------------------------------------
- * voice                02633 - 470736  
- * international phone  00-49-2633-470736
- * Skype
- * E-mail               kurschristian@gmail.de
- * Community Website    http://www.vgfc.org/community/tippo
+ * voice		:  
+ * international phone	:
+ * Skype		:
+ * E-mail               : kurschristian@gmail.de
+ * Community Website    :
  * 
  * -----------------------------------------------------------------------------
  * This software is supplied as is. 
  * 
- * Use it at your own  RISK !!!!.
+ * Use it at your own  💥 RISK 💥!!!!.
  * 
  * Obviously I've tried to do the best job possible.
  * If you find any problem with it, let me know.
@@ -833,14 +152,14 @@
  * NO fee for NON-Commercial use our Community Website:
  * ----------------------------------------------------------------------------
  * 
- * http://www.vgfc.org/community/project/vgf/
+ * 
  * 
  * ----------------------------------------------------------------------------
  * Honest Business Users, to use our compiled Versions, 
  * please call us to send you our Business Licenses.
  * or 
  * our Business Website:
- * www.vgf.com/business/vgf/License
+ * 
  * 
  * 
  *############################################################################# 
@@ -848,7 +167,7 @@
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2019 by Christian 🧑'TIPPO'🧑 Kurs - Germany
+ * Copyright © 2020 by Christian 🧑'TIPPLIN'🧑 Kurs - Germany
  * 
  ******************************************************************************
  * English:
@@ -864,7 +183,7 @@
 
 
 /* ######################### Visual.Galaxy.Framework ##########################
- * # Start Date: 2016/01/01 - 17:00 - Ground Leaning -Initial
+ * # Start Date: 2019/01/01 - 17:00 - Ground Leaning -Initial
  * #---------------------------------------------------------------------------
  * # Freeze Date:
  * # (FREEZE: like Microsoft - stopp develop, no more codes into project,
@@ -888,54 +207,7 @@
  * Please write Visual C# Wrapper as here !!!. (Indirect Call)
  * ############################################################################
  * 
- * ----------------------------------------------------------------------------
- * Windows Operation System - native Methods - 
- * ----------------------------------------------------------------------------
- * Windows 10 Major jump to 10, Microsoft Info: has problems with 9 as
- * major version, same install/setups programs has problems with them,
- * and see 9 as Windows 95.
- * ----------------------------------------------------------------------------
- * Same Windows API have new Flags and Functions for Windows 10: 
- * ----------------------------------------------------------------------------
- * 1. 	use the .NET Framework 4.6.2, 4.7, 4.7.1 or higher (de. to Win 10)
- * 2. 	use all NOT into .NET Framework as native Functions 
- *      in DLLImportAttribute - user32, kernel32, shell32, advapi32 and so..
- *      all this new System Dll's have more Functions.
- * ----------------------------------------------------------------------------
- * 
- * ! NOTE !:
- * 
- * ----------------------------------------------------------------------------
- * All marked Windows 10 functions, you can use ONLY on Windows 10 System !.
- * Set special #if directive for Platform - 32 BIT and 64 BIT -
- * x86 and x64 - Intel and AMD compatible(little different, but not relevant).
- * a.)  Visual Studio help us porting a 32 BIT Project to 64 BIT Project, 
- *      like a Assistant, going to Platform Option over new... 
- *      and show the Assist.
- *      Choice your Selecting new Platform 64 BIT, than 32 BIT Project......
- *      Take Solution, but your must pass on same specials for 64 BIT.
- * 
- * 
- * ----------------------------------------------------------------------------
- * 
- * ----------------------------------------------------------------------------
- * Set here Directives and namespaces (Project)
- * using System,
- * using namespacename,
- * at .NET Framework 4.6(4.6.1, 4.6.2)
- * using static - classes and Methods are written with static.
- * using static directivename.classname,
- * so you can use the Methods directly without instance !.
- * ----------------------------------------------------------------------------
- * using static System.Math,		// mathematic methods - pow(x,y),
- *                                  // power of 2 - 2^10
- *                                  // Visual C++ Runtime Library refactoring:
- *                                  // old 17 Digits on new 768 Digits.
- * ----------------------------------------------------------------------------
- * using static System.Console,	// console:
- *                              // methods, properties and one event
- * ----------------------------------------------------------------------------
- * 
+ *
  * ################ MICROSOFT INFO ############################################
 //----------------------------------------------------------------------------
 // <!-- Microsoft Portability, Globalization, Design automatic active! -------
@@ -1170,69 +442,10 @@ using static Visual.Galaxy.Framework.Core.VGFCoreUrls;
 namespace Visual.Galaxy.Framework.Core
 {
 
-
-    /*
-    #DEFINE MB_ICONSTOP             16      && Critical message
-    #DEFINE MB_ICONQUESTION         32      && Warning query
-    #DEFINE MB_ICONEXCLAMATION      48      && Warning message
-    #DEFINE MB_ICONINFORMATION      64      && Information message
-
-    #DEFINE MB_APPLMODAL            0       && Application modal message box
-    #DEFINE MB_DEFBUTTON1           0       && First button is default
-    #DEFINE MB_DEFBUTTON2           256     && Second button is default
-    #DEFINE MB_DEFBUTTON3           512     && Third button is default
-    #DEFINE MB_SYSTEMMODAL          4096    && System Modal
-
-    MsgBox return values
-    #DEFINE IDOK            1       && OK button pressed
-    #DEFINE IDCANCEL        2       && Cancel button pressed
-    #DEFINE IDABORT         3       && Abort button pressed
-    #DEFINE IDRETRY         4       && Retry button pressed
-    #DEFINE IDIGNORE        5       && Ignore button pressed
-    #DEFINE IDYES           6       && Yes button pressed
-    #DEFINE IDNO            7       && No button pressed
-
+/*
+	
+    Author TIPPLIN Experimental Idea's:
     
-    Data-handling subset from FOXPRO.H
- 
-    Cursor buffering modes
-    #DEFINE DB_BUFOFF               1
-    #DEFINE DB_BUFLOCKRECORD        2
-    #DEFINE DB_BUFOPTRECORD         3        
-    #DEFINE DB_BUFLOCKTABLE         4
-    #DEFINE DB_BUFOPTTABLE          5
-
-    Update types for views/cursors
-    #DEFINE DB_UPDATE               1
-    #DEFINE DB_DELETEINSERT         2
-
-    WHERE clause types for views/cursors
-    #DEFINE DB_KEY                  1
-    #DEFINE DB_KEYANDUPDATABLE      2
-    #DEFINE DB_KEYANDMODIFIED       3
-    #DEFINE DB_KEYANDTIMESTAMP      4
-
-    Remote connection login prompt options
-    #DEFINE DB_PROMPTCOMPLETE       1
-    #DEFINE DB_PROMPTALWAYS         2
-    #DEFINE DB_PROMPTNEVER          3
-
-    Remote transaction modes
-    #DEFINE DB_TRANSAUTO            1
-    #DEFINE DB_TRANSMANUAL          2
-
-    Source Types for CursorGetProp()
-    #DEFINE DB_SRCLOCALVIEW         1
-    #DEFINE DB_SRCREMOTEVIEW        2
-    #DEFINE DB_SRCTABLE             3
-
-
-    #DEFINE WINDOWTYPE_MODELESS   0
-    #DEFINE WINDOWTYPE_MODAL      1
-    #DEFINE WINDOWTYPE_READ       2
-    #DEFINE WINDOWTYPE_READMODAL  3
-
-
     begin declare section ('Application')
     {
 
@@ -1434,9 +647,9 @@ namespace Visual.Galaxy.Framework.Core
     /// <summary>
     /// Class VGFCore for all Basics
     /// </summary>
-    /// <!-- Author TIPPO 🧑 -->
+    /// <!-- Author TIPPLIN 🧑 -->
     /// If class static declare, sealed not allowed!
-    /// <!-- Author TIPPO 🧑 -->
+    /// <!-- Author TIPPLIN 🧑 -->
     /// <remarks>
     /// Globals for the Project-Solution for all others Files.
     /// Bind In, thats all!
@@ -1448,7 +661,7 @@ namespace Visual.Galaxy.Framework.Core
         // /** in Visual C# not allowed ! more then two asterics like /***
 
 
-        // Insert EMOJI's in your Code bzw. Commentblock  🖥 here all emoji's uni color, in Office in Multi Color
+        // Insert EMOJI's in your Code bzw. Commentblock  🖥 here all emoji's uni color, in Office, GitHub page in Multi Color
 
 
         /* insert emoji's with Screen - Tastatur 👩‍🦰 - 💥💫💘💓 right mouse click on taskbar, window Screemtastatur show, right on Taskbar show the sign, click it!
@@ -1487,7 +700,7 @@ namespace Visual.Galaxy.Framework.Core
 
 
         /* 
-         * 🧑 TIPPO-Tip: 👌 🧑 🏴
+         * 🧑 TIPPLIN-Tip: 👌 🧑 🏴
          * emoji only one colour 🧑❗, in Visual Studio Code in colors❗
          * 
          * Globals at Class-Head:
@@ -1656,6 +869,9 @@ namespace Visual.Galaxy.Framework.Core
         /// some constants, but only one define internal const string,
         /// the last one everytime with end semicolon ;
         /// </summary>
+	/// <!-- Author 🧑TIPPLIN 🧑-->
+	///
+	/// <!-- Author 🧑TIPPLIN 🧑-->
         internal const string SETTINGS_STORE_NAME = "vscode-edge-devtools",
                               SETTINGS_DEFAULT_USE_HTTPS = "",
                               SETTINGS_DEFAULT_HOSTNAME = "localhost",
@@ -1663,7 +879,7 @@ namespace Visual.Galaxy.Framework.Core
                               SETTINGS_DEFAULT_URL = "about:blank",
                               SETTINGS_WEBVIEW_NAME = "Elements",
                               SETTINGS_PREF_NAME = "devtools-preferences",
-                              SETTINGS_PREF_DEFAULTS = "";
+                              SETTINGS_PREF_DEFAULTS = ""; // end sign for constants
 
         /// <summary>
         /// Constant String for start Webbrowser Microsoft Edge directly,
@@ -1671,13 +887,13 @@ namespace Visual.Galaxy.Framework.Core
         /// Microsoft-Edge:websitename
         /// by start with Process.Start(MSEdge, website);
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- Author TIPPLIN 🧑 -->
         /// NOTE: direct call is different to Internet Explorer,
         /// or under console the command start:
         /// start is an new console window, without start an new Window while
         /// start Website directly:
         /// start microsoft-edge:http://www.microsoft.com
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- Author TIPPLIN 🧑 -->
         /// <remarks>
         /// In Windows 10 Build 10000, Microsoft Edge Web Browser 
         /// with Chrominum Engine have new place in Directory:
@@ -1694,7 +910,7 @@ namespace Visual.Galaxy.Framework.Core
         /// Make sure, that the String is not higher/longer as the StringBufferSize is !.
         /// StringBuffers have an strong Value, not variable or maximum Capacity.
         /// </summary>
-        /// <!-- 🧑 Author Tipplin 🧑 -->
+        /// <!-- 🧑 Author TIPPLIN 🧑 -->
         /// SizeCharSize is the static chars for an Buffersize:
         /// SizeChar1024 are 1024 chars in maxium StringBuilder and so...
         /// maximum chars is integer value: 2.147.483.647
@@ -1707,7 +923,7 @@ namespace Visual.Galaxy.Framework.Core
         /// StringBuilder standard is 16 chars internal set.
         /// StringBuilder sb = new StringBuilder();
         /// -------------------------------------------------------------------
-        /// <!-- 🧑 Author Tipplin 🧑-->
+        /// <!-- 🧑 Author TIPPLIN 🧑-->
         /// <remarks>
         /// Use only StringBuilder is 3000x faster as string,
         ///  own CACHE.
