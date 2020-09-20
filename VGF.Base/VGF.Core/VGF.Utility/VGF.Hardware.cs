@@ -7,15 +7,15 @@
 //-----------------------------------------------------------------------------
 // Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
 //-----------------------------------------------------------------------------
-// Part				:	VGF.Hardware
+// Part			:	VGF.Hardware
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2018
+// Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2018 by Microsoft Corporation GmbH.
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 // Warning:
 // ----------------------------------------------------------------------------
@@ -32,12 +32,12 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2019 by  Visual Galaxy Framework Community Kernel Developer Team
+// Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
 // All Rights Reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //-----------------------------------------------------------------------------
-// This software is Copyright © 2018 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -57,23 +57,9 @@
 // and entities on the Bureau of Export Administration Entity List or
 // involved with missile technology or nuclear, chemical or biological weapons)
 //-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------
-// Microsoft make Restrictions of Export for following Countries:
-// ============================================================================
-// This software is subject to the U.S. Export Administration Regulations and 
-// other U.S.law, and may not be exported or re-exported to certain countries
-// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
-// or
-// to persons or entities prohibited from receiving U.S.exports
-// (including Denied Parties, Specially Designated Nationals,
-// and entities on the Bureau of Export Administration Entity List or
-// involved with missile technology or nuclear, chemical or biological weapons)
-//-----------------------------------------------------------------------------
-// © 1982 - 2019 Microsoft Corporation.All rights reserved.
-//-----------------------------------------------------------------------------
 
 /*
      For Developers:
