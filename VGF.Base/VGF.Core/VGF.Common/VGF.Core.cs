@@ -127,7 +127,7 @@
  * DON'T CHANGE OR DELETE ANYTHING IN SECTION !!!.
  * ----------------------------------------------------------------------------
  * VFGCore written by
- *                      Christian 🧑 "TIPPO" 🧑 Kurs
+ *                      Christian 🧑 "TIPPLIN" 🧑 Kurs
  *                      Ahornweg 1
  *               - G -  53177 Bonn
  *                      Germany - Allemagne - Duitsland
@@ -429,7 +429,7 @@ using static Visual.Galaxy.Framework.Core.VGFCoreUrls;
  * NAME_SPACE_BEGIN::Visual.Galaxy.Framework.Core
  *-----------------------------------------------------------------------------
  * Use Windows Emoji's in Comment-Blocks, short comments... 
- * Emoji's in the Screen-Keyboard like me 🧑TIPPO🧑 as Developer Face
+ * Emoji's in the Screen-Keyboard like me 🧑TIPPLIN🧑 as Developer Face
  * look below under class VGFCore.
  *-----------------------------------------------------------------------------
  * Members:
@@ -668,7 +668,7 @@ namespace Visual.Galaxy.Framework.Core
          * emoji's show with click smile face, choice an emoji and click it then he insert in document or here in commentblock. 😜
          */
 
-        /*** <!-- ⚠ **WARNING** --
+        /*** <!-- ⚡ **WARNING** --
         */
 
         /*** <!-- 👉 **NOTE** --
@@ -680,7 +680,7 @@ namespace Visual.Galaxy.Framework.Core
         /*** <!-- ❗ **ATTENTION** --
          */
 
-        /*** <!-- ❔ **QUESTION** --
+        /*** <!-- 🧶 **QUESTION** --
          */
 
         /*** <!-- 👁‍🗨 **FOR YOUR EYES ONLY ! --
@@ -866,11 +866,12 @@ namespace Visual.Galaxy.Framework.Core
          */
 
         /// <summary>
-        /// some constants, but only one define internal const string,
-        /// the last one everytime with end semicolon ;
+        /// Settings Constants for Web.config
+        /// 
         /// </summary>
 	/// <!-- Author 🧑TIPPLIN 🧑-->
-	///
+	/// some constants, but only one define internal const string,
+	/// the last one everytime with end semicolon ;
 	/// <!-- Author 🧑TIPPLIN 🧑-->
         internal const string SETTINGS_STORE_NAME = "vscode-edge-devtools",
                               SETTINGS_DEFAULT_USE_HTTPS = "",
