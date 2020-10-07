@@ -13,7 +13,7 @@ Application Framework for great Applications
 - 🧑 Search for new Developers for my Project.
 - 🧑 Nice to have you ! at begin !
 ----
-- 🧑 Please this Project is in construction, so please contact to me:
+- 🧑 Please this Project is under construction, so please contact to me:
 - 🧑 kurschristian@gmail.com
 ----
 #### Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
