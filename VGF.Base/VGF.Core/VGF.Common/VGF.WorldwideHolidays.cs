@@ -11,12 +11,13 @@
  * ----------------------------------------------------------------------------
  * Base Class       :	
  * ----------------------------------------------------------------------------
- * Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
+ * Copyright © 2017 - 2020 by  
+ * Visual Galaxy Framework Community Kernel Developer Team
  * ----------------------------------------------------------------------------
  * Project-Maintainer and
- * Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
+ * Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
  * ----------------------------------------------------------------------------
- * Portions Copyright © 2020 by Microsoft Corporation GmbH.
+ * Portions Copyright © 2021 by Microsoft Corporation GmbH.
  * ----------------------------------------------------------------------------
  * 
  * ============================================================================
@@ -62,25 +63,23 @@
  * and entities on the Bureau of Export Administration Entity List or
  * involved with missile technology or nuclear, chemical or biological weapons)
  * ----------------------------------------------------------------------------
- * © 1982 - 2019 Microsoft Corporation.All rights reserved.
+ * © 1982 - 2021 Microsoft Corporation.All rights reserved.
  * ----------------------------------------------------------------------------
  * Same sourcecode by Microsoft, so we marked with Copyright !.
- * © 1982 - 2019 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
+ * © 1982 - 2021 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
  * Copyright © and Tradewark by Microsoft Windows, Windows Logo, Visual Studio
  * ----------------------------------------------------------------------------
  * DON'T CHANGE OR DELETE ANYTHING IN SECTION !!!.
  * ----------------------------------------------------------------------------
  * VFGCore written by
- *                      Christian "TIPPO" Kurs
- *                      Nettweg 1
- *                      - G -  53498 Bad Breisig
+ *                      Christian "TIPPLIN" Kurs
+ *                      Ahornweg 1
+ *                      - G -  53177 Bonn
  *                      Germany - Allemagne - Duitsland
  * ----------------------------------------------------------------------------
- * voice                02633 - 470736  
- * international phone  00-49-2633-470736
  * Skype
  * E-mail               kurschristian@gmail.de
- * Community Website    http://www.vgfc.org/community/tippo
+ * Community Website   
  * 
  * -----------------------------------------------------------------------------
  * This software is supplied as is. 
@@ -96,14 +95,14 @@
  * NO fee for NON-Commercial use our Community Website:
  * ----------------------------------------------------------------------------
  * 
- * http://www.vgfc.org/community/project/vgf/
+ * 
  * 
  * ----------------------------------------------------------------------------
  * Honest Business Users, to use our compiled Versions, 
  * please call us to send you our Business Licenses.
  * or 
  * our Business Website:
- * www.vgf.com/business/vgf/License
+ * 
  * 
  * 
  *############################################################################# 
@@ -111,7 +110,7 @@
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2019 by Christian 'TIPPO' Kurs - Germany
+ * Copyright © 2017 - 2021 by Christian 'TIPPLIN' Kurs - Germany
  * 
  ******************************************************************************
  * English:
