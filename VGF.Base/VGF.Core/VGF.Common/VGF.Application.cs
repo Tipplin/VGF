@@ -5,7 +5,7 @@
 //#############################################################################
 //
 //-----------------------------------------------------------------------------
-// Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
+// Programmer       :	Project-Founder and Main-Author Christian "Tipplin"Kurs
 //-----------------------------------------------------------------------------
 // Part				:	VGF.Application
 //-----------------------------------------------------------------------------
@@ -14,8 +14,8 @@
 // Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
-// Portions Copyright © 2020 by Microsoft Corporation GmbH.
+// by Head-Author: Christian "Tipplin" Kurs - Visual C# Developer
+// Portions Copyright © 2017 - 2021 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 //
 // For same secured Assemblies set inside internal for class, Methods...
@@ -41,13 +41,14 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2020
+// Copyright © 2017 - 2021
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 // all rights reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //
-// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2017 - 2021 by 
+// VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -66,7 +67,7 @@
 // and entities on the Bureau of Export Administration Entity List or
 //involved with missile technology or nuclear, chemical or biological weapons).
 //
-// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+// © 1982 - 2021 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
@@ -77,11 +78,11 @@
 //				  -G -  53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
-// 				voice               :
-//					international phone :	
+//					international phone :	0049 1734593440
 //					Skype               :
 //					e-mail              : kurschristian@gmail.com
 //                  e-mail              : christian.kurs@gmx.net
+//                  e-mail              : christian.kurs@web.de
 //					community Website   :	
 //                  own website         :
 //										
@@ -107,7 +108,7 @@
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2020 by Christian 'Tipplin' Kurs - Germany
+ * Copyright © 2017 - 2021 by Christian 'Tipplin' Kurs - Germany
  * 
  ******************************************************************************
  * 
@@ -136,7 +137,7 @@
  * ----------------------------------------------------------------------------
  * 
  * German:
- * 
+ * ============================================================================
  * Personen, die eine Kopie dieser Software und der dazugehörigen 
  * Dokumentationsdateien (die "Software") erhalten, 
  * wird hiermit die kostenlose Erlaubnis erteilt.
@@ -166,6 +167,7 @@
  * ----------------------------------------------------------------------------
  *
  * Frensh:
+ * ============================================================================
  * Par la présente, une autorisation est accordée gratuitement à toute personne 
  * obtenant une copie de ce logiciel et des fichiers de documentation associée 
  * (le "Logiciel"),
@@ -194,7 +196,7 @@
  * ----------------------------------------------------------------------------
  * 
  * Spanish:
- * 
+ * ============================================================================
  * Por la presente se otorga el permiso, sin cargo, a cualquier persona que 
  * obtenga una copia de este software y los archivos de 
  * documentación asociados (el "Software"), para operar en el Software sin 
@@ -220,7 +222,7 @@
  * -----------------------------------------------------------------------------
  * 
  * Italian:
- * 
+ * =============================================================================
  * L'autorizzazione è concessa, a titolo gratuito, a chiunque ottenga una copia 
  * di questo software e dei relativi file di documentazione (il "Software"),
  * trattare il Software senza limitazioni, 
@@ -246,7 +248,7 @@
 
 //-----------------------------------------------------------------------------
 // All System Directories about .NET Framework 4.8
-//
+// ! NOTE ! Migration to 5.0 is in Progress !
 //
 //-----------------------------------------------------------------------------
 using System;
@@ -328,12 +330,16 @@ namespace Visual.Galaxy.Framework.Application
     /// </remarks>
     public static class VGFApplication
     {
-        // Avantage for Global Here in the Class Head
-
+        //
+        // Avantage for all Methods and others Classes
+        // Set here the GLOBALS in the Class Head
+        // Set the sign @ for unicode UTF16 - CLR internal UTF16 in/out
+        // so no double slashes !
+        
         #region ### VGFApplication - Constants ###
         
         /// <summary>
-        /// constant for Autostart Registry Key with sign @ for unicode UTF16 - CLR internal UTF16 in/out
+        /// constant for Autostart Registry Key 
         /// </summary>
         internal const string VGF_AUTOSTART_REGISTRY_KEY = @"Software\Microsoft\Windows\CurrentVersion\Run";
 
@@ -354,6 +360,7 @@ namespace Visual.Galaxy.Framework.Application
         #region ### Lambda Operator => for Enviroment Infos, for short names ###
 
         //---------------------------------------------------------------------
+        // Globals
         // for use the shortnames in Project set this directive
         // -------------namespace in project other file-----Class
         // using static Visual.Galaxy.Framework.Application.VGFApplication;
