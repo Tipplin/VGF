@@ -2,15 +2,15 @@
 // Project	    : Visual.Galaxy.Framework
 //
 //-----------------------------------------------------------------------------
-// Programmer	: Christian "TIPPO" Kurs - 
+// Programmer	: Christian "Tipplin" Kurs - 
 //				: Visual .NET C# / C++ Developer
 //              : Project-Founder and Maintainer
 //-----------------------------------------------------------------------------
 // Part         : VGF.Assembly
 //              :
 //-----------------------------------------------------------------------------
-// Copyrights © 2020 by Christian "TIPPO" Kurs
-// Portions of Copyrights © 2020 by Microsoft Corporation 
+// Copyrights © 2017 - 2021 by Christian "Tipplin" Kurs
+// Portions of Copyrights © 1982 - 2021 by Microsoft Corporation 
 //-----------------------------------------------------------------------------
 // Main-Author: Christian 'Tipplin' Kurs
 //-----------------------------------------------------------------------------
