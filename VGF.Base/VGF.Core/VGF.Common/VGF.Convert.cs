@@ -5,17 +5,18 @@
 //#############################################################################
 //
 //-----------------------------------------------------------------------------
-// Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
+// Programmer       :	Project-Founder and Main-Author 
+//                  :    Christian "Tipplin" Kurs
 //-----------------------------------------------------------------------------
 // Part			:	VGF.Convert
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2020
+// Copyright © 2017 - 2021
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
-// Portions Copyright © 2020 by Microsoft Corporation GmbH.
+// by Head-Author: Christian "Tipplin" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2021 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 //
 // ============================================================================
@@ -34,13 +35,14 @@
 // the VGF Libraries for further details.
 //
 // Authored by 
-// Copyright © 2020
+// Copyright © 2017 - 2021
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 // all rights reserved.
 // May be redistributed for free,
 // but may not be sold without the author's explicit permission
 //
-// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// This software is Copyright © 2017 - 2021 by 
+// VGF-Technologies at VGF-KernelTeam
 // You may only use this software if you are an authorized licensee
 // of an VGF developer tools product.
 //
@@ -59,7 +61,7 @@
 // and entities on the Bureau of Export Administration Entity List or
 //involved with missile technology or nuclear, chemical or biological weapons).
 //
-// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+// © 1982 - 2021 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
@@ -70,8 +72,8 @@
 //				     -G - 53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
+//                       mobile              :    0049 1734593440
 // 				     voice               :
-//					international phone :
 //					Skype               :
 //					e-mail			:	kurschristian@gmail.com
 //					community Website	:
@@ -98,7 +100,7 @@
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2020 by Christian 'TIPPLIN' Kurs - Germany
+ * Copyright © 2017 - 2021 by Christian 'Tipplin' Kurs - Germany
  * 
  ******************************************************************************
  * 
