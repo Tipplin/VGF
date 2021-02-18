@@ -11,7 +11,7 @@
 //-----------------------------------------------------------------------------
 // Base Class       :	
 //-----------------------------------------------------------------------------
-// Copyright © 2020
+// Copyright © 2017 - 2021
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
 // by Head-Author: Christian "Tipplin" Kurs - Visual C# Developer
@@ -78,7 +78,7 @@
 //				  -G -  53177 Bonn
 //						Germany - Allemagne - Duitsland
 //-----------------------------------------------------------------------------
-//					international phone :	0049 1734593440
+//					mobile              :	0049 1734593440
 //					Skype               :
 //					e-mail              : kurschristian@gmail.com
 //                  e-mail              : christian.kurs@gmx.net
@@ -330,7 +330,7 @@ namespace Visual.Galaxy.Framework.Application
     /// </remarks>
     public static class VGFApplication
     {
-        //
+        // This is allow in Visual C# Class
         // Avantage for all Methods and others Classes
         // Set here the GLOBALS in the Class Head
         // Set the sign @ for unicode UTF16 - CLR internal UTF16 in/out
