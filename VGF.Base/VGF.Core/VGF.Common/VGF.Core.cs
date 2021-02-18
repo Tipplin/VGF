@@ -6,7 +6,7 @@
  * 
  * ----------------------------------------------------------------------------
  * Programmer       :	Project-Founder and 
- *                  :   Main-Author Christian 🧑 "TIPPLIN" 🧑 Kurs
+ *                  :   Main-Author Christian 🧑 "Tipplin" 🧑 Kurs
  *                  :
  *                  :
  *                  :
@@ -33,20 +33,18 @@
  * ;---------------------------------------------------------------------------
  * ; 0.0            :   initial startup
  * ;---------------------------------------------------------------------------
- * ; 0.1            :   initial classes in Visual Galaxy Framework.
- * ;---------------------------------------------------------------------------
- * ; 0.2            :
- * ;---------------------------------------------------------------------------
+ * ;
  * ;
  * ;---------------------------------------------------------------------------
  * ;
  * ;
  * ----------------------------------------------------------------------------
- * Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
+ * Copyright © 2017 - 2021 by  
+ * Visual Galaxy Framework Community Kernel Developer Team
  * ----------------------------------------------------------------------------
- * by Head-Author: Christian 🧑 "TIPPLIN" 🧑 Kurs - 👀 Visual C# Developer - 👀
+ * by Head-Author: Christian 🧑 "Tipplin" 🧑 Kurs - 👀 Visual C# Developer 👀
  * ----------------------------------------------------------------------------
- * Portions Copyright © 2020 by Microsoft Corporation GmbH.
+ * Portions Copyright © 2017 - 2021 by Microsoft Corporation GmbH.
  * ----------------------------------------------------------------------------
  * 
  * We are currently looking for collaborators. 
@@ -61,7 +59,7 @@
  * ============================================================================
  * ============================================================================
  * 
- * Developer Tippo 🧑 - 🚧 WARNING 🚧 - :
+ * Developer Tipplin 🧑 - 🚧 WARNING 🚧 - :
  * ----------------------------------------------------------------------------
  * ----------------------------------------------------------------------------
  * Tippo Tip:
@@ -92,14 +90,15 @@
  * Please see the documentation supplied with 
  * the VGF Libraries for further details.
  * 
- * Authored by Copyright © 2020 by 
+ * Authored by Copyright © 2017 - 2021 by 
  * Visual Galaxy Framework Community Kernel Developer Team.
  * All rights reserved.
  * 
  * May be redistributed for free, but may not be sold without 
  * the author's explicit permission.
  * 
- * This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+ * This software is Copyright © 2017 - 2020 by 
+ * VGF-Technologies at VGF-KernelTeam
  * You may only use this software if you are an 
  * authorized licensee of an VGF developer tools product.
  * 
@@ -118,10 +117,10 @@
  * and entities on the Bureau of Export Administration Entity List or
  * involved with missile technology or nuclear, chemical or biological weapons)
  * ----------------------------------------------------------------------------
- * © 1982 - 2020 Microsoft Corporation.All rights reserved.
+ * © 1982 - 2021 Microsoft Corporation.All rights reserved.
  * ----------------------------------------------------------------------------
  * Same sourcecode by Microsoft, so we marked with Copyright !.
- * © 1982 - 2020 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
+ * © 1982 - 2021 - Copyrights by Microsoft: Images, Icons, Signs, Gadgets, 
  * Copyright © and Tradewark by Microsoft Windows, Windows Logo, Visual Studio
  * ----------------------------------------------------------------------------
  * DON'T CHANGE OR DELETE ANYTHING IN SECTION !!!.
@@ -132,8 +131,8 @@
  *               - G -  53177 Bonn
  *                      Germany - Allemagne - Duitsland
  * ----------------------------------------------------------------------------
+ * mobile		: 0049 1734593440
  * voice		:  
- * international phone	:
  * Skype		:
  * E-mail               : kurschristian@gmail.de
  * Community Website    :
@@ -167,7 +166,7 @@
 
 /*********************** Developer Disclaimer *********************************
  *
- * Copyright © 2020 by Christian 🧑'TIPPLIN'🧑 Kurs - Germany
+ * Copyright © 2017 - 2021 by Christian 🧑'Tipplin'🧑 Kurs - Germany
  * 
  ******************************************************************************
  * English:
@@ -406,30 +405,12 @@ using static Visual.Galaxy.Framework.Core.VGFCoreUrls;
 * make global instancevariables.
 *
 * -----------------------------------------------------------------------------
-* Visual Studio 2019 - Visual C# 8.0 - .NET Framework 4.8.03752 - NEW's:
-* Windows 10 May Update 2019 - OS-Build 18362 is fix, but comes Revisions:
-* at Time Revision .86 after cleanups/Bugfixes to end of May - Final -
-* some new operator's, patterns, switch pattern,
-* so I' pass on some Methods...
-* -----------------------------------------------------------------------------
-* Have a space in codeline/comment, Visual Studio delete automatic in realtime.
-* Yellow Lamp on left side is the Compiler most show by Errors.
-* run 'under the Hood', no Error in Codeline, he precompile the line, 
-* foreward compilation is a better backend compile.
-* Live Share is realtime implementation.
-* Visual Studio 2019 to GitHub Projectside in Team Explorer Connected,
-* at buttom right side <Projectname click open the Windows Team Explorer
-* Bell sign at buttom right side is the new Messenger for updates and more...
-* if a new on MS Server the Bell change the color on green, no is gray.
-* Last Update was Visual Studio 2019 Version 16.0.3 Revision update 3
-*-----------------------------------------------------------------------------/
-
-
+*/
 /*-----------------------------------------------------------------------------
  * NAME_SPACE_BEGIN::Visual.Galaxy.Framework.Core
  *-----------------------------------------------------------------------------
  * Use Windows Emoji's in Comment-Blocks, short comments... 
- * Emoji's in the Screen-Keyboard like me 🧑TIPPLIN🧑 as Developer Face
+ * Emoji's in the Screen-Keyboard like me 🧑Tipplin🧑 as Developer Face
  * look below under class VGFCore.
  *-----------------------------------------------------------------------------
  * Members:
@@ -441,209 +422,6 @@ using static Visual.Galaxy.Framework.Core.VGFCoreUrls;
 */
 namespace Visual.Galaxy.Framework.Core
 {
-
-/*
-	
-    Author TIPPLIN Experimental Idea's:
-    
-    begin declare section ('Application')
-    {
-
-
-
-    }
-
-
-    begin declare section ('Framework')
-    {
-        if(47)
-        {
-
-        }
-        // Windows 10 Fall Creators Update 2017
-        elif(471) 
-        {
-
-        }
-        // Windows 10 Spring/April Creators Update 2018
-        elif(472)
-        {
-
-        }
-        // Windows 10 October Update 2018
-        elif(473)
-        {
-
-        }
-        // Windows 10 May Update 2019
-        elif(474)
-        {
-        
-        }
-        // Windows 10 October Update 2019
-        elif(475)
-        {
-        
-        }
-        // Windows 10 March/Spring Update 2020
-        elif(476)
-        {
-        
-        }
-        // Windows 10 September/October Update 2020
-        elif(477)
-        {
-        
-        }
-
-    }
-
-
-    begin declare section ('Network')
-    {
-
-
-
-    }
-
-    begin declare section ('Server')
-    {
-
-
-
-    }
-
-    begin declare section ('Computer')
-    {
-
-
-
-    }
-
-    begin declare section ('Operation System')
-    {
-        if(15700) // Windows 10 Creators Update 2017
-        {
-
-        }
-        elif(16299) // Windows 10 Fall Creators Update 2017
-        {
-
-        }
-        elif(17134) // Windows 10 Spring/April Creators Update 2018
-        {
-
-        }
-        elif(17763) // Windows 10 October Update 2018
-        {
-
-        }
-        elif(18862) // Windows 10 May Update 2019
-        {
-
-        }
-        elif(18000) // Windows 10 October Update 2019
-        {
-
-        }
-        elif(19000) // Windows 10 May Update 2020
-        {
-
-        }
-        elif(19000) // Windows 10 October Update 2020
-        {
-
-        }
-        elif(20000) // Windows 10 March Update 2021
-        {
-
-        }
-        elif(20000) // Windows 10 October Update 2021
-        {
-
-        }
-
-
-    }
-
-    begin declare section ('Processor')
-    {
-
-
-
-    }
-
-
-
-    */
-
-
-
-
-
-
-
-    /* first Alternate:
-     * 
-     * set NamespaceBundle with Namespace inside for use in this Project.
-     * using NamespaceBundle.StartUp3;
-     * 
-     * using have avantage to namespace, so you must write the NamespaceBundle here
-     * NamespaceBundle miscellous namespaces
-     * 
-     * namespace Namespace_Bundle_name
-     * {
-     * 
-     *      - namespace 1
-     *      namespace StartUp1 { };
-     *      - namespace 2
-     *      namespace StartUp2 { };
-     *      - namespace 3
-     *      namespace StartUp3 { };
-     *      
-     * };
-     * 
-     */
-
-    /* 
-     * Program Code returns by end
-     * 
-     * standard:
-     * static void main(string[] args) {...}
-     * change to: (in Visual C# allowed)
-     * static int main(string[] args) {...}
-     * 0 - Program end successfully
-     * 1 - Program end with failure
-     * (Use Windows Debugger, start app.exe show you all dependencies by call
-     * by end, Windows automatic call TerminatProcess()...)
-     * uncheck by Tipplin
-     * 2 - File not found
-     * 3 - Search way not found
-     * 4 - to many files open
-     * 5 - Fileacess denied
-     * 6 - Handle not defined
-     * 12 - no guilty access code
-     * 63 - Programm Description
-     * 80 - File is exist
-     * 255 - unknown Error
-     * 
-     * Help via Errorlevel.bat
-     * 
-     * Wenn ein Programm in Windows ausgeführt wird, wird jeder Wert, 
-     * der von der Funktion Main zurückgegeben wurde, in einer Umgebungsvariable gespeichert.
-     * 
-     * Diese Umgebungsvariable kann abgerufen werden, 
-     * indem ERRORLEVEL aus einer Batchdatei oder $LastExitCode aus PowerShell verwendet wird.
-     * 
-     * When a program runs in Windows, any value returned by the Main function 
-     * is stored in an environment variable.This environment variable can be obtained by 
-     * using ERRORLEVEL from a batch file or $ LastExitCode from PowerShell.
-     */
-
-    
-
-
-
     /// <summary>
     /// Class VGFCore for all Basics
     /// </summary>
@@ -700,7 +478,7 @@ namespace Visual.Galaxy.Framework.Core
 
 
         /* 
-         * 🧑 TIPPLIN-Tip: 👌 🧑 🏴
+         * 🧑 Tipplin-Tip: 👌 🧑 🏴
          * emoji only one colour 🧑❗, in Visual Studio Code in colors❗
          * 
          * Globals at Class-Head:
@@ -720,159 +498,15 @@ namespace Visual.Galaxy.Framework.Core
          */
         #region ### Instances, instance for structs, global variables here ###
 
-        /*---------------------------------------------------------------------
-         * Developer Tipplin found by Microsoft:
-         * arts of Buffers, like C++ Buffers
-         * secured string,
-         * --------------------------------------------------------------------
-         * Class SecureString
-         * For TAN, Password, PIN, LogIn Screen.
-         * SecureString encrypt directly by input string with EEC, AES
-         * Microsoft Cryptography API in .NET Framework.
-         * If crypt, any person change device harddrive 
-         * the String remains crypt. 
-         * Crypted string hold in Memory only in microseconds, 
-         * can't be readable, have inside an Interface IDisposable, 
-         * the string is not moved to memory, most make the GC.
-         * GC = Garbage Collector.
-         * --------------------------------------------------------------------
-         * Test String and StringBuilder following results:
-         * --------------------------------------------------------------------
-         * String are no changes, by any change in Memory an new object create.
-         * String written with Loop code and Text by 50000 changes so any time 
-         * string must allocate 50000 objects everytime new.
-         * Test run by this little code 400 ms.
-         * --------------------------------------------------------------------
-         * StringBuilder is faster, high Performance, flexable, dynamic.
-         * StringBuilder are dynamic Objects and 
-         * can be change without allocation in Memory.
-         * Test StringBuilder same Loop code and Text,
-         * Test run by this little code 1 ms.
-         * --------------------------------------------------------------------
-         * StringBuilder have own Cache , StringBuilderCache.
-         * Everytime set MaxCapacity, is better!, no cuts, no OutRangeException
-         * make message to User, the text or any other is too long!.
-         * By StringBuilder is the highest Value integer value 2147483647,
-         * but set maximal value 2147483647 with minus -1, no out of range.
-         * <code
-         *   StringBuilder sb = new StringBuilder(255, 2147483646);
-         *   if Text or other higher as 255 he expand to 
-         *   highest Value automatic.
-         * NOTE: 
-         *   Text or other by maximal value here 2048 higher he cut's.
-         *   StringBuilder sb = new StringBuilder(255, 2048);
-         * </code
-         * --------------------------------------------------------------------
-         * In intellisense window not show
-         * 
-         * <code</code
-         * 
-         * developer info, description
-         * <dev</dev
-         * 
-         * 
-         * --------------------------------------------------------------------
-         * <code
-         * StringBuilder bu = new StringBuilder("Friday");
-         * 
-         * // index begins with 0 (here is F) - index 3 == d
-         * char c = bu[3];
-         * 
-         * // return result = d
-         * return c;
-         * 
-         * </code
-         * --------------------------------------------------------------------
-         * Developer want show you an sample code, can set in Comment Block
-         * like this:
-         * XML Comment Block
-         * <code
-         * 
-         * </code
-         *---------------------------------------------------------------------
-         * The best for C/C++ Buffers:
-         * var stringBuilder = new StringBuilder(260);
-         * if (Win32Native.GetSystemDirectory(stringBuilder, 260) == 0)
-         * {
-         * 
-         * }
-         * 
-         * string text = stringBuilder.ToString();
-         * return text;
-         *---------------------------------------------------------------------
-         * The best for C/C++ Buffers:
-         * var stringBuilder = new StringBuilder(256);
-         * int bufferSize = 256;
-         * 
-         * -----------------------------------------------sizeof bufferSize
-         * if (Win32Native.GetComputerName(stringBuilder, ref bufferSize) == 0)
-         * {
-         * 
-         * }
-         * 
-         * return stringBuilder.ToString();
-         * 
-         *----------------------------------------------------------------------
-         * 
-         * public static string StackTrace
-         * {
-         *      get
-         *      {
-         *          new EnvironmentPermission(PermissionState.Unrestricted).Demand();
-         *          return GetStackTrace(null, needFileInfo: true);
-         *      }
-         * }
-         * 
-         *  static string GetStackTrace(Exception e, bool needFileInfo)
-         * {
-         *      // Class Stacktrace from System.Diagnostics
-         *      StackTrace stackTrace = (e != null) ? new StackTrace(e, needFileInfo) : new StackTrace(needFileInfo);
-         *      return stackTrace.ToString(System.Diagnostics.StackTrace.TraceFormat.Normal);
-         * }
-         * 
-         * --------------------------------------------------------------------
-         * write own Debugger
-         * System.Diagnostics.Debugger
-         * 
-         * --------------------------------------------------------------------
-         * Visual Studio 2019 Version 16.5.0 and Visual C# 8.0 and 
-         * .NET Framework 4.8.03752 (cumulative update with 18362.113)
-         * 
-         * --------------------------------------------------------------------
-         * datatype block string, bool, int, long
-         * string
-         * string
-         * string
-         * string
-         * marked string block and make it simple goto 
-         * all removes with var < = "";
-         * the compile see what datatype you mean.
-         * 
-         * --------------------------------------------------------------------
-         * New in Visual C# 8.0
-         * Enumerator with 1 char allowed - string laster version - 
-         * Typescript with string
-         * 
-         * enum
-         * {
-         *      euro = '€',
-         *      dollar = '$'
-         * 
-         * }
-         * 
-         *  string EURO = Currencies.euro.ToString();
-         * 
-         * --------------------------------------------------------------------
-         */
+       
 
         /// <summary>
         /// Settings Constants for Web.config
-        /// 
         /// </summary>
-	/// <!-- Author 🧑TIPPLIN 🧑-->
+	/// <!-- Author 🧑TIPPLIN🧑-->
 	/// some constants, but only one define internal const string,
 	/// the last one everytime with end semicolon ;
-	/// <!-- Author 🧑TIPPLIN 🧑-->
+	/// <!-- Author 🧑TIPPLIN🧑-->
         internal const string SETTINGS_STORE_NAME = "vscode-edge-devtools",
                               SETTINGS_DEFAULT_USE_HTTPS = "",
                               SETTINGS_DEFAULT_HOSTNAME = "localhost",
@@ -888,13 +522,13 @@ namespace Visual.Galaxy.Framework.Core
         /// Microsoft-Edge:websitename
         /// by start with Process.Start(MSEdge, website);
         /// </summary>
-        /// <!-- Author TIPPLIN 🧑 -->
+        /// <!-- Author 🧑TIPPLIN🧑 -->
         /// NOTE: direct call is different to Internet Explorer,
         /// or under console the command start:
         /// start is an new console window, without start an new Window while
         /// start Website directly:
         /// start microsoft-edge:http://www.microsoft.com
-        /// <!-- Author TIPPLIN 🧑 -->
+        /// <!-- Author 🧑TIPPLIN🧑 -->
         /// <remarks>
         /// In Windows 10 Build 10000, Microsoft Edge Web Browser 
         /// with Chrominum Engine have new place in Directory:
@@ -911,7 +545,7 @@ namespace Visual.Galaxy.Framework.Core
         /// Make sure, that the String is not higher/longer as the StringBufferSize is !.
         /// StringBuffers have an strong Value, not variable or maximum Capacity.
         /// </summary>
-        /// <!-- 🧑 Author TIPPLIN 🧑 -->
+        /// <!-- 🧑Author TIPPLIN🧑 -->
         /// SizeCharSize is the static chars for an Buffersize:
         /// SizeChar1024 are 1024 chars in maxium StringBuilder and so...
         /// maximum chars is integer value: 2.147.483.647
@@ -924,7 +558,7 @@ namespace Visual.Galaxy.Framework.Core
         /// StringBuilder standard is 16 chars internal set.
         /// StringBuilder sb = new StringBuilder();
         /// -------------------------------------------------------------------
-        /// <!-- 🧑 Author TIPPLIN 🧑-->
+        /// <!-- 🧑Author TIPPLIN🧑-->
         /// <remarks>
         /// Use only StringBuilder is 3000x faster as string,
         ///  own CACHE.
@@ -972,9 +606,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Use the BufferBaseSize for Buffers - standard always 255 -
         /// </summary>
-        /// <!-- 🧑 Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// can use for all Buffers you need.
-        /// <!-- 🧑 Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// Use inside StringBuilder with baseValue, 
         /// is the better way for Buffers and C++ Buffers.
@@ -997,9 +631,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Use the BufferBaseSizeMax for Buffers - maxium 65535
         /// </summary>
-        /// <!-- Author Tippo -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// can use for all Buffers you need.
-        /// <!-- Author Tippo -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// Use inside StringBuilder with baseValue, 
         /// is the better way for Buffers and C++ Buffers.
@@ -1021,9 +655,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Set capacity for Buffers, like C++ here with 255 
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// But is the given buffer capacity greather as 255, StringBuilder he cut him!
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         internal static int capacity = 255;
         /// <summary>
         /// Class StringBuilder are 3000x faster as string.
@@ -1038,85 +672,6 @@ namespace Visual.Galaxy.Framework.Core
 
 
         /*
-        * -----------------------------------------------------------------------------
-        * -----------------------------------------------------------------------------
-        * Set instance for StringBuilder with instancevariable sb,
-        * so is global in this File.
-        * -----------------------------------------------------------------------------
-        * -----------------------------------------------------------------------------
-        * StringBuilder(string, Int32)
-        * add string/chars
-        * -----------------------------------------------------------------------------
-        * Buffer:
-        * int capacity = 255;
-        * StringBuilder sb = new StringBuilder(capacity);
-        * -----------------------------------------------------------------------------
-        * -----------------------------------------------------------------------------
-        * string initialString = "Initial String";
-        * StringBuilder sb = new StringBuilder(initialString);
-        * 
-        * -----------------------------------------------------------------------------
-        * -----------------------------------------------------------------------------
-        * The following example demonstrates how to call the StringBuilder 
-        * constructor with a specified capacity and maximum capacity.
-        * 
-        * int capacity = 255;
-        * int maxCapacity = 1024;
-        * StringBuilder stringBuilder = new StringBuilder(capacity, maxCapacity);
-        * ------------------------------------------------------------------------------
-        * ------------------------------------------------------------------------------
-        * public StringBuilder(string value, int startIndex, int length, int capacity);
-        * ------------------------------------------------------------------------------
-        * Parameter
-        * Wert
-        * ------------------------------------------------------------------------------
-        * String:
-        * Die Zeichenfolge, die die Teilzeichenfolge enthält, die zum Initialisieren des 
-        * Werts dieser Instanz verwendet wird.Wenn valueist nullder neue 
-        * String wird die leere Zeichenkette enthalten (das heißt, es enthält Leer).
-        * String sind unveränderlichm das bei jeder Ändernung im Speicher ein neues
-        * Objekt angelegt wird. Unabhängig davon, ob sich die Länge der Zeichenkette 
-        * ändert.
-        * ------------------------------------------------------------------------------
-        * Test Schleife String 50000 durchläufe Änderungen an einer Zeichenkette,
-        * gleich immer neue Objekte erzeugt.
-        * Durchlaufzeit: 400 ms.
-        * 
-        * StringBuilder:
-        * Einsatz gleiche Schleife, gleicher Text. Objekte sind hier dynamisch, können
-        * verändert werden, ohne dass allokieren von Speicher erforderlich ist.
-        * Durchlaufzeit: 1 ms.
-        * Anmerkung StringBuilder hat eigenen Cache - StringBuilderCache
-        * ------------------------------------------------------------------------------
-        * StringBuilder vorher Kapazitäten festlegen !:
-        * MaxCapacity = <value; // höchste ist integer wert -1, 
-        * so läuft man nicht gefahr OutRangeException, mit Prüfung.
-        * 
-        * ------------------------------------------------------------------------------
-        * Startindex - Int32
-        * Die Position, valuean der der Teilstring beginnt.
-        * Länge - Int32
-        * Die Anzahl der Zeichen in der Teilzeichenfolge.
-        * 
-        * Kapazität - Int32
-        * Die empfohlene Startgröße des StringBuilder.
-        * 
-        * Ausnahmen
-        * ArgumentOutOfRangeException
-        * capacity ist kleiner als null.
-        * -oder-
-        * startIndexPlus lengthist keine Position innerhalb value.
-        * Der capacityParameter definiert die maximale Anzahl von Zeichen, 
-        * die in dem von der aktuellen Instanz zugewiesenen Speicher gespeichert werden können. 
-        * Sein Wert wird der Capacity- Eigenschaft zugewiesen.
-        * Wenn die Anzahl der Zeichen, die in der aktuellen Instanz gespeichert werden sollen, 
-        * diesen capacityWert überschreitet , 
-        * weist das StringBuilder- Objekt zusätzlichen Speicher zum Speichern zu.
-        * Wenn capacityes Null ist, wird die implementierungsspezifische Standardkapazität verwendet.        
-        */
-
-
-        /*
          * See section StringBuilder with different maximum values. 
          * Sets instances here in ClassHead, thats allowed in Visual C#
          * Allowed: enumerators, struct's, instances, constants, file paths,
@@ -1127,9 +682,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// StringBuilder expanded
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin 🧑 -->
         /// String are slower as StringBuilder is very fast.
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin 🧑 -->
         /// <remarks>
         /// StringBuilder(minimum integer, maximum integer);
         /// he expand automatic to highest capacity !.
@@ -1154,13 +709,13 @@ namespace Visual.Galaxy.Framework.Core
         /// Class Stack
         /// Quicksort, Bubblesort...
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin 🧑 -->
         /// For no  conflicts, I have set other instancevariables!.
         /// If conflict the compiler make message, before at left side yellow lamp.
         /// Visual C# Compiler runs "under the Hood", check syntax and semantics, make helps!
         /// if codeline ok!, he precompile the codeline directly, faster backend compile!.
         /// If search infos about Keywords and others, push F1 - goes Online to Website.
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin 🧑 -->
         /// <remarks>
         /// NOW ! 
         /// but don't forget 'private' is degree of protection, no access!
@@ -1200,7 +755,7 @@ namespace Visual.Galaxy.Framework.Core
 
 
         /*
-         * © Author Christian 🧑 Tippo 🧑 Kurs
+         * © 🧑Author Tipplin🧑 
          * 
          * Tipplin 🐻 👌Special Constants here  👌
          * 
@@ -1227,34 +782,34 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Constant string with Pathname and Folder for all Trace Log Files
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// @ sign for unicode sign, so only one \ backward slash in Pathname !
         /// / forward slash, see Javascript, HTML, - by Audiocontrol, Videocontrol (Website) as directory who is the Audiofile and Videofile.
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         internal static string TraceFile = @"C:\Users\Tippo\Project_Visual_Galaxy_Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\IFTTraceFiles";
 
         /// <summary>
         /// Constant string with Pathname and Folder for all Console Log Files
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// @ sign for unicode sign, so only one \ backward slash in Pathname !
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         internal static string ConsoleFile = @"C:\Users\Tippo\Project_Visual_Galaxy_Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\ConsoleFiles";
 
         /// <summary>
         /// Constant string with Pathname and Folder for all System Log Files
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// @ sign for unicode sign, so only one \ backward slash in Pathname !
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         internal static string SystemFile = @"C:\Users\Tippo\Project_Visual_Galaxy_Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\Visual.Galaxy.FrameworkC:\SystemFiles";
 
         /// <summary>
         /// Constant string with Pathname and Folder for all Framework Log Files
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// @ sign for unicode sign, so only one \ backward slash in Pathname !
-        /// <!-- Author Tipplin --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         internal static string FrameworkFile = @"C:\Users\Tippo\Project_Visual_Galaxy_Framework\Visual.Galaxy.Framework\Visual.Galaxy.Framework\Visual.Galaxy.FrameworkC:\FrameworkFiles";
 
         /// <summary>
@@ -1297,7 +852,7 @@ namespace Visual.Galaxy.Framework.Core
         /// this Class VGFAssemblyInfo is NOT normally in AssemblyInfo.cs
         /// All Properties are all Information about the Assembly.
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// Make different names for Class AssemblyInfo, if not the compiler make error message,
         /// set first letter the short Assemblyname:
         /// VGF = Visual Galaxy Framework   = VGFAssemblyInfo
@@ -1305,7 +860,7 @@ namespace Visual.Galaxy.Framework.Core
         /// VEE = Visual Exception Engine   = VEEAssemblyInfo
         /// VFL = Visual Form Library       = VFLAssemblyInfo
         /// VRL = Visual Resource Library   = VRLAssemblyInfo    
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// NOW ! 
         /// but don't forget 'private' is degree of protection, no access!
@@ -1316,9 +871,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// .NET Class DirectoryInfo - Exists Dir...
         /// </summary>
-        /// <!-- Author Tippolin 🧑 -->
+        /// <!-- 🧑Author Tippolin🧑 -->
         ///  Class Instance
-        /// <!-- Author Tippolin 🧑 -->
+        /// <!-- 🧑Author Tippolin🧑 -->
         /// <remarks>
         /// Class Directory
         /// pplies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity
@@ -1334,14 +889,14 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// .NET Class StreamWriter - write into File
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// .Flush() write complete Block into File.
         /// .Flush() everytime before .Close() the File !.
         /// if not he close file, but nothing write into file!.
         /// DON'T FORGET .Close(); - if so, the File continue open and no access more and can block the System.
         /// Tipplin Tip: write .Close(); into try/catch block - finally
         /// finally is ultimate free resource, If Exception ot NOT !.
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// 
         /// </remarks>
@@ -1350,17 +905,17 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// .NET Class StreamReader - read from a File
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         public static StreamReader sr = new StreamReader(TraceFile);
 
         /// <summary>
         /// .NET Class FileStream instance with instancevariable fs.
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!--  🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!--  🧑Author Tipplin🧑 -->
         /// <remarks>
         /// Provides a System.IO.Stream for a file, 
         /// supporting synchronous and asynchronous reads and writes.
@@ -1396,79 +951,13 @@ namespace Visual.Galaxy.Framework.Core
 
         /// <summary>
         /// Class Constructor VGFCore
-        /// <!-- Author TIPPO -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// You can set Statements, Logs, Calls, Messages and Validation
         /// if class declare static, the Constructor same static, without not allowed!.
-        /// <!-- Author TIPPO -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// </summary>
         static VGFCore()
         {
-
-            /*************************************************************************************
-             * Tipplin Idea
-             * -----------------------------------------------------------------------------------
-             * ! NOTE ! - An Feature in Windows 10 Professional OS-Build 18362.116 Final Release,
-             * AMSI - Anti Malware Scan Interface with API on Website, 
-             * or Headerfile amsi.h in SDK 18362
-             * -----------------------------------------------------------------------------------
-             * AMSI Sample found in Windows Classics on GitHub in C++.
-             * AMSI must write an Provider COM Library.
-             * ()
-             * -----------------------------------------------------------------------------------
-             * AMSI Website:
-             * https://docs.microsoft.com/en-us/windows/desktop/api/_amsi/
-             * 
-             * -----------------------------------------------------------------------------------
-             * before any call at Framework, idea is check the string or call,
-             * bad boy implement an Malware in our Framework.
-             * -----------------------------------------------------------------------------------
-             * Before use any Function initialize AMSI with Applicationname and AmsiContext:
-             * -----------------------------------------------------------------------------------
-             * AmsiInitialize(string AppName, System.IntPtr AmsiContext);
-             * Parameter AppName:
-             * The name, version, or GUID string of the app calling the AMSI API.
-             * 
-             * 
-             * -----------------------------------------------------------------------------------
-             * 
-             * scan the given string, is Malware inside.
-             * AmsiScanString(IntPtr.Zero, "", "", IntPtr.Zero, AMSI_RESULT.AMSI_RESULT_DETECTED);
-             * 
-             * -----------------------------------------------------------------------------------
-             * 
-             * AmsiResultIsMalware(uint Result);
-             * AMSI_RESULT.AMSI_RESULT_BLOCKED_BY_ADMIN_END
-             * AMSI_RESULT.AMSI_RESULT_BLOCKED_BY_ADMIN_START
-             * AMSI_RESULT.AMSI_RESULT_CLEAN
-             * AMSI_RESULT.AMSI_RESULT_DETECTED
-             * AMSI_RESULT.AMSI_RESULT_NOT_DETECTED
-             * 
-             * -----------------------------------------------------------------------------------
-             * Anti Trojan Scan Engine
-             * 
-             * -----------------------------------------------------------------------------------
-             * Tippo Info:
-             * Bad Boys!
-             * Have download an .zip file from CodeProject, Anti Trojan Engine found Trojan inside
-             * Warning: Trojan found !, Remove directly now, Quartantine...
-             * Windows 10 Firewall block and the AMSI alert beeps
-             * -----------------------------------------------------------------------------------
-             * More Security in Windows 10 May update OS-Build 13862.116 (Official Version)
-             * 21.05.2019 at time new Revision .145 increment by Microsoft for cleanup's.
-             * Windows Firewall is better as before now with Extentions.
-             * Network & Firewall Protection, Data Protection, Folder Protection, 
-             * Device Protection, Account Protection
-             * Ransom Protection save your Datas on ONEDRIVE.
-             * -----------------------------------------------------------------------------------
-             * Anti Virus Scanner
-             * 
-             * -----------------------------------------------------------------------------------
-             * 
-             * 
-             * 
-             * 
-             ************************************************************************************* 
-             */
 
             //-----------------------------------------------------------------
             // into class constructor and check is 64BIT System, 
@@ -1624,9 +1113,9 @@ namespace Visual.Galaxy.Framework.Core
                 vgfmessage = "Thank you for use our Framework, if any Problem or Exception,\n";
                 vgfmessage += "send it us: per Website or Email. see our Methods for directly send it!.\n";
                 vgfmessage += "Any Suggestion or any other welcome !.\n\n";
-                vgfmessage += "Copyright © 2019 by  Visual Galaxy Framework Community Kernel Developer Team.\n";
-                vgfmessage += "Copyright © 2019 by Christian 'TIPPO' Kurs - Project-Founder and Main-Author\n";
-                vgfmessage += "Portions Copyright © 2019 by Microsoft Corporation GmbH. \n";
+                vgfmessage += "Copyright © 2017-2021 by  Visual Galaxy Framework Community Kernel Developer Team.\n";
+                vgfmessage += "Copyright © 2017-2021 by Christian 'Tipplin' Kurs - Project-Founder and Main-Author\n";
+                vgfmessage += "Portions Copyright © 1982-2021 by Microsoft Corporation GmbH. \n";
 
                 VFLMsgBox(vgfmessage, "Visual Galaxy Framework - Remote", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
             }
@@ -1642,9 +1131,9 @@ namespace Visual.Galaxy.Framework.Core
             /// Remote Server Client DLL
             /// 
             /// </summary>
-            /// <!-- Author Tipplin -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// 
-            /// <!-- Author Tipplin -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             public static string VGFRemoteServerName = VGFServerName("");
             /// <summary>
             /// 
@@ -1683,13 +1172,13 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             ///  USE
             /// </summary>
-            /// <!-- Author Tipplin -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// Lock Application, means the User can't close the Application,
             /// an I/O Operation is now running, most by multi threads on 64BIT System on multiple CPUkernels
             /// CPUKernel starts by 0 to 64, but don't use CPUKernel 0 is the Operation System.
             /// GPUKernels for calculation, financial calculation, GPUKernel 1000 faster as the CPU.
             /// Move the Operation from CPU to GPU and return.
-            /// <!-- Author Tipplin-->
+            /// <!-- 🧑Author Tipplin🧑-->
             /// <returns>
             /// boolean as string true or false
             /// </returns>
@@ -1723,7 +1212,7 @@ namespace Visual.Galaxy.Framework.Core
             /// means run the GCWorkstation or GCServer.
             /// project-solution-name.config
             /// </summary>
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// NOTE! Project-Solution has more than standard file from Visual Studio automatic:
             /// but hidden, must be load into Project Solution Map, stand in Project Paths
             /// your Projectname: Asssemblynamedll.config
@@ -1745,7 +1234,7 @@ namespace Visual.Galaxy.Framework.Core
             /// 
             /// but must be an 64 BIT System ! and 64 BIT .NET Framework !.
             /// ---------------------------------------------------------------
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// <remarks>
             /// Gets a value that indicates whether 
             /// server garbage collection is enabled.
@@ -1773,66 +1262,13 @@ namespace Visual.Galaxy.Framework.Core
                return string.Format("The {0} Garbage Collector is running.", result);
 
             }
-
-            /*
-             * 
-             * 
-             * 
-             * 
-             * 
-             * 
-             * Global Const VB_LNG_FRENCH = 1
-             * Global Const VB_LNG_DUTCH = 2
-             * Global Const VB_LNG_GERMAN = 3
-             * Global Const VB_LNG_ENGLISH = 4
-             * Global Const VB_LNG_ITALIAN = 5
-             * Global Const VB_LNG_SPANISH = 6
-             * 
-            internal static string VGFrameworkGetLanguageString(int LanguageID)
-            {
-        internal string RetLanguage;
-    
-        switch(LanguageID)
-        {
-      case VB_LNG_FRENCH:
-         RetLanguage = "VFR";
-                break;
-                case VB_LNG_DUTCH:
-         RetLanguage = "VNL";
-                break;
-      case VB_LNG_GERMAN:
-         RetLanguage = "VDE";
-                break;
-      case VB_LNG_ENGLISH:
-         RetLanguage = "VUK";
-                break;
-      case VB_LNG_ITALIAN:
-         RetLanguage = "VIT";
-                break;
-      case VB_LNG_SPANISH:
-         RetLanguage = "VSP";
-                break;
-                default
-   }
-
-
-        If(LanguageID > 0) Then
-          Language = LanguageID
-   Else
-      Language = VB_LNG_ENGLISH
-   End If
-
-   mcGetLanguageID = RetLanguage
-
-    }
-
-*/
+	    
             /// <summary>
             /// Get NetBIOS-Computername
             /// </summary>
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// use here  Class SystemInformation from .NET Framework 4.8.03752
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <remarks>
             /// ---------------------------------------------------------------------
             /// Use Class SystemInformation from 
@@ -1859,9 +1295,9 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             ///  Send directly to Author via URL
             /// </summary>
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             ///  
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <remarks>
             /// If any Problem or Exception in codeparts, 
             /// we can send later directly to Author on Website/Webserver or GitHub Connect.
@@ -1877,9 +1313,9 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// 
             /// </summary>
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// 
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <remarks>
             /// 
             /// </remarks>
@@ -1910,8 +1346,11 @@ namespace Visual.Galaxy.Framework.Core
             } // END_OF_METHOD::VGFWebSiteCommunityInvestigativ
 
             /// <summary>
-            /// 
+            /// Start Community Help Website
             /// </summary>
+	    /// <!-- 🧑Author Tipplin 🧑 -->
+            /// 
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <returns></returns>
             public static string VGFWebSiteCommunityHelp()
             {
@@ -1937,6 +1376,9 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// Start Microsoft Webbrowser EDGE
             /// </summary>
+	    /// <!-- 🧑Author Tipplin 🧑 -->
+            /// 
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <returns>
             /// boolean string - True/False as string return.
             /// </returns>
@@ -1968,9 +1410,9 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             ///  Method ToUserDirectlyReturned
             /// </summary>
-            /// <!-- Author Tipplin -->
-            ///  everytime HIDDEN in this Codepart.
-            /// <!-- Author Tipplin -->
+	    /// <!-- 🧑Author Tipplin 🧑 -->
+            /// everytime HIDDEN in this Codepart.
+            /// <!-- 🧑Author Tipplin 🧑 -->
             /// <param name="User"></param>
             /// <remarks>
             /// 
@@ -1991,23 +1433,16 @@ namespace Visual.Galaxy.Framework.Core
 
         } // END_OF_CLASS::VGFRemote
 
-
-
-
-
-
-
-
         /// <summary>
         /// Get the current GUID of Windows Operation Systems
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// NOTE: 
         /// found in Setup.bin is binary file, but with Windows XML Block.
         /// ATTENTION:
         /// UNCHECKED
         /// With any new update change GUID's.
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         internal static class VGFWindowsOperationSystemGUIDS
         {
 
@@ -2025,9 +1460,9 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// GUID Windows 10 - General Unique Identification Key
             /// </summary>
-            /// <!-- Author Tippo 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// unchecked by new updates, change the GUID by Windows Operation System 10
-            /// <!-- Author Tippo 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// <remarks>
             /// Microsoft GUID's by Operation Systems and .NET Assemblies - unicate key 128 Bit.
             /// Apple UUID
@@ -2070,9 +1505,9 @@ namespace Visual.Galaxy.Framework.Core
         /// The set of constants required for across various(Communication, CrossPlatform, etc.) modules.
         /// string constants with sign @ for unicode string is UTF16
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// Set here all global constants for strings.
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// Set instancevariable for class VGFAssemblyInfo - Visual Galaxy Framework
         /// </remarks>
@@ -2146,9 +1581,9 @@ namespace Visual.Galaxy.Framework.Core
             /// private is standard in Visual C# without set the private statement.
             /// private has now an degree of protection !, no access by other .cs files.
             /// </summary>
-            /// <!-- Author Tippo 🧑 -->
+            /// <!-- 🧑Author Tippo🧑 -->
             /// Set short cut names, assignment to a value or string with Lambda Operator =
-            /// <!-- Author Tippo 🧑 -->
+            /// <!-- 🧑Author Tippo🧑 -->
             internal static int NUM_FILES = DEFAULT_NUM_FILES;
 
             /// <summary>
@@ -2210,7 +1645,7 @@ namespace Visual.Galaxy.Framework.Core
             /// @ sign for unicode UTF16,
             /// make special sign like '', "" without espace sign
             /// </remarks>
-            public const string MAIN_AUTHOR = @"Christian 'Tipplin' Kurs - Project-Founder / Maintainer";
+            public const string MAIN_AUTHOR = @"Christian '🧑Tipplin🧑' Kurs - Project-Founder / Maintainer";
 
             /// <summary>
             /// 
@@ -2299,13 +1734,13 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// Start Dir for NEW Microsoft Webbrowser EDGE with Chromium Engine.
             /// </summary>
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// New, Edge is in separte Dir Microsoft\Edge\Application,
             /// so you can call directly the Edge App with click,
             /// in command line (Console Window) call Edge with start command,
             /// start msedge.
             /// sign @ for unicode, so only one slash !.
-            /// <!-- Author Tipplin 🧑 -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             public const string MSEdgeStart = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe";
 
             /// <summary>
@@ -2325,9 +1760,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// class VGFWorldWide
         /// </summary>
-        /// <!-- Author Tipplin 🧑-->
+        /// <!-- 🧑Author Tipplin🧑-->
         /// separate from an Website
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         ///
         /// <remarks>
         /// first array - 190 World Countries
@@ -2339,6 +1774,10 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// 190 World Countries
             /// </summary>
+	    /// <!-- 🧑Author Tipplin🧑-->
+	    /// World Countries into string Array,
+	    /// begins by Index 1
+	    /// <!-- 🧑Author Tipplin🧑 -->
             public static readonly string[] VGFWorldCountries = {
                 // Index 0 empty, the string array begins with Index 1
                 "",
@@ -2590,8 +2029,12 @@ namespace Visual.Galaxy.Framework.Core
             internal static string localcountry => VGFGetWorldWideCountry(5);
 
             /// <summary>
-            /// All US States here
+            /// United States of America - 53 states
             /// </summary>
+	    /// <!-- 🧑Author Tipplin🧑-->
+	    /// World Countries into string Array,
+	    /// begins by Index 1
+	    /// <!-- 🧑Author Tipplin🧑 -->
             public static readonly string[] VGFUSStates = {
                 // begin with Index 0
                 "",
@@ -2644,14 +2087,16 @@ namespace Visual.Galaxy.Framework.Core
 
                 "MD", //Maryland
 
-                /* Massachusetts - special people Hugenotts speak german and english,
-                 * old German Butchery - Price mark 'For the Hund' (Bones,rests)
+                /* Massachusetts
+		 * special people Hugenotts speak german and english,
+		 * dutch, is not nethersland language is an german dialect
+                 * Old German Butchery - Price mark 'For the Hund' (Bones,rests)
                  */
                 "MA", 
 
                 "MI", //Michigan
 
-                "MN", //Minnesota - Minnesota German Cities names: Hamburg, New Ulm, Köln, Heidelberg....
+                "MN", //Minnesota - Minnesota German Cities names: Hamburg, New Ulm, Cologne, Heidelberg....
 
                 "MS", //Mississippi
 
@@ -2671,13 +2116,15 @@ namespace Visual.Galaxy.Framework.Core
 
                 "NM", //New Mexico
 
-                /* New York - part of city is New Paltz 
+                /* New York - The Part of New York City is 'New Paltz' 
                  * (German: Neue Pfalz speech paltzisch/pfälzisch
                  * German Teacher in New Paltz: "kann's mit mir deutsch schwätze.")
                  * Long History: Paltz People from Germany migrate to USA 1864,
                  * all childrens speak paltzisch and english.
-                 * Tip: On YouTube Videos from 'Kelly Englishs to Germans'
-                 * Leavenworth an German Bavaria Town in USA, all from Bavaria, Bavaria Houses, Backery and more... 
+                 * Tip: 
+		 * On YouTube Videos from 'Kelly Englishs to Germans'
+                 * Leavenworth an German Bavaria Town in USA, 
+		 * all from Bavaria, Bavaria Houses, Backery and more... 
                  * 
                  */
                 "NY", 
@@ -2720,11 +2167,11 @@ namespace Visual.Galaxy.Framework.Core
 
                 "TN", //Tennessee
 
-                "TX", //Texas - Cologne, two people from German Cologne have founded this City.
+                "TX", //Texas - Cologne/Köln, two people from German Cologne have founded this City.
 
                 "AE", //US ARMY EUROPE
 
-                "UT", //Utah - Cologne, two people from German Cologne have founded this City. Früh Kölsch Inn
+                "UT", //Utah - Cologne/Köln, two people from German Cologne have founded this City. BAR Früh Kölsch Inn
 
                 "VT", //Vermont
 
@@ -2746,15 +2193,12 @@ namespace Visual.Galaxy.Framework.Core
             /// <summary>
             /// Germany 16 Federal States
             /// </summary>
-            /// <!-- Author Tipplin -->
+            /// <!-- 🧑Author Tipplin🧑 -->
             /// For other Countries, all German Federal States in English/German.
             /// German Holidays in Class VGFWorldWideHolidays.
-            /// <!-- Author Tipplin -->
-            /// <remarks>
-            /// 
-            /// </remarks>
+            /// <!-- 🧑Author Tipplin🧑 --!>
             /// <return>
-            /// 
+            /// give the name of string array
             /// </return>
             public static readonly string[] VGFGermaFederalStates =
             {
@@ -2804,25 +2248,17 @@ namespace Visual.Galaxy.Framework.Core
 
             };
 
-
-
-
-
-
-
-
-
         } // END_OF_CLASS::VGFCountries
 
 
         /// <summary>
         /// International Languages for automatic switch in App.
         /// Take check install Version of Windows, then switch to Language.
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// For Germany art Whitepaper from Dr. Knittel CBM:
         /// "German Umlauts"
         /// Coding at UTF8
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// </summary>
         public static class VGFCountryLanguages
         {
@@ -2830,14 +2266,16 @@ namespace Visual.Galaxy.Framework.Core
              * Following the ISO International Norm:
              * -----------------------------------------------------------------
              * Two Letter ISO --- Normally Language
-             * German grammar rules,
+             * German grammar rules, more information about this see file
+	     * Dr. Knittel CBM - German 'Umlauts'
              * 
              * Germany------- de-DE
              * Autriche------ de-AT
              * Switzerland--- de-CH
              * Luxembourg---- de-LU
              * Lichtenstein-- de-LI
-             * Belgium------- de-be German Minority unproof
+	     *
+             * Belgium------- de-be German Minority unproof!
              * -----------------------------------------------------------------
              * Three Letter ISO - Regional Language Dialect
              * -----------------------------------------------------------------
@@ -2868,54 +2306,7 @@ namespace Visual.Galaxy.Framework.Core
             /// </summary>
             public static readonly string Sorbish = "den-WEN";
 
-            /// <summary>
-            /// 
-            /// Dialect of German UN City of Bonn ca. 20 Organizations of UN 2000 People.
-            /// The Building was before UN the "Long Eugen" owner now is UN.
-            /// 
-            /// https://www.unbonn.org/de
-            /// 
-            /// 
-            /// Bonn Video UN
-            /// https://www.unbonn.org/sites/default/files/2020-02/DEU-UT-L.mp4
-            /// 
-            /// Bonn have new Center: 'little Rhinemanhattan'
-            /// 
-            /// Post Tower is 167 Meters, 
-            /// 
-            /// 'New Federal Cancellor Place' (before Bonn Center) 101,5 Meters (2023) Investor: Art Invest - with Video
-            /// Postbank The main tenant
-            /// 
-            /// The German Federal Cancellor second Workplace and the German Federal President in Bonn. 
-            /// --------------------------------------------------------------------------------------------------------
-            /// Mariott Hotel 4 Stars plus Superior Star - 17 Stocks. an First Class Hotel in Bonn. (coast 70 Billions.)
-            /// Mariott Hotels Group the greatest of World 2000 an more...
-            /// On the Roof - Bar and Restaurant 'KONRAD's' - Star Maitre - Alexander Stadler -
-            /// SO - DO 11:00 to 01:00
-            /// FR-SA 11:00 to 02:00 Lounge Bar - Long Drinks
-            /// --------------------------------------------------------------------------------------------------------
-            /// Hotel with Bavarian Beer garden Original Bavarian Food from Munich.
-            /// By good Weather you see the Dom in Cologne and more.
-            /// General Train Station in progress, new Piazza, Buildings and an Work Office Building with Glass fascade.
-            /// In: Versace, Gucci, 
-            /// near Bonn General Train Station an Atlanic Hotel - Atlantic Hotel Group Dallas/Texas USA.
-            /// Investor: Die Developer Duesseldorf -
-            /// 
-            /// UNCHECK: Apple Store Bonn 
-            /// (Apple was search for Place, Year to Year, Fake: Muensterplace Bank Building.)
-            /// 
-            /// New Bonn near General Railstation: 
-            /// Motel ONE, City Office and more see Video from die Developer Duesseldorf as Investor.
-            /// 
-            /// https://youtu.be/rl9_A37J4Po
-            /// 
-            /// Bonn Peoples: goes to 400.000
-            /// 
-            /// The greatest City in NorthRhine-Westfalia is Cologne 1,2 billions People, 6 Place in Germany.
-            /// ---------------------------------------------------------------------------------------------
-            /// German Regional Language Dialect
-            /// </summary>
-            public static readonly string Boennsch = "den-BON";
+            
 
 
 
@@ -2927,21 +2318,7 @@ namespace Visual.Galaxy.Framework.Core
 
 
 
-        //
-        // Class Destructor
-        // <!-- Author TIPPO --
-        // You can set Statements, Logs, Calls, Messages and Validation
-        // <!-- Author TIPPO--
-        // ATTENTION ! In Visual C# allowed, but the Destructor never Empty or NULL !,
-        // if so?, the Destructor goes idling, and the Systen Performance goes down !.
-        //
-        // static class doesn't havent static destructors.
-        //
-        // static ~VGFCore()
-        // {
-        //
-        // }
-
+        
 
 
 
@@ -3198,33 +2575,33 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         internal const int LANG_NEUTRAL = 0x00,
                            LOCALE_IFIRSTDAYOFWEEK = 0x0000100C;   /* first day of week specifier */
 
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 -->        internal const int LOCALE_IMEASURE = 0x0000000D;   // 0 = metric, 1 = US
+        /// <!-- 🧑Author Tipplin🧑 -->        internal const int LOCALE_IMEASURE = 0x0000000D;   // 0 = metric, 1 = US
 
         /// <summary>
         /// Comments by SAP ABAP - Programming Language
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         internal const string CommentABAP = "=!";
 
         /// <summary>
         /// Set Global Variable for all in Project
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static string vgfmessage;
 
 
@@ -3235,9 +2612,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Get short real time now.
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <return>
         /// 
         /// </return>
@@ -3246,23 +2623,18 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Get the real date
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static string SNowDate => DateTime.Now.ToShortDateString();
 
         /// <summary>
         /// Get the real day
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static string SToday => DateTime.Today.Day.ToString();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static string ACTION_SETTINGS { get; private set; }
 
         /// <summary>
         ///  Univeral Time Coordinate Time for Worldtime/Europe
@@ -3280,227 +2652,74 @@ namespace Visual.Galaxy.Framework.Core
         ///  PTB-Clock with local time difference in milliseconds - unsafe +- milliseconds: https://uhr.ptb.de/
         ///  
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
-        /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 -->
+        /// NOTE: 2018 in USA Minute have now 60 seconds not 59 then jump to 1 minute.
+	/// so our Time in Europa goes 1 minute after.
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static string UtcNow = DateTime.UtcNow.ToString();
 
         /// <summary>
         /// Get real Weekday
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static string Wday = DateTime.Now.DayOfWeek.ToString();
 
         /// <summary>
         /// Get is Leap Year ?, with given Year
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static bool LYear = DateTime.IsLeapYear(Year);
 
         /// <summary>
         /// Get real Year
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static int Year = DateTime.Now.Year;
 
         /// <summary>
         /// Get real value for Month - 1=january - 12 december
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static int Month = DateTime.Now.Month;
 
         /// <summary>
         /// Get real Days in Month, with given year and month
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static int DMonth = DateTime.DaysInMonth(Year, Month);
 
 
         /// <summary>
         /// Cane write into File
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static bool CanWrite = true;
 
         /// <summary>
         /// Can't write into File
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         public static bool CanNotWrite = false;
 
 
         #endregion
 
 
-        #region ### Enumerators ###
-
-
-
-        #endregion
-
-
-
-        #region sourcecode from VALA Programming Language
-
-
-        /* Experimental for Visual C# and .NET
-
-        public static Application instance;
-
-        public static bool log_auth = false;
-        public static bool log_downloader = false;
-        public static bool log_workers = false;
-        public static bool log_no_filters = false;
-        public static bool log_verbose = false;
-
-        public const string ACTION_PREFIX = "app.";
-        public const string ACTION_SETTINGS = "settings";
-        public const string ACTION_ABOUT = "about";
-        public const string ACTION_CORRUPTED_INSTALLER_PICK_ACTION = "corrupted-installer.pick-action";
-        public const string ACTION_CORRUPTED_INSTALLER_SHOW = "corrupted-installer.show";
-        public const string ACTION_CORRUPTED_INSTALLER_BACKUP = "corrupted-installer.backup";
-        public const string ACTION_CORRUPTED_INSTALLER_REMOVE = "corrupted-installer.remove";
-        public const string ACTION_GAME_RUN = "game.run";
-        public const string ACTION_GAME_DETAILS = "game.details";
-        public const string ACTION_GAME_PROPERTIES = "game.properties";
-
-        internal static string[] Exec_cmd = {
-                    "gdb", "-q", "--batch",
-                    "-ex", @"set args $cmd_args_string",
-                    "-ex", (opt_gdb_fatal_criticals ? "set env G_DEBUG = fatal-criticals" : "unset env G_DEBUG"),
-                    "-ex", "set pagination off",
-                    "-ex", "handle SIGHUP nostop pass",
-                    "-ex", "handle SIGQUIT nostop pass",
-                    "-ex", "handle SIGPIPE nostop pass",
-                    "-ex", "handle SIGALRM nostop pass",
-                    "-ex", "handle SIGTERM nostop pass",
-                    "-ex", "handle SIGUSR1 nostop pass",
-                    "-ex", "handle SIGUSR2 nostop pass",
-                    "-ex", "handle SIGCHLD nostop pass",
-                    "-ex", "set print thread-events off",
-                    "-ex", "run",
-                    "-ex", "thread apply all bt" + (opt_gdb_bt_full ? " full" : ""),
-                    current_args[0]
-                };
-
-
-        construct
-		{
-			application_id = ProjectConfig.PROJECT_NAME;
-			flags = ApplicationFlags.HANDLES_COMMAND_LINE;
-			instance = this;
-			add_action_entries(action_entries, this);
-        set_accels_for_action(ACTION_PREFIX + ACTION_SETTINGS, { ACCEL_SETTINGS });
-		}
-
-    private const string[] Action_Entries = {
-            ACTION_SETTINGS = "action_settings",
-            { ACTION_ABOUT,                           action_about },
-            { ACTION_CORRUPTED_INSTALLER_PICK_ACTION, action_corrupted_installer, "(ss)" },
-            { ACTION_CORRUPTED_INSTALLER_SHOW,        action_corrupted_installer, "(ss)" },
-            { ACTION_CORRUPTED_INSTALLER_BACKUP,      action_corrupted_installer, "(ss)" },
-            { ACTION_CORRUPTED_INSTALLER_REMOVE,      action_corrupted_installer, "(ss)" },
-            { ACTION_GAME_RUN,                        action_game, "s" },
-            { ACTION_GAME_DETAILS,                    action_game, "s" },
-            { ACTION_GAME_PROPERTIES,                 action_game, "s" }
-        };
         
-
-
-    */
-
-        /* @    ManagedComment for Visual C# and .NET
-         * @
-         * @
-         * @ Applicationname = (most) Solutionname;
-         * @
-         * @ Path
-         * @    Paths{
-         *              "path 1",
-         *              "path 2",
-         *              "path 3"
-         * }
-         * 
-         * @ Class
-         * @    Class1{
-         *              Classname = "VGF.Core",
-         *              Classversion = 0,
-         *              ClassMajor = 0,
-         *              ClassMinor = 0,
-         *              ClassBuild = 0,
-         *              ClassRevision = 0
-         * }
-         * 
-         * @ Method
-         * @    Method1{
-         *              Methodname = "",
-         *              Methodversion = 0,
-         *              Methodrevision = 0
-         * }
-         * 
-         * @ Instances
-         * @    ManagedInstances{
-         * 
-         * 
-         * }
-         * 
-         * @    UnManagedInstances{
-         * 
-         * 
-         * }
-         * 
-         * @    ApplicationScope{
-         * @    Set dependencies here for Application:
-         * @    External Libraries and Operation System.
-         *  Dependencies{
-         *              <dependency>
-         *                  <name>user32.dll</name>
-         *                  <group></group>
-         *                  <groupID></groupID>
-         *                  <artifactID></artifactID>
-         *                  @ mininum .NET Framework Version
-         *                  <minNETFrameworkVersion></minNETFrameworkVersion>
-         *                  @placeholder@
-         *                  @ mininum SDK Version for Application 
-         *                  <minsdkversion>10.0.20175.1000</sdkversion>
-         *                  <version>2005</version>
-         *                  <scope>Windows</scope>
-         *  
-         *              </dependency>
-         *  /Dependencies}
-         *                  
-         *                  
-         *                  
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         *              
-         *      
-        */
-
-
-
-        #endregion
 
 
 
@@ -3525,9 +2744,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         /// <param name="primary"></param>
         /// <param name="sub"></param>
         /// <returns></returns>
@@ -3547,9 +2766,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin 🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin 🧑 --> 
         /// <param name="lgid"></param>
         /// <param name="srtid"></param>
         /// <returns></returns>
@@ -3562,9 +2781,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin 🧑 --> 
+        /// <!-- 🧑Author Tipplin🧑 --> 
         /// <param name="lgid"></param>
         /// <param name="sort"></param>
         /// <returns></returns>
@@ -3578,9 +2797,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Show standard Message for Method.
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// Have set the Enumerator ERROR_CODES all in.
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// NRMExit is an Wrapper in C#, Microsoft C Runtime Function Exit(int Errorcode);
         /// msvcrt.dll - 64BIT Only -
@@ -3595,9 +2814,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Show standard for User Cancel.
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// 
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// NRMExit is an Wrapper in C#, Microsoft C Runtime Function Exit(int Errorcode); -
         /// have set all ERROR_CODES in the Assembly Visual.Operation.System.dll
@@ -3611,9 +2830,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Show standard for DLL not found.
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// 
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// NRMExit is an Wrapper in C#, Microsoft C Runtime Function Exit(int Errorcode); -
         /// have set all ERROR_CODES in the Assembly Visual.Operation.System.dll
@@ -3627,9 +2846,9 @@ namespace Visual.Galaxy.Framework.Core
         /// <summary>
         /// Show standard for Internal Error
         /// </summary>
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// 
-        /// <!-- Author Tippo 🧑 -->
+        /// <!-- 🧑Author Tippo🧑 -->
         /// <remarks>
         /// NRMExit is an Wrapper in C#, Microsoft C Runtime Function Exit(int Errorcode); -
         /// have set all ERROR_CODES in the Assembly Visual.Operation.System.dll
@@ -5247,473 +4466,20 @@ public sealed class ExecutionEngineException : SystemException
 
         
     } // END_OF_CLASS::VGFCoreBufferData
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Visual Studio 2019 Productivity Features
-    //
-    // Control-Shift V - Clipboard
-    // Multi Caret - marked all same names you inserted search box
-    // Control Q is the general big search
-    // Show all Class Members with F12
-    // Robert Green and Kendra Havens
-    // https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-Productivity-Tips
-
-
-    /*
-     * on sequents
-     * Navigate backward[03:55]
-     * Solution Explorer tips[04:55]
-     * Editor context menu(Alt + `) [06:40]
-     * Keyboard command mapping[09:30]
-     * Right-click on.sln  Open With [13:00]
-     * Clipboard History (Ctrl + Shift + V) [14:10]
-     * Go to recent files(Ctrl + T + R) [15:10]
-     * Go to last edit location(Ctrl + Shift + Backspace)[15:20]
-     * Multi-caret editing[16:10]
-     * Using Git in Team Explorer[19:00]
-     * Code snippets(Ctrl + K, Ctrl + X) [24:55]
-
-        */
-    /*  -------------------------------------------------------------------------------
-     *  Windows 10 Professional Edition with more Security Protections:
-     *  Folder, Data, System, Network and avantage Windows Firewall,
-     *  Windows 10 Web Password Tresor with Security Query
-     *  input Password(Logon Screen) then can blend in your password.
-     *  Windows 10 save all Web Passwords for you.
-     *  System-Tool: netplwiz.exe on command area.
-     *  -------------------------------------------------------------------------------
-     *  
-     *  
-     *  -------------------------------------------------------------------------------
-     *  Windows 10 OS - Memory health / Kernel Isolation Protection
-     *  May Update 2019 - only the (System-)Administrator can set Option on/off.
-     *  ! ATTENTION !
-     *  If set on by Kernel Isolation, he blend the toggle button, no return to off !.
-     *  the only way for return off is the registry with 
-     *  registry key for Kernel Isolation, set dword value 1 to 0.
-     *  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\
-     *  Scenarios\HypervisorEnforcedCodeIntegrity
-     *  If ON!, runs the Windows Device Guard automatic, and 
-     *  search for old device drivers, if to old the Windows Updater 
-     *  stop the new great Update, no change!.
-     *  -------------------------------------------------------------------------------
-     *  Memory integrity is a high-performance, the hardware virtualization,
-     *  Windows Hyper-V hypervisor for the protection of Windows kernel-mode processes 
-     *  before inserting and executing malicious or not verified code uses.
-     *  Code integrity checks are performed in a secure environment that protects 
-     *  against attacks from malicious software.
-     *  Page permissions for kernel mode are set by the Hyper-V hypervisor and managed.
-     *  Memory integrity helps to block many types of malicious software on computers 
-     *  that are running Windows 10 and Windows Server 2016.
-     *  --------------------------------------------------------------------------------
-     *  IIS is the Web Server
-     *  iisexpress.exe start automatic workloads
-     *  Starting IIS Express ...
-     *  Successfully registered URL "http://localhost:8080/" 
-     *  for site "WebSite1" application "/"
-     *  Registration completed for site "WebSite1"
-     *  IIS Express is running.
-     *  Enter 'Q' to stop IIS Express
-     *  
-     *  
-     *  
-     *  --------------------------------------------------------------------------------
-     */
-
-
-
-
-
-
-
-    /* #Developer Info#====================================================================================================
-     * 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Title...........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Author..........: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Language........: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Description.....: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Remarks.........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Note............:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Author(s).......:  
-     * --------------------------------------------------------------------------------------------------------------------
-     * 
-     * ====================================================================================================================
-     * #CURRENT#
-     * ====================================================================================================================
-     * _StringSize.....: Returns size of rectangle required to display string - maximum width can be chosen
-     * 
-     * 
-     * ====================================================================================================================
-     * #_USE_ONLY#
-     * ====================================================================================================================
-     * 
-     * 
-     * 
-     * 
-     * 
-     * ====================================================================================================================
-     * #FUNCTION#
-     * ====================================================================================================================
-     * Name............: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Description ....: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Syntax .........: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Parameters .....: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Requirement(s)..: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Return values...:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Author .........: 
-     * --------------------------------------------------------------------------------------------------------------------
-     * Modified .......:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Remarks ........: 
-     * 
-     * 
-     * 
-     * 
-     * -------------------------------------------------------------------------------------------------------------------- 
-     * Related ........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Link ...........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Example ........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * 
-     * 
-     * ====================================================================================================================
-     * 
-     * --------------------------------------------------------------------------------------------------------------------
-     * #_USE_ONLY#
-     * --------------------------------------------------------------------------------------------------------------------
-     * Author..........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Name............: _StringSize_DefaultFontName
-     * --------------------------------------------------------------------------------------------------------------------
-     * Description.....: Determines Windows default font
-     * --------------------------------------------------------------------------------------------------------------------
-     * Syntax..........: _StringSize_DefaultFontName()
-     * --------------------------------------------------------------------------------------------------------------------
-     * Parameters......: None
-     * --------------------------------------------------------------------------------------------------------------------
-     * Return values...: Success - Returns name of system default font
-     * --------------------------------------------------------------------------------------------------------------------
-     * Failure-Returns.:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Author..........: Melba23, based on some original code by Larrydalooza
-     * --------------------------------------------------------------------------------------------------------------------
-     * Modified........:
-     * --------------------------------------------------------------------------------------------------------------------
-     * Remarks.........: This function is used ly by _StringSize
-     *
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * ====================================================================================================================
-
-    ----------------------------------------------------------------
-    ONLY for Students and good boys Insiders not for bad brain.
-    Like Tipplin is good boy.
-    ----------------------------------------------------------------
-    Windows Research Kernel Code - Sourcecode - 2016 - all .c files:
-    ----------------------------------------------------------------
-    The primary NTOS source components included in the 
-    WRK are organized as follows:
-    (Windows 10 - 2016 - Operation System - Kernel Source Code)
-    ----------------------------------------------------------------
-    cache\  - cache manager
-    config\ - registry implementation
-    dbgk\   - user-mode debugger support
-    ex\     - executive functions (kernel heap, synchronization, time)
-    fsrtl\  - file system run-time support
-    io\     - I/O manager
-    ke\     - scheduler, CPU management, low-level synchronization
-    lpc\    - local procedure call implementation
-    mm\     - virtual memory manager
-    ob\     - kernel object manager
-    ps\     - process/thread support
-
-    se\     - security functions
-    accessck.c
-
-    This Module implements the access check procedures.  Both NtAccessCheck
-    and SeAccessCheck check to is if a user (denoted by an input token) can
-    be granted the desired access rights to object protected by a security
-    descriptor and an optional object owner.  Both procedures use a common
-    local procedure to do the test.
-    SepAccessCheck 
-
-    wmi\    - Windows Management Instrumentation
-
-    inc\    - NTOS-only include files
-    rtl\    - kernel run-time support
-    init\   - kernel startup
-
-    The NTOS kernel implements the basic OS functions
-    for processes, threads, virtual memory and cache managers, I/O management,
-    the registry, executive functions such as the kernel heap and synchronization,
-    the object manager, the local procedure call mechanism, the security reference
-    monitor, low-level CPU management (thread scheduling, Asynchronous and Deferred
-    Procedure calls, interrupt/trap handling, exceptions), etc.
-
-    The NT Hardware Abstraction Layer, file systems, network stacks, and device
-    drivers are implemented separately from NTOS and loaded into kernel mode
-    as dynamic libraries.  Sources for these dynamic components are not included
-    in the WRK, but some are available in various development kits published
-    by Microsoft, such as the Installable File System (IFS) Kit and the
-    Windows Driver Development Kit (DDK).
-    -------------------------------------------------------------------------------
-    Die Java Virtual Runtime Machine
-    https://www.artima.com/insidejvm/ed2/jvm8.html
-
-    Table of Contents 
-    Links to reprints of each chapter of the book:
-
-    Chapter 1 -- "Introduction to Java's Architecture".
-    Chapter 2 -- "Platform Independence".
-    Chapter 3 -- "Security".
-    Chapter 4 -- "Network Mobility".
-    Chapter 5 -- "The Java Virtual Machine".
-    Chapter 6 -- "The Java Class File".
-    Chapter 7 -- "The Lifetime of a Type".
-    Chapter 8 -- "The Linking Model".
-    Chapter 9 -- "Garbage Collection".
-    Chapter 10 -- "Stack and Local Variable Operations".
-    Chapter 11 -- "Type Conversion".
-    Chapter 12 -- "Integer Arithmetic".
-    Chapter 13 -- "Logic".
-    Chapter 14 -- "Floating Point Arithmetic".
-    Chapter 15 -- "Objects and Arrays".
-    Chapter 16 -- "Control Flow".
-    Chapter 17 -- "Exceptions".
-    Chapter 18 -- "Finally Clauses".
-    Chapter 19 -- "Method Invocation and Return".
-    Chapter 20 -- "Thread Synchronization".
-
-
-    Stack Walking in the .NET Runtime
-    https://mattwarren.org/2019/01/21/Stackwalking-in-the-.NET-Runtime/
-
-
-
-    Java® Platform, Standard Edition & Java Development Kit 12
-    Version 12 API Specification
-    https://docs.oracle.com/en/java/javase/12/docs/api/index.html
-
-    Java® Platform, Standard Edition & Java Development Kit 13
-    Version 13 API Specification
-
-
-    Java® Platform, Standard Edition & Java Development Kit
-    Version 12 API Specification
-    Runtime Exception
-    https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/lang/RuntimeException.html
-
-
-
-
-
-    Constructs a new runtime exception with the specified detail message.
-    public RuntimeException​(String message)
-
-    Constructs a new runtime exception with the specified detail message and cause. 
-    Note that the detail message associated with cause is not automatically incorporated in this runtime exception's detail message.
-    public RuntimeException​(String message, Throwable cause)
-
-    Constructs a new runtime exception with the specified cause and a detail message of (cause==null ? null : cause.toString()) 
-    (which typically contains the class and detail message of cause). 
-    This constructor is useful for runtime exceptions that are little more than wrappers for other throwables.
-    public RuntimeException​(Throwable cause)
-
-    Constructs a new runtime exception with the specified detail message, 
-    cause, suppression enabled or disabled, and writable stack trace enabled or disabled.
-    protected RuntimeException​(String message,
-                           Throwable cause,
-                           boolean enableSuppression,
-                           boolean writableStackTrace)
-
-    Parameters:
-    message - the detail message.
-    cause - the cause. (A null value is permitted, and indicates that the cause is nonexistent or unknown.)
-    enableSuppression - whether or not suppression is enabled or disabled
-    writableStackTrace - whether or not the stack trace should be writable
-
-    StringBuilder Buffers:
-    StringBuilder sb = new StringBuilder(min int32, max int32);
-    Standard Buffer  by Visual C# is 16 chars, only StringBuilder sb = new StringBuilder();
-    So make sure the string is not longer as 16 Chars, is longer he cut him !.
-    or
-    StringBuilder sb = new StringBuilder(255, 8148);
-    So is the string longer as 255 chars he expand automatic to maximal Capacity here 8148.
-    use same for C++ Buffers in C#.
-
-    [flags()]
-     enum StringBuffer
-    {
-        = 256,
-        = 512,
-        = 1024,
-        = 2048,
-        = 4096,
-        = 8148,
-        =
-        =
-        =
-        =
-        =
-        = 2147483647 -1 set, while is greather is OutOfRangeException
-
-
-    }
-
-
-
-    */
-
-
+    
     /// <summary>
     /// 
     /// </summary>
     public static class VGFCoreUrls
     {
-        /*
-        Handling and raising events
-        Raise and Consume Events
-        Handle Multiple Events Using Event Properties
-        */
-        //https://docs.microsoft.com/en-us/dotnet/standard/events/
-
-        // .NET API Browser
-        // https://docs.microsoft.com/en-us/dotnet/api/index
-
-        /*
-         * Welcome to the.NET API Browser – 
-         * your one-stop shop for all.NET-based APIs from Microsoft.Start 
-         * searching for any managed APIs by typing in the box below.
-         * 
-         * You can learn more about the API Browser in our blog post.
-         * If you have any feedback, 
-         * create a new issue in the MicrosoftDocs/feedback repo on GitHub.
-         * 
-         * Select Version
-         * 
-         * All APIs
-         * all about.NET others
-         * 
-         * 
-         * Identity- und Access-Management (IAM) 
-         * 
-         * 
-         * 
-         * Privileged Access Management (PAM)
-         * 
-         * Identity Solution for Identity and Access Management
-         * Identity Solution eliminate the complexities and 
-         * time-consuming processes often required to govern identities, 
-         * manage privileged accounts and control access.
-         * 
-         * Active Roles
-         * Password Manager
-         * Identity Manager
-         * 
-         * 
-         */
-
-        #region ### URI's as Constants ##
-
-        /*
-         * with Class Uri from namespace System.Uri
-         * set all uri's do you need
-         * create instance static Uri wuri = new Uri("orginalstring uri");
-         * / or // are forward slashs - HMTL source
-         * \ or \\ backward slashs - Windows Directories
-         * 
-         * 
-         */
-
-        /*
-        * Additional sources (repositories) to search for this pod.
-        *
-        * Since order is important sources specified in this list
-        * are interleaved across each Pod added to the resolver.
-        * e.g Pod1.source[0], Pod2.source[0] ...
-        *    Pod1.source[1], Pod2.source[1] etc.
-        *
-        * See: https://guides.cocoapods.org/syntax/podfile.html#source
-        */
+        
 
         /// <summary>
         /// 
         /// </summary>
-        public static List<string> sources = new List<string>() {
-
-            // set index 0 of nullstring, we begin with Index 1
-            "null",
-            // index 1
-            "https://github.com/CocoaPods/Specs.git",
-            // index 2
-            "https://github.com/Tipplin/VGF"
-
-        };
-
-        /// <summary>
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// </summary>
-        public static DateTime Timestamp { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static string Time => Timestamp.ToString("hh:mm tt");
-
-        /*
-        /// <summary>
-        /// 
-        /// </summary>
-        public static string Text = GetValue(id, TextSnippetValues);
-        /// <summary>
-        /// 
-        /// </summary>
-        public static string UserName = GetValue(id, UserNameValues);
-        /// <summary>
-        /// 
-        /// </summary>
-        public static string Image = GetValue(id, ImagesValues);
-        */
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <!-- Author Tipplin -->
-        /// 
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <param name="index"></param>
         /// <param name="values"></param>
         /// <returns>
@@ -5723,14 +4489,6 @@ public sealed class ExecutionEngineException : SystemException
         {
             return values[index % values.Length];
         }
-
-
-
-
-
-
-
-
 
         /// <summary>
         /// 
@@ -5835,12 +4593,12 @@ public sealed class ExecutionEngineException : SystemException
         /// <summary>
         /// VGFWaitSeconds
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// Method with optional pararmeters MessageText and MessageTitle,
         /// paramter milliseconds must be have an Value !.
         /// See in code asterics operator for an Call or 
         /// show MessageBox after Sleep an thread in milliseconds
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <param name="milliseconds">Set milliseconds value</param>
         /// <param name="MessageText">Optional set Text for MessageBox</param>
         /// <param name="MessageTitle">Optional set Title for MessageBox</param>
@@ -5873,9 +4631,9 @@ public sealed class ExecutionEngineException : SystemException
         /// <summary>
         /// Get World Wide Country Name
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// 
-        /// <!-- Author Tipplin -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <param name="ArrayItem">Index Begin with 1 to 190 ABC sorted</param>
         /// <remarks>
         /// Array's in Visual C# begins everytime with Index 0,
@@ -5935,12 +4693,12 @@ public sealed class ExecutionEngineException : SystemException
         /// <summary>
         /// Uri Microsoft Website🌀
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// Class Uri form namespace System
         /// NOTE: without accessmofi public, all private with degree of protection,
         /// private now is standard in Visual C# without set.
         /// no access from outside.
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// @ unicode sign, so only one slash !
         /// 
@@ -5959,7 +4717,7 @@ public sealed class ExecutionEngineException : SystemException
         /// <summary>
         /// Microsoft TV Channel 9 with many Video's for all Developer.
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// Uri's as constant for OrginalString
         /// 
         /// Attention ! 
@@ -5968,7 +4726,7 @@ public sealed class ExecutionEngineException : SystemException
         /// Either internal or public take.
         /// have forgotten by static uri... access modi public.
         /// 
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", wuri.OriginalString);
         /// start process with NEW Webbrowser Microsoft Edge and directly Website channel9.msdn.com
@@ -6025,9 +4783,9 @@ public sealed class ExecutionEngineException : SystemException
         /// <summary>
         /// 🧑 Tipplin 🧑 E-mail adress for send mail to me!
         /// </summary>
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// Base E-mail-adress
-        /// <!-- Author Tipplin 🧑 -->
+        /// <!-- 🧑Author Tipplin🧑 -->
         /// <remarks>
         /// For E-Mail Method directly to me as Author.
         /// -------------------------------------------------------------------
