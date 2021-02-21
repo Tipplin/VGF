@@ -16,7 +16,7 @@ Application Framework for great Applications
 - 🧑 Please this Project is under construction, so please contact to me:
 - 🧑 kurschristian@gmail.com
 ----
-#### Copyright © 2017-2020 by  Visual Galaxy Framework Community Kernel Developer Team
+#### Copyright © 2017-2021 by  Visual Galaxy Framework Community Kernel Developer Team
 #### Portions Copyright © 1982 - 2021 by Microsoft Corporation.
 #### All rights reserved .
 ---- 
