@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.0.0.38</AssemblyVersion>
+    <FileVersion>1.0.0.38</FileVersion>
+    <Authors>Visual.Galaxy.Framework.Community.KernelTeam</Authors>
+    <Description>Application Framework Classes for great Applications.</Description>
+    <Copyright>Copyright © 2017-2021 by  Visual Galaxy Framework Community Kernel Developer Team.</Copyright>
+    <RepositoryUrl>https://github.com/Tipplin/Visual.Galaxy.Framework</RepositoryUrl>
+    <PackageReleaseNotes>Project is in progress under development and can have exceptions in time by Methods, while without Tests, please wait...</PackageReleaseNotes>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>C:\Users\Tipplin\src\development\Visual.Galaxy.Framework\Visual.Galaxy.Framework.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="VGF.WindowsAPI.CSharp.cs" />
+    <Compile Remove="Visual.Galaxy.Framework.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="IBM.Connect.To.Mainframes" />
+    <None Remove="TIPPO.INFO.Windows.History.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

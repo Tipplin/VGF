@@ -1,0 +1,3674 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Visual.Galaxy.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Visual.Galaxy.Framework.Application.VGFApplication">
+            <summary>
+            Class VGFApplication
+            </summary>
+            <!-- Author Tipplin -->
+            Class Application with Information, Settings, Security, AccessSystem
+            <!-- Author Tipplin -->
+            <remarks>
+            Use Class Application from System.Windows.Form (inside 300 classes)
+            Class Application, Battery, MessageBox, Controls, SystenInformation
+            Webbrowser for your own Browser,
+            special for multiple Works, means I/O Operation on miscellous CPU-Kernels:
+            CPU-0, CPU-1, CPU-2, CPU-3 (!NOTE! dont use CPU-0 is the Operation System reserved ever!)
+            CPU-1 input and CPU-2 output
+            If the user want end the Application, but one or more CPU-Kernels work now,
+            you can set Application.QuitAllowed (bool) = true/false - yes/no
+            by false give Message to User.
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Application.VGFApplication.VGF_AUTOSTART_REGISTRY_KEY">
+            <summary>
+            constant for Autostart Registry Key with sign @ for unicode UTF16 - CLR internal UTF16 in/out
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Name">
+            <summary>
+            Property shortname for UserName
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Machine">
+            <summary>
+            Property shortname for MaschineName
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.UDomain">
+            <summary>
+            Get the current Network-Domain-Name for User in Network.
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Process64">
+            <summary>
+            The current Process in 64BIT Process ?
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Is64">
+            <summary>
+            The current Operation System is 64 BIT ?
+            </summary>
+            <!-- Author TIPPLIN -->
+            Tip:
+            can change the datatype bool to string,
+            then added by Environment.Is64BitOperatingSystem.ToString;
+            so returned boolean as an string True or False !
+            <!-- Author TIPPLIN -->
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Major">
+            <summary>
+            Get current Operation System Major
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Minor">
+            <summary>
+            Get current Operation System Minor
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Build">
+            <summary>
+            Get current Operation System Build
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.Revision">
+            <summary>
+            Get current Operation System Revision,
+            Microsoft increment the Revision by updates !.
+            Quickfixes, Bugfixes, SecurityFixes, Improvements or
+            Great Year Update.
+            The Value stand in Registry under Key UBR as hexadecimal.
+            Tipplin write help warapper for the OS-Revision's,
+            read out the current Revision on this Computer.
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Application.VGFApplication.ProcCount">
+            <summary>
+            Get how many Processors inside the current Machine
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Application.VGFApplication.VGFAddAutoStartApplication(System.String,System.String,System.Boolean)">
+            <summary>
+            Add Application to Autostart
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="ApplicationPath">Set Application Path</param>
+            <param name="RegisterName">Set Register Name</param>
+            <param name="User">Set User</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Application.VGFApplication.VGFRemoveAutoStartApplication(System.String,System.Boolean)">
+            <summary>
+            Remove Application from Autostart
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="RegisterName"></param>
+            <param name="User"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Application.VGFApplication.VGFGetAutoStartApplicationPath(System.String,System.Boolean)">
+            <summary>
+            Get Autostart Application Path
+            </summary>
+            <param name="RegisterName">Set Registername</param>
+            <param name="User">Set User - true/false</param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Application.VGFApplication.VGFRegisterApplicationToWindows(System.String)">
+            <summary>
+            Register App into Windows Operation System for Restart
+            </summary>
+            <param name="ApplicationName">Set Application Name</param>
+            <!-- Author Tipplin -->
+            Windows 10 have a internal table for Applications
+            <!-- Author Tipplin -->
+            <remarks>
+            OS-Function: RegisterApplicationWindows(LPSTR ApplicationName);
+            If registered, so for use by Reboot and shutdown,
+            Reboot, all operations close (force) reboot Windows and starts the Application new.
+            can use by Hotfix, Bugfix and Securityfix, shutdown clear install fix and reboot.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Application.VGFApplication.VGFApplicationLockRunningOperation(System.Boolean)">
+            <summary>
+            Application Lock by Running Operation
+            </summary>
+            <param name="LockApp"></param>
+            <!-- Author Tipplin -->
+            use Class Application for specials
+            <!-- Author Tipplin -->
+            <remarks>
+            Property AllowQuit means, if a Operation now running, 
+            but User will close the Application you can lock it.
+            AllowQuit - true, he can close the Application - false NO !
+            Use for Multiple Operations in CPU-Kernels,
+            Intel i5 - 
+            Microsoft Tool for distributed work on more than 2 CPU's:
+            CPU 0, CPU 1, CPU 2, CPU 3... to CPU 63
+            make hook by checkbox o, so the Works run on this CPUKernel.
+            
+            but CPU 0 only for Operation System - Hand off -
+            time-consuming works by I/O Operations, set on a CPU X,
+            so this Work in background by System, but you must create a Lock like this.
+            For calculations and mathematic Operations use better the GPU,
+            the modern GPU like Nidvia G. works and faster 3000x as an CPU!
+            Works moves from the CPU to the GPU and returns the result.
+            Windows Operation System Functions:
+            SetAffinityMask(threadname, CPUMask);
+            ----------------GetCurrentThread, 0x2); CPU 2
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Assembly.VGFAssembly">
+            <summary>
+            Assembly Visual.Galaxy.Framework.dll
+            </summary>
+            <!-- Author Tipplin -->
+            Specials Infos about Assembly Visual.Galaxy.Framework
+            <!-- Author Tipplin -->
+            <remarks>
+            Assembly Informations - Properties from Class AssemblyInfo in AssemblyInfo.cs
+            Late Binding and Loading - LoadAssembly
+            AddAssembly to Project/App
+            
+            
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyName">
+            <summary>
+            Get Fullname of VGF Assembly
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!--Author Tipplin -->
+            <remarks>
+            The Information come from AssemblyInfo.cs
+            with Class VGFAssemblyInfo and Properties
+            this Class is not normally !.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyCopyright">
+            <summary>
+            Get VGF Assembly Copyright
+            </summary>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyVersion">
+            <summary>
+            Get VGF Assembly current Version Number
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyCompanyName">
+            <summary>
+            Get VGF Assembly Company Name
+            </summary>
+            <!-- Author Tipplin -->
+            Specials Infos about Visual.Galaxy.Framework.dll
+            <!-- Author Tipplin --> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyProductName">
+            <summary>
+            Get VGF Assembly Product Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyDescription">
+            <summary>
+            Get VGF Assembly Description
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyTitleName">
+            <summary>
+            Get VGF Assembly Title Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Assembly.VGFAssembly.VGFGetAssemblyFileVersion">
+            <summary>
+            Get VGF Assembly File Version
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.CLRRuntime.VGFCLRRuntime">
+            <summary>
+            Class VGFCLRRuntime
+            </summary>
+            <!-- Author TIPPO -->
+            Common Language Runtime have exported Functions.
+            Query CLR Version and more...
+            The CLR Team is seperatly with own Projectteam and Versions, not .NET Framework Versions.
+            The CLR Team test all new implemented in .NET and Languages.
+            simplesample: Visual C# Structure with initialize the Members in Struct Constuctor,
+            but the CLR Team test it and old parts of .NET Framework doesnt work with them.
+            remove the Feature Struct Constructor pure, the Struct Constructor with Parameters works!.
+            In Visual C# 7.0
+            <!-- Author TIPPO -->
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.CLRRuntime.VGFCLRRuntime.VGFGetCLRRumtineVersion">
+            <summary>
+            Get current Common Language Runtime Version on this Computer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Configuration.VGFConfiguration">
+            <summary>
+            Class VGFConfiguration
+            </summary>
+            <!-- Author TIPPO -->
+            
+            <!-- Author TIPPO-->
+            <remarks>
+            .NET Framework:
+            Class ConfigurationManager, create configuration for: Application,
+            Web, Server, User, Machine, Network, SQLQuery's, ASP.NET with
+            security - encrypt the .config file,
+            create, add, change, delete sections
+            
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Console.VGFConsole">
+            <summary>
+            Class VGFConsole
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Conversion.VGFCoreConversion">
+             <summary>
+             UNDONE - exceptionhandling do or not do ?!
+            
+            
+            
+              Contains methods to do all kinds of Conversions
+            
+            
+             </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFHexToDec(System.Char)">
+            <summary>
+            Convert Hexadecimal to Decimal
+            </summary>
+            <param name="chChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFSecondsToShortHMSString(System.Int32)">
+            <summary>
+            Get Seconds to Time short String
+            </summary>
+            <param name="lSeconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFSecondsToHMSString(System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="timespan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFSecondsToHMSString(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lSeconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFSecondsToHMString(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lSeconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFGetUnixTime(System.DateTime)">
+            <summary>
+            Get Unix Time
+            </summary>
+            <!-- Author Tipplin -->
+            Note! at Remarks
+            <!-- Author Tipplin -->
+            <param name="desiredTime_"></param>
+            <remarks>
+            NOTE !
+            At Timebomb next is the Year 2038 at 03:48:00, the Unix Time -C- t_time is overflow !.
+            is running at 1970 - 32 BIT written.
+            source from Book: Better coding
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFLongToDate(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="ldate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFDateToLong(System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFGetSizeString(System.Int64)">
+            <summary>
+            Returns the size as a string formatted with Kibi bytes, Mebi bytes , Gibi bytes
+            new norm for sizes, BIMP Paris official Values !.
+            Kilobytes, Megabytes, Gigabytes are wrong values!
+            BIMP Table differrents in Present / %
+            </summary>
+            <!-- Author Tipplin -->
+            Official Values binary bytes the true values, 
+            Kibi = Kilo Binary Byte 
+            Mebi = Mega Binary Byte
+            Gebi
+            Tebi
+            Exbi
+            Yobi
+            Zebi
+            <!-- Author Tipplin -->
+            <param name="dwFileSize"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsAlpha(System.Char)">
+            <summary>
+            Is Char Alpha ?
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFCaseIgnoreCompare(System.String,System.String)">
+            <summary>
+            Case Ignore Compare
+            </summary>
+            <param name="s1"></param>
+            <param name="s2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFToUpper(System.Char)">
+            <summary>
+            Char To Upper
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFToLower(System.Char)">
+            <summary>
+            Char to Lower
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFToLowerString(System.String)">
+            <summary>
+            String to Lower
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFToUpperString(System.String)">
+            <summary>
+            String to Upper String
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsAlphaString(System.String)">
+            <summary>
+            String is a Alpha-string
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsNumeric(System.Char)">
+            <summary>
+            Char is numeric
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsNumericString(System.String)">
+            <summary>
+            String is numeric string
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsAlphaNumeric(System.Char)">
+            <summary>
+            Char is Alpha-Numeric
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFIsAlphaNumericString(System.String)">
+            <summary>
+            String is Alpha-Numeric string
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Conversion.VGFCoreConversion.VGFDifferentTimes">
+            <summary>
+            
+            </summary>
+            <!-- Author Tipplin -->
+            ! ATTENTION ! use the Windows Function GetTickCount64() !,
+            the old GetTickCount() overflow after 49 Days.
+            Source: Microsoft Windows Developer.
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Converting.VGFConvert">
+            <summary>
+            Class VGFConvert
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Converting.VGFConvert.VGFConvertToString(System.Int32)">
+            <summary>
+            Convert integer value to string
+            </summary>
+            <!-- Author Tipplin -->
+            System Value Converter
+            <!-- Author Tipplin -->
+            <param name="Value"></param>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Converting.VGFConvert.VGFConvertToString(System.Byte)">
+            <summary>
+            Convert byte value to char
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Cryption.VGFCryption">
+            <summary>
+            class VGFCryption
+            </summary>
+            <!-- Author TIPPO -->
+            
+            <!-- Author TIPPO -->
+            <remarks>
+            write here wrapper's from Visual.Security.Library.dll,
+            
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Currency.VGFCurrency">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.euro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.dollar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.rubel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.pfund">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.danmarkkronen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.australiadollar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies.forint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies2">
+            <summary>
+            Enumerator for World Currencies
+            Info: Most Currencies in Windows 10 Calculator
+            under Currencies option. 
+            But NOTE ! make connect Currency Stock are with costs.
+            And the best the Windows 10 Calculator is open source on GitHub written in Visual C++.
+            </summary>
+            <!-- Author Tippo -->
+            Note! Only one char allowed in '€'
+            <!-- Author Tippo -->
+            <remarks>
+            shortname for Sign
+            public static string Euro => Currencies2.euro.ToString();
+            </remarks>
+            <return>
+            returned the Sign.
+            </return>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies2.euro">
+            <summary>
+            Euro Sign €
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies2.dollar">
+            <summary>
+            Dollar Sign $
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Currency.VGFCurrency.Currencies2.pfund">
+            <summary>
+            Pfund Sign l
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Currency.VGFCurrency.Euro">
+            <summary>
+            Get Euro sign
+            </summary>
+            <!-- Author Tippo -->
+            Shortname for Euro sign with Lamdba Operator,
+            as property.
+            stringformat("Cash {0} {1} it !", Value, Euro);
+            in {1} the euro sign.
+            <!-- Author Tippo -->
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Currency.VGFCurrency.Dollar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Currency.VGFCurrency.Pfund">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Dialog.VGFDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Directory.VGFDirectory">
+            <summary>
+            Class VGFDirectory
+            </summary>
+            <!-- Auhor TIPPO -->
+            
+            <!-- Author TIPPO -->
+            <remarks>
+            Windows 10 new October 2018
+            Active Directory Lightweight Directory Services (ADLDS)
+            
+            
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Directory.VGFDirectory.VGFCreateDirectory(System.String)">
+            <summary>
+            Create Directory with given Name
+            </summary>
+            <param name="DirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Directory.VGFDirectory.VGFDeleteDirectory(System.String)">
+            <summary>
+            Delete the Directory with given Name
+            </summary>
+            <param name="DirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Directory.VGFDirectory.VGFGetCreationTimeOfDirectory(System.String)">
+            <summary>
+            Get Creation Time of Directory
+            </summary>
+            <param name="DirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Directory.VGFDirectory.VGFLastAccessTimeOfDirectory(System.String)">
+            <summary>
+            Last Access Time of Directory
+            </summary>
+            <param name="DirName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Directory.VGFDirectory.VGFGetLastWriteTimeOfDirectory(System.String)">
+            <summary>
+            Get Last Write Time of Directory
+            </summary>
+            <param name="DirName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Document.VGFDocument">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Exception.VGFCoreException">
+            <summary>
+            Class VGFCoreException
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            Create Remote Exception Service for Framework, Application...
+            DataContracts
+            ExceptionServer
+            ExceptionClient
+            
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService">
+            <summary>
+            Class VGFCoreExceptionService
+            </summary>
+            <!-- Author Tipplin -->
+            VGFCoreExceptionService:
+            Idea Developer create full Exception Service for Framework and Application,
+            as Help Service for Users.
+            So the Developer can see where is the Exception occured and can cleanup this,
+            and send fix(es) vis Webserver to Users.
+            Fix Category: Security, Quick, Bug, Quality
+            By Windows Operation System 10, 
+            the Developer can create Function ExitWindowsEx(EXW_SHUTDOWN | EXW_REBOOT, REASON_APPLICATION_MINOR | REASON_SECURITY_FIX_PLANNED)
+            shutdown system install fix and reboot it.
+            VGFCoreExceptionServiceClient:
+            
+            
+            VGFCoreExceptionServiceServer:
+            
+            
+            VGFCoreExceptionServiceHTTPS:
+            secure connect to Webserver
+            
+            VGFCoreExceptionServiceURI:
+            constants Uri's as Websites with .NET Class URI
+            
+            Call is: 
+            Process.Start(webserver, instancevaraiable.OrginalString);
+            Process.Start(InternetExplorer/Chrome/Edge/..., wuri.OrignalString
+            ---------------------------------------------"https://www.microsoft.com"
+            
+            
+            ------------------------------------------------------------------------
+            Next can use:
+            Windows Tool - psr.exe - problem step recorder -
+            All Useractions (mouse, taste...), Machine, System,
+            create Microsoft Special HTML File x.mht, 
+            can pack all into .zip package and send to Developer directly.
+            
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            Create Remote Exception Service for Framework, Application...
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.extensionDataField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.DataField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.ErrorTypeField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.InnerErrorField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.MessageField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.SourceField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.StackTraceField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.ExtensionData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.ErrorType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.InnerError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.StackTrace">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Exception.VGFCoreException.VGFCoreExceptionService.RaisePropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.FileSystem.VGFFileSystem">
+            <summary>
+            Class VGFFileSystem
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            NOTE ! Class File is static, you can directly use the members.
+            
+            
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.FileSystem.VGFFileSystem.VGFGetLastAccessTimeOfFile(System.String)">
+            <summary>
+            Get Last Access of File
+            </summary>
+            <param name="FullFilePathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.FileSystem.VGFFileSystem.VGFGetLastWriteTimeOfFile(System.String)">
+            <summary>
+            Get Last Write Time for a File
+            </summary>
+            <param name="FullFilePathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.FileSystem.VGFFileSystem.VGFGetCreationTimeOfFile(System.String)">
+            <summary>
+            Get the creation Time of File
+            </summary>
+            <param name="FullFilePathName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Interaction.VGFInteraction">
+            <summary>
+            Class VGFInteraction
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Web.VGFInternet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Licensing.VGFLicense">
+            <summary>
+            Class VGFLicense
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            License Methods, Trial, Demo,
+            FeatureSwitcher (After Registered more new Methods in framework)
+            License Activator
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Logging.VGFLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Logging.VGFLogger.VGFLogEventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Logging.VGFLogger.VGFLogLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Logging.VGFLogger.VGFWriteToFrameworkLogFile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Logging.VGFBaseFileLogger.VGFLogsEvents(System.String,System.String,System.String)">
+            <summary>
+            Initialize is guaranteed to be called by MSBuild at the start of the build
+            before any events are raised.
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Logging.VGFCoreLogs">
+            <summary>
+            VGFCoreLogs make it SPF conform with ISO Norm Developer
+            Logs central in Class with static, so all Classes and Method using.
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Logging.VGFCoreLogs.VGFWriteTrace(System.Int32,System.Int32,System.String,System.Object[])">
+            ------------------------------------------------------------------------------------
+             Set Method Implementation with Options:
+             AggressiveInline	- for short methods better inline
+             InternalCall		- internal call for method, so in Common Language Runtime Entry
+             NoInline			- No Inline say to Compiler !.
+             Compiler make Inline Methods at Compile with our Code.
+             Do J want this NOT, set NoInline !!!.
+            ------------------------------------------------------------------------------------
+             UNDONE - MethodImplAttribute have out comment
+             [MethodImplementation(MethodImplOption.AggressiveInline)]
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Mobile.VGFMobile">
+            <summary>
+            Class VGFMobile
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Multimedia.VGFMultimedia">
+            <summary>
+            Class Multimedia
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL">
+            <summary>
+            Class VGFNativeWindows
+            Like Microsoft Guideline for native Methods:
+            Three Classes.
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.OkOnly">
+            <summary>
+            Set MessageBox Button
+            </summary>
+            <summary>
+            Button OK only
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.OkCancel">
+            <summary>
+            Button OK and Cancel
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.AbortRetryIgnore">
+            <summary>
+            Button Abort and Retry and Ignore
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.YesNoCancel">
+            <summary>
+            Button Yes and No and Cancel
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.YesNo">
+            <summary>
+            Button Yes and No
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.RetryCancel">
+            <summary>
+            Button Retry and Cancel
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Application">
+            <summary>
+            Set MessageBox Icon
+            </summary>
+            <summary>
+            Application Icon
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Critical">
+            <summary>
+            Critical Icon
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Question">
+            <summary>
+            Question Icon 
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Exclamation">
+            <summary>
+            Icon Exclamation
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Information">
+            <summary>
+            Icon Information
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Winlogo">
+            <summary>
+            Icon Windows Operation System Logo
+            </summary>
+            
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.Shield">
+            <summary>
+            Icon Shield green, yellow, red
+            means the Security Shield
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.MsgBoxSetForeground">
+            <summary>
+            Set Window in foreground everytime
+            </summary>
+            <remarks>
+            Flag SetForeGround,
+            The Window is Foreground everytime.
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.SystemModal">
+            <summary>
+            Set Modal Type
+            
+            Flag SystemModal for this Window,
+            User must bes close the Window, before he continue the Work,
+            NO switch to other App's.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles.TaskModal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.NativeMethods">
+            <summary>
+            Class NativeMethods
+            </summary>
+            <remarks>
+             NO! [SuppressUnmanagedCodeSecurityAttribute]
+             class NativeMethods-------- Stackwalk execute
+             </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.SafeNativeMethods">
+            <summary>
+            Class SafeNativeMethods
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            No SecurityCheck and without Stackwalk,
+            No dangerous and Risk for User Call.
+            
+            !ATTENTION!
+            Have set special Attribute set in Main == assemblyname in AssemblyInfo.cs
+            InternalsVisibleTo("Visual.Galaxy.Framework") as Reference of Class SafeNativeMethods.
+            Class SafeNativeMethods in this Assembly 
+            have Attribute [SuppressUnmanagedCodeSecurityAttribute] is degree of protection.
+            All SafeNativeMethods outside locked. 
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.SafeNativeMethods.VFLMsgBox(System.String,System.String,Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.Styles)">
+            <summary>
+            MessageBox from our famous Visual.Function.Library.dll written in C.
+            </summary>
+            <!-- Author Tipplin -->
+            At next in new Project an better MessageBox as this old Style,
+            Project "" - WPFMessageBox with many Features:
+            WPFMessageBox: 3D Icons, Hyperlink, Clipboard, Copy, Scrollbar, 
+            Expand WPFMessageBox to Full Window at Left Corner Black Field click and make it greather,
+            Timeout, set value and the WPFMessageBox close automatic by no User Action!.
+            (NOTE: same was in Windows Operation System as MessageBoxTimeout Function)
+            (NOTE: STOPPED a Thread with Thread.Sleep or Sleep Function can write this:
+            Thread.Sleep(5000 * MessageBox("After OK Click, Thread continue!", "Thread", OK, Buton) );
+            * asteric as operator, so sleep the Thread 5 seconds and than the MessageBox shows the Message.
+            Thread.Sleep(5000 * MethodName(parameters) );
+            * asteric as operator, so sleep the Thread 5 seconds and than execute the Call/Method.
+            Many Timers in .NET Framework without any Control!
+            Timers Timer;
+            Timer(interval, parameter, Call, x);
+            The Timer execute after TimeInterval any time this Call, don't forget the Timer.Stop!,
+            Forget the Timer runs continue.
+            Same in Mobile Class Vibrator as Timer, forget Timer.Stop - Phone any time vibrate.
+            <!-- Author Tipplin -->
+            <param name="lpszText">set here your Text</param>
+            <param name="lpszTitel">set here your Title</param>
+            <param name="styles">Enumerator Styles: Button, Icon, SetForeground, SystemModal</param>
+            set here the Style do you want
+            1 - 4
+            OK Button
+            1 Critical Icon
+            2 Exclamation Icon
+            3 Information Icon
+            4 Question Icon
+            5 - 8
+            YESNO
+            9 - 12
+            ABORTRETRYIGNORE
+            
+            <remarks>
+            Note!, MessageBox from System with internal Flags,
+            MessageBox is alltime in Foreground and SystemModal,
+            so the user must be closed, before work continue with other Programs.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.UnsafeNativeMethods">
+            <summary>
+            Class UnsafeNativeMethods
+            </summary>
+            <!-- Author Tipplin -->
+            Third Class for Native Methods from native DLL's
+            <!-- Author Tipplin -->
+            <remarks>
+            [SuppressUnmanagedCodeSecurityAttribute]
+            with SecurityCheck and Stackwalk.
+            
+            !ATTENTION!
+            Have set special Attribute set in Main == assemblynae.dll in AssemblyInfo.cs
+            InternalsVisibleTo("Visual.Galaxy.Framework") as Reference of Class SafeNativeMethods.
+            Class SafeNativeMethods in this Assembly 
+            have Attribute [SuppressUnmanagedCodeSecurityAttribute] is degree of protection.
+            All SafeNativeMethods outside locked.  
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.NativeMethodsRuntimes">
+            <summary>
+            Use here Microsoft C Runtime Library - mscrt.dll - 64 Bit Version !.
+            !NOTE! If Operation System is Windows 10 Professional more than one C/C++ Runtimes !
+            at Time by Windows 10 October Update 2018.
+            
+            Windows 10 System Compoment - ucrt.dll - universal c runtime library -
+            equa. is vcruntime140.dll in Visual Studio - Windows is written with Visual Studio.
+            
+            ucrt.h as headerfiles in Windows 10 SDK in:
+            C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucr
+            
+            ucrt with sourcecodes:
+            C:\Program Files (x86)\Windows Kits\10\Source\10.0.17763.0\ucr
+            
+            Windows Error Numbers with description
+            C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared
+            INFO ! catch the Windows Operation System Error with:
+            Class Win32Exception
+            .NET Framework: try/catch/finally block and filtermethod 
+            catch(Win32Exception exe)if(ex.Number == -2100000) or when(ex.Number == 0x000000c5){...}
+            
+            
+            Give mixed Runtimes C and C++ by C++ Classes with mangled Names and pure C Functions,
+            see with Dependency Walker (32/64BIT) - Functions 64BIT at Name.
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.NativeMethodsRuntimes.VRLExit">
+            <summary>
+            Use here Microsoft C Runtime Library - mscrt.dll - 64 Bit Version !.
+            exit, terminate process complete, call and caller.
+            exit(errorcode); All in Windows SDK: All with begin ERROR_
+            </summary>
+            <remarks>
+            Microsoft Name Convention: First Letter must be upper at Declaration
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.NativeMethodsRuntimes.VRLExit2(System.Int32)">
+            <summary>
+            Use here Microsoft C Runtime Library - mscrt.dll - 64 Bit Version !.
+            exit, terminate process complete, call and caller.
+            exit(errorcode); All in Windows SDK: All with begin ERROR_
+            VRLExit2(1150); 
+            // 1150 is The specifies program requires a newer Version of Windows Operation System.
+            ERROR_OLD_WIN_VERSION = 1150L
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.NativeWindows.VGFNativeDLL.NativeMethodsRuntimes.VRLCExit">
+            <summary>
+            Use here Microsoft C Runtime Library - mscrt.dll - 64 Bit Version !.
+            mscrt.dll
+            _cexit, Performs cleanup operations and returns without terminating the process.
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.NativeWindows.VGFNativeWindowsDLL">
+            <summary>
+            Class VGFNativeWindows
+            Like Microsoft Guideline for native Methods:
+            Three Classes.
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.NativeWindows.VGFNativeWindowsDLL.VGFBeep(System.Int32,System.Int32)">
+            <summary>
+            Multi Beep
+            write for all Windows Operation System Functions, C# Wrapper Methods.
+            </summary>
+            <param name="fre">Set Frequence</param>
+            <param name="dur">Set Duration</param>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            Frequence is integer Value, hear/not hear
+            32474 maximum.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Network.VGFCoreNetwork">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork">
+            <summary>
+            VGFEndpointInfoNetwork
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.NetworkID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.NamespaceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.IPAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.MacAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.Gateway">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.RouteInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.Policies">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.Subnet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.DNSInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFEndpointInfoNetwork.ContainerID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Network.VGFCoreNetwork.VGFLockWorkStation">
+            <summary>
+            Lock the current Workstation/Computer
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin-->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Registry.VGFRegistry">
+            <summary>
+            Class VGFRegistry
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplinlin -->
+            <remarks>
+            Wrapper Methods for Methods from 
+            Assembly Visual.Registry.Library.dll
+            In Assembly internal written, can be visible with Attribute
+            in AssemblyInfo.cs
+            
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Registry.VGFRegistry.WindowsVersionRegKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Registry.VGFRegistry._registry">
+            <summary>
+            Interface from IMicrosoftWin32Registry
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.IsWindows7">
+            <summary>
+            Check whether the current Windows is Windows 7 or not. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.GetCurrentWindowsVersion">
+            <summary>
+            Get the current Windows version info from HKLM
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.GetCurrentWindowsBuild">
+            <summary>
+            Get the current Windows build info from HKLM
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.GetCurrentWindowsRevision">
+            <summary>
+            Returned the Key UBR for Windows 10 Revisionnumber
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.GetCurrentWindowsBuildLab">
+            <summary>
+            Get Windows Operation System BuildLabEx
+            </summary>
+            <!-- Author Tipplin -->
+            BuildLabex means the created current Build with Date and Time compiled.
+            19640.1.amd64fre.mn_release.200530-1731
+            Build 19640 30.05.2020 at 17:31
+            <!-- Author Tipplin -->
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetWindowsBuildLab">
+            <summary>
+            Get the current Windows Operation System Build Lab
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetWindowsCurrentBuildNumber">
+            <summary>
+            Get the current Windows Build Number
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetWindowsOperationSystemEdition">
+            <summary>
+            Get the Windows Operation System Editian Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetRegisteredOrganizationName">
+            <summary>
+            Get Registered Organization Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetRegisteredOwner">
+            <summary>
+            Get Current Registered Owner()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFGetWindowsOperationSystemRevisionnumber">
+            <summary>
+            Get Windows Current Revisionnumber()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Registry.VGFRegistry.VGFCompareWithGivenRevisionNumber(System.Int32)">
+            <summary>
+            Compare with given RevisionNumber on Windows System.
+            </summary>
+            <param name="RevisionNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.RemoteServer.VGFRemoteServer">
+            <summary>
+            Class VGFRemoteServer
+            </summary>
+            <!-- Author -->
+            
+            <!-- Author -->
+            <remarks>
+            Windows 10 Professional Edition many Networking
+            WinSTAT.dll for connect and remote to Servers.
+            Remote Operations, Synchronzation Services
+            
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Resource.VGFResources">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Scheduler.VGFScheduler">
+            <summary>
+            Class VGFScheduler
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Screen.VGFScreen">
+            <summary>
+            Class VGFScreen
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Security.VGFSecurity">
+            <summary>
+            Class VGFSecurity
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFIsRunningWithElevatedPrivileges">
+            <summary>
+            Determines if the current process is running with elevated privileges
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFIsRunningWithElevatedAdminPrivileges">
+            <summary>
+            Determines if the current process is running with elevated Admin privileges
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFSystemFunction001(System.String,System.String)">
+            <summary>
+            Framework Method don't use it!
+            </summary>
+            <!-- Author Tipplin -->
+            SystemFunction001 is Security Method as Check
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFSystemFunction002(System.Int32)">
+            <summary>
+            Framework Method don't use it!
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="ErrorCode">Set ErrorCode</param>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFSystemFunction003(System.Int32)">
+            <summary>
+             Framework Method don't use it!
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="ErrorCode">Set ErrorCode</param>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Security.VGFSecurity.VGFSystemFunction004(System.Int32)">
+            <summary>
+            
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="ErrorCode">Set ErrorCode</param>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Services.VGFProcessBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Services.VGFProcessBuilder.VGFStartExecutableProcess(System.String,System.String,System.Security.SecureString,System.String,System.String)">
+            <summary>
+            Start Executable Process
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+            <param name="ProcessName">Set EXE Name</param>
+            <param name="ProcessArgument">Set Arguments</param>
+            <param name="UserName">Set your UserName, but is an optional parameter.</param>
+            <param name="Password">Set your Password</param>
+            <param name="UDomain">Set your Domainname, but is an optional parameter.</param>
+            <remarks>
+            Method-declaration with optional parameters,
+            string UserName = ""
+            string Domain = ""
+            the standard nullorempty can be change in Code.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Services.VGFProcessBuilder.VGFStartProcessWithArguments(System.String,System.String)">
+            <summary>
+            Start any Process (.exe) with arguments
+            </summary>
+            <!-- Author Tipplin -->
+            Start all executable .exe as process, same with SDK Tools, System-tools...
+            <!-- Author Tipplin -->
+            <param name="ProcessName">set the Processname, most .exe</param>
+            <param name="arguments">set the arguments, is optional parameter.</param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Services.VGFProcessBuilder.VGFTestStartUpAppConsole">
+            <summary>
+            Test our Console Window App
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Services.VGFProcessBuilder.VGFStartWebSiteDirectly(System.String)">
+            <summary>
+            Start Website directly with Internet Explorer or Microsoft Edge or other Web-Browser
+            </summary>
+            <param name="WebsiteURI">Set the uri: -microsoft.com- </param>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Signatures.VGFSignatures">
+            <summary>
+            Class VGFSignatures
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.SystemResources.VGFSystemResources">
+            <summary>
+            Get VGFSystemResources
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Timer.VGFRealTimeService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Timer.VGFRealTimeService.Now">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Timer.VGFRealTimeService.Today">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Timer.VGFRealTimeService.UtcNow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Timer.VGFTime">
+            <summary>
+            Class VGFTime
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFTime.dt">
+            <summary>
+            static DateTime must be, while static class,  
+            for global instance for all Methods
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+            Class-Head:
+            All class instances, 
+            struct's on stack or heap.
+            // on stack
+            structname instancevariable;
+            
+            // on heap with new operator
+            structname instancevariable = new structname();
+            ----------------------------------classconstructor
+            ----------------------------------with Parameters or without
+            In Visual C# struct's never null, (without Members) 1 byte everytime ! managed the struct!.
+            ~class destructor never null in Visual C#, 
+            destructor null he run in idle, the system performance goes down!.
+            ~destructor in C# for cleanup's, statement, call, log's...
+            
+            Class destroy: by more then one, the GC make lazy destroy from last class to first class.
+            
+            But not the call!
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFTime.Day">
+            <summary>
+            Hour now, as integer value
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFTime.Minute">
+            <summary>
+             Minute now, as integer value
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFTime.Year">
+            <summary>
+            Second now, as integer value
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFTime.MSecond">
+            <summary>
+            Milliseconds now, as integer value
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFCurrentLocalTimeNow">
+            <summary>
+            Current Local Time now
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFGetLongTimeFormat">
+            <summary>
+            Get Long Time Format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFGetShortTimeFormat">
+            <summary>
+            Get Short Time Format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFGetUTCTimeFormat">
+            <summary>
+            Get UTC the Worldtime Format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFGetTimeofInstanceNow">
+            <summary>
+            Get Time of this Instance now
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFTime.VGFIsTimeInSummerActualTimeZone">
+            <summary>
+            Is Time In Summertime Actual Timezone
+            </summary>
+            <!-- Author Tipplin-->
+            
+            <!-- Author Tipplin-->
+            <remarks>
+            Visual C# Datatype: bool / boolean 
+            hard coded as true = 0 or false = 1
+            or
+            as Literal: "True" or "False"
+            .ToString();
+            </remarks>
+            <returns>
+            returned boolean literal "True" or "False"
+            in Visual C# internal hard coded.
+            </returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Timer.VGFTimers">
+            <summary>
+            Class VGFTimers
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Timer.VGFDate">
+            <summary>
+            Class VGFDate
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFDate.Day">
+            <summary>
+            Day of Month as integer value
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFDate.dWeek">
+            <summary>
+            Day of Week
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFDate.Month">
+            <summary>
+             Month as integer value
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Timer.VGFDate.Year">
+            <summary>
+            Year as integer value
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFGetLocalLongDate">
+            <summary>
+            Get Local Long Date
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFGetLocalShortDate">
+            <summary>
+            Get Local Short Date
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFGetDayOfWeek">
+            <summary>
+            Get Day Of Week
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFGetDayOfYear">
+            <summary>
+            Get Day Of Year
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFIsCurrentYearLeapYear(System.Int32)">
+            <summary>
+            Is Current Year a LeapYear ?
+            </summary>
+            <param name="currentYear"></param>
+            <returns>
+            true or false - 0 or 1
+            Literal isnt.
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFDaysInMonth(System.Int32,System.Int32)">
+            <summary>
+            Get the Day's in a Month
+            </summary>
+            <param name="Year"></param>
+            <param name="Month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Timer.VGFDate.VGFCurrentLocalDateTimeNow">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy">
+             <summary>
+             VGFCoreUtiliy 
+             Utilities Methods:
+             Languages (primary language-secondary language-sorted),
+             call Website directly with Process.Start
+             use LockWorkstation for lock with keyboard hit (taste = F12 later)
+             use _cexit to terminate caller (.dll) - NOT .exe !!!.
+             use VGFCheckDirectoryIsExists check is Directory current created.
+            
+            
+            
+            
+             </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.mse">
+            <summary>
+            Global Struct instance for all Methods for use!
+            without new operator so is on STACK not on Heap.
+            access with instancevariable mse.
+            NOTE! some Objects with in Constructors parameters!
+            then must set with new operator.
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMAKELANGID(System.Int32,System.Int32)">
+            <summary>
+            Make Langauage ID
+            </summary>
+            <param name="primarylanguage"></param>
+            <param name="sublanguage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFPRIMARYLANGID(System.Int32)">
+            <summary>
+            Make Primary Language ID
+            </summary>
+            <param name="lgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFSUBLANGID(System.Int32)">
+            <summary>
+            Make Sub Language ID
+            </summary>
+            <param name="lgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMAKELONG(System.Int32,System.Int32)">
+            <summary>
+            Make Long
+            </summary>
+            <param name="low"></param>
+            <param name="high"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMAKELPARAM(System.Int32,System.Int32)">
+            <summary>
+            Make
+            </summary>
+            <param name="low"></param>
+            <param name="high"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFHIWORD(System.Int32)">
+            <summary>
+            Make HIWORD
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFLOWORD(System.Int32)">
+            <summary>
+            Make LOWORD
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMAKEHESULT(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Make HRESULT
+            </summary>
+            <param name="Severe"></param>
+            <param name="Facility"></param>
+            <param name="Code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMakeHRFromErrorCode(System.Int32)">
+            <summary>
+            Make HRESULT from given Error Code
+            </summary>
+            <param name="ErrorCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFHResultFromWin32(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFSucceeded(System.Int32)">
+            <summary>
+            VGFSucceeded
+            </summary>
+            <param name="hr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFFailed(System.Int32)">
+            <summary>
+            VGFFailed
+            </summary>
+            <param name="hr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFStartUpMessage">
+            -----------------------------------------------------------------------
+             Start Message at Entrypoint of APP
+            
+            	[assembly: PreApplicationStartMethod(typeof("") VGFStartUpMessage() )]
+             main(string[] args)
+             {
+            		.....	
+             }
+             
+             ----------------------------------------------------------------------
+             Prefined Message in our Visual Function Library written in C.
+             TextID from 1 to 24. Text as CHAR array.
+            -----------------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFComponentPrivateMessage(System.String)">
+            
+             Assembly can write for shared and other Developers for use them, 
+             this is public.
+             Assembly can write only for Application, this is private.
+             use AssemblySharedAttribute true = public/shared
+             false = private.
+             Developer can call add reference on Assembly for use, but we dont allowed it,
+             "You have NO License to use them, you dont use our Assembly - STATUS: private"
+             "Only reserved for Application !!!. NOT FOR FREE !!!."
+             [assembly: AssemblySharedAttribute(true, false)]
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckApplicationAlreadyRunning(System.Boolean)">
+            <summary>
+            	Checks whether another instance of the same application is already running.
+            </summary>
+            <param name="SwitchToAlreadyRunningProcess">
+            	Whether the already running process is flashed and brought to front.
+            </param>
+            <returns>
+            	Whether another instance of the application is already running.
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFAppGetClassName(System.IntPtr)">
+            End of Method::VGFCheckApplicationAlreadyRunning
+            ------------------------------------------------------------
+             VGFAppGetClassName
+             Get the Classname of a Application.
+             sample: Microsoft Applications.
+             MS Word = opus 
+             MS Edge = spartan
+             MS Excel = 
+            ------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFHitLockWorkstation">
+            <summary>
+            Lock the Workstation with an Keyboard Hit
+            </summary>
+            <!-- Author Tipplin -->
+            WINAPI32 native method - Lock the Workstation - Unlock via Screen LogOn
+            Windows 10 Professional is an Workstation, 
+            Multi User System ! one or more User on ONE Computer.
+            Use Internal System Tool: netplwiz.exe for create Users and Groups,
+            Windows Password Tresor, decrypt all your Passwords, encrypt with your User Password.
+            <!-- Author Tipplin -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckForSecretKeyStroke">
+            End of Method::VGFLockWorkstation
+            ------------------------------------------------------------
+             Lock your Workstation, here version for key's 
+             s/S = Secret, Lock, u/U = unsecret, show LogIn Dialog
+             Another is per click on Taskbar, icon secret.
+            ------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFExitDllApplication(System.String)">
+            End of Method::VGFLockWorkstation
+            --------------------------------------------------------
+             VGFExitDllApplication
+             You can exit the Dynamic Link Library from Memory Space
+             with cexit from Visual C++ Runtime Library !
+             But NOT the .exe = app
+             Take, you can see in Task Manager.
+            --------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckDirectoryIsExistsOrCreate(System.String)">
+            <summary>
+            Check Directory is Exists or Create it.
+            </summary>
+            <param name="DirectoryName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckIsDebuggerPresent">
+            <summary>
+            Check is Debugger present on System
+            </summary>
+            <!-- Author Tipplin -->
+            means the local debugger on system,
+            other is the (install!) remote debugger system on customer system,
+            have access, for see who is the Error occured,
+            make remote update.
+            or
+            install app and start the PSR on Customer System,
+            so many Information about User Action and App,
+            PSR make an special HTML File is Microsoft HTML - .mht,
+            pack in to .zip file and send to Author.
+            PSR.exe is an Windows Systemtool = Problem Step Recorder.
+            All user actions, Keyboard, Mouse moves...
+            <!-- Author Tipplin -->
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetComputerNameDNSHostname">
+            End of Method::VGFCheckIsDebuggerPresent
+            
+             Get the Computername
+            	
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetUserName">
+            <summary>
+            Get Username extend, Domainname
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckIsInstanceRun(System.IntPtr,System.String)">
+            <summary>
+            Check App Instance is running
+            </summary>
+            <param name="WindowHandle"></param>
+            <param name="WindowTitleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFShutdownSystemWithFlag(System.UInt32)">
+            End of Method::VGFCheckIsInstanceRun
+            -----------------------------------------------------------------
+             UNDONE: 
+             shutdown flags and reason flags
+             At Windows new access rights and privileges.
+             The User must have Shutdown Privilege (many more)
+             failed LookupAccountPrivilege and struct's
+            -----------------------------------------------------------------
+             Shutdown your System with Shutdown Flag and Reason Flag
+             second parameter is for Reasons, can combine with | operator.
+             Reasons: 
+             Hardware reasons, software reasons......
+            
+             reasons practiable for Applications, means Fixes, 
+             planned updates, upgrade, install, reconfig,
+            
+             avantage: write entry into Windows your App, 
+             with RegisterApplicationRestart(string AppName);
+             so windows shutdown, make your work, 
+             than windows reboot and start your app automatic.
+            
+             Bugfix			- Bug in Application
+             Securityfix		- Security Leak in Application
+             Hotfix			- Fix the App, after Operation System Fix.
+            					- pass on !
+            
+             unchecked:
+             Windows 10 NOT allowed when app and component in use a update or so...
+             Windows 10 have a Anti Virus scanner and Malware Protection Engine,
+             scan every app.... - Defender ! ATTENTION about Modulversion !
+            
+             Please get the newest !!!.
+             Online:
+             often make Microsoft automatic update, outer Patchcycle Time.
+            
+             Systemtool: scan system, inconti. problems?
+             
+            
+            
+             This Reasons are from Microsoft:
+            
+            
+            -----------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFSearchFile(System.String,System.String,System.String)">
+            <summary>
+            Search File in System
+            </summary>
+            <!-- Author Tipplin -->
+            The fasted System-Function for search a File in System.
+            <!-- Author Tipplin -->
+            <param name="Path"></param>
+            <param name="FileName"></param>
+            <param name="FileExtension"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetFileSystemNameOnComputer(System.String)">
+            End of Method::VGFSearchFile
+            ------------------------------------------------------------
+             GetVolumeInformation
+             GetVolumeInformation("c:\\", volname, volname.Capacity, out sernum, out maxlen, out flags, fsname, fsname.Capacity))
+            
+             string RootPathName						- Drive (A, B, C, D.....)
+             StringBuilder VolumeNameBuffer			- VolumeNameBuffer caching the Name of Volume in a Buffer
+             int VolumeNameSize						- Size of the Volume Name (Drive)
+             out uint VolumeSerialNumber				- Serial Number of Volume (Drive)
+             out uint MaximumComponentLength			-
+             out FileSystemFeature FileSystemFlags	-
+             StringBuilder FileSystemNameBuffer		- Name of Filesystem of current System
+             int nFileSystemNameSize					- Size of Filesystemname
+            
+            
+            ------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetVolumeSerialNumber(System.String)">
+            <summary>
+            Get Volume Serialnumber
+            </summary>
+            <param name="DriveLetter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFSetComputerPhysDNSHostName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetComputerDNSDomainName">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFRecycleBinDelAll(System.IntPtr,System.String)">
+            <summary>
+            Recycle the Trash, delete all!
+            </summary>
+            <param name="WindowHandle"></param>
+            <param name="DriveLetter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFRandomNumberString(System.Int32,System.Int32)">
+             <summary>
+              Create Random Number
+             </summary>
+             <!-- Author Tipplin -->
+             Random Generator not from .NET FX, use C/C++ Runtime Lib: Random srand/rand
+             next use Intel Processor Random Generator.
+             <!-- Author Tipplin -->
+             <remarks>
+             -----------------------------------------------------------
+             Generate a Random Numbers like:
+             -----------------------------------------------------------
+             Type: 
+             ===========================================================
+             alpha, alphanumeric, numeric with lengths
+            
+             srand, rand from Microsoft Visual C++ Runtime Library
+             all methods declared with .cdecl convention for C#
+             so you can use them.
+             Better Visual C++ Runtime Methods as Class Random.
+             -----------------------------------------------------------
+             INFO: 
+             INTEL SKYLAKE have internal Random Generator for use. 
+             Intel give C++ Header's Files, so you can use all Features.
+             
+             Intel Processor Randomnumbers 
+             in 16, 32, 64 BIT Numbers returned.
+             
+             This Numbers are everytime NEW.
+             Intel Processor Cryption - AES and Rijndael for use.
+             -----------------------------------------------------------
+             </remarks>
+             <param name="Type">
+            		alpha               = 1
+            		numeric             = 2
+            		alphanumeric string = 3
+             </param>
+             <param name="Length">
+            		insert your length for random number string
+             </param>
+             <returns>
+            		returned create random string
+             </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCreateCRC32">
+            <summary>
+            Create Cycle Redundancy Check 32BIT
+            DON'T USE at current Windows Operation System,
+            in new Windows 10 SDK OS-Build 18282 and new 18298
+            NTCreateCRC32 - System - Function
+            NTCreateCRC64 - System - Function
+            </summary>
+            <!-- Author Tipplin -->
+            Cycle Redundancy Check 32BIT Value
+            <!-- Author Tipplin -->
+            <remarks>
+            Windows 10 SDK 18272 winuser.h new functions
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCreateCRC64">
+            <summary>
+            Create Cycle Redundancy Check 64BIT
+            DON'T USE at current Windows Operation System,
+            in new Windows 10 OS-Build 18362 and new 18922
+            </summary>
+            <!-- Author Tipplin -->
+            Cycle Redudancy Check 64BIT Value
+            <!-- Author Tipplin -->
+            <remarks>
+            Windows 10 SDK 18282 
+            C++ headerfile: winuser.h new functions
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFInitialSystemShutdown(System.String,System.String,System.UInt32,System.Boolean,System.Boolean,Visual.Operation.System.Native.NativeMethods.SHTDN_REASON_CODES)">
+            <summary>
+            
+            </summary>
+            <param name="MachineName"></param>
+            <param name="MessageText"></param>
+            <param name="TimeOut"></param>
+            <param name="ForceShutdown"></param>
+            <param name="RebootAfterShutdown"></param>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFSearchFile(System.String)">
+            <summary>
+            Search File in System
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <param name="FileName"> Set Filename for search</param>
+            <remarks>
+            System Function: SearchFile is the fasted Search.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetMessageAboutMemoryPermanent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetMessageAboutTotalMemory">
+            <summary>
+            Get Total Physical Memory
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFConsoleReadFiletext(System.String)">
+            
+             Code: Zeilenweises Lesen einer Textdatei (Visual C#)
+             In diesem Beispiel wird der Inhalt einer Textdatei mit Hilfe der 
+             ReadLine-Methode der StreamReader-Klasse zeilenweise in eine Zeichenfolge eingelesen.
+             Jede Textzeile wird in der line-Zeichenfolge gespeichert und auf dem Bildschirm angezeigt.
+            
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFComputeDiffDays(System.Int32,System.Int32,System.Int32)">
+            End of Method::VGFConsoleReadFiletext
+            
+             Compute different days
+            
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFShowOpenFileDialog(System.String)">
+            End of Method::VGFComputeDiffDays			
+            ------------------------------------------------------------
+             Standard Windows Dialogs
+             OpenFileDialog and SaveFileDialog
+            ------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetCurrentTimeATOM">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFShowPTBClock">
+            <summary>
+            Show the German PTB Atom Currectness Clock,
+            with option Speech output for hours and seconds
+            </summary>
+            <!-- Author Tipplin -->
+            
+            <!-- Author Tipplin -->
+            <remarks>
+             so here Microsoft Webbrowser Edge , GitHub not supported Internet Explorer.
+             Area Internet Explorer goes to end.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCancelShutdownOnComputer">
+            <summary>
+            Cancel Shutdown on Computer
+            </summary>
+            <!-- Author Tipplin -->
+            Have use here Process.Start and Shutdown Command Line with switch -a, the cancel the shutdown.
+            <!-- Author Tipplin -->
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFStartMicrosoftSite">
+            <summary>
+            Start directly Microsoft Website with Microsoft Edge
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMainAuthorWebsite">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFMethodNullGuardAnalyzer(System.String,System.Object,System.Int32)">
+            <summary>
+            MethodNullGuardAnalyzer
+            </summary>
+            <param name="str"></param>
+            <param name="obj"></param>
+            <param name="i"></param>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckHardwareMachine(System.String,System.String,System.Byte)">
+            ------------------------------------------------------------
+             UNDONE
+            
+            
+            ------------------------------------------------------------
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFGetBatteryStatusLife">
+            <summary>
+            Get Battery Status Life
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Utility.VGFCoreUtiliy.VGFCheckAssemblyConnection(System.String,System.Boolean)">
+            ------------------------------------------------------------
+             UNDONE
+             Assembly failed ? or want bind later ?
+             Method, Check Connection, failed ?, 
+             bind with bAddAssembyToProject = true
+            ------------------------------------------------------------
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Validation.VGFValidation">
+            <summary>
+            Class VGFValidation
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Window.VGFWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.WMI.VGFWMI">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.WMI.VGFWMI.VGFGetDeviceID">
+            <summary>
+            Get Device ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays">
+            <summary>
+            Class Worldwide Holidays
+            </summary>
+            <!-- Author Tipplin -->
+            First set German Holidays, but correct same German Holidays there are failed.
+            Set German Holidays movable and fixed Holidays.
+            other Formuale
+            Meeuws
+            T.H. O' Beirne
+            Bresenham
+            <!-- Author Tipplin -->
+            <remarks>
+            source part:
+            Take from C# Holiday Framework - Thomas Gianini
+            63 Countries, Europe and North America.
+            Use for Holidays Calculation.
+            But he forgot German Days:
+            Totensonntag, Volkstrauertag,
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator">
+            <summary>
+            German Calendar Calculator
+            Translate German States and Federal Name to Englisch,
+            help by NEW Langenscheidt German/English Book.
+            German/English Commission,
+            translate same German Special Words to English
+            Brötchen = roll,
+            
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator._FederalState">
+            <summary>
+             Actual Federal State of Germany
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator._holidayMatrix">
+            <summary>
+            Matrix der Feiertage pro Bundesland
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator._saturday_IsWorkday">
+            <summary>
+            // Flag ob Samstag als Arbeitstag zählt
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator._sundayIsWorkday">
+            <summary>
+            // Flag ob Sonntag als Arbeitstag zählt
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.#cctor">
+            <summary>
+            Class Construtor with Info
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.#ctor">
+            <summary>
+            Class Constructor Standard
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.#ctor(Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany)">
+            <summary>
+            Class Constructor with Parameter
+            </summary>
+            <param name="federalState"></param>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany">
+            <summary>
+            Federal States of Germany
+            </summary>
+            <!-- Author Tipplin -->
+            First I set the Federal States in German Language,
+            after test I change to English.
+            <!-- Author Tipplin -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.DeutschlandGesamt">
+            <summary>
+            Germany total
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Bayern">
+            <summary>
+            Bavaria - short Federal State BY
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.BadenWürtemberg">
+            <summary>
+            Baden Wuerttemberg - short Federal State BW
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Berlin">
+            <summary>
+            Berlin - short Federal State BE
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Brandenburg">
+            <summary>
+            Brandenburg - short Federal State BB
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Bremen">
+            <summary>
+            Bremen - short Federal State HB
+            Hanseatic city
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Hamburg">
+            <summary>
+            Hamburgs - short Federal State HH
+            Hanseatic city
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Hessen">
+            <summary>
+            Hesse - short Federal State HE
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.MecklenburgVorpommern">
+            <summary>
+            Mecklenburg Western Pomerania - short Federal State MV
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Niedersachsen">
+            <summary>
+            Lower Saxony - short Federal State NI
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.NordrheinWestfalen">
+            <summary>
+            North Rhine Westphalia - short Federal State NW
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.RheinlandPfalz">
+            <summary>
+            Rhineland Palatinate - short Federal State RP
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Saarland">
+            <summary>
+            Saarland - short Federal State SL
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Sachsen">
+            <summary>
+            Saxony - short Federal State SN - only Federal State RepentanceAndPrayer/Buß und Bettag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.SachsenAnhalt">
+            <summary>
+            Saxony-Anhaltine - short Federal State ST
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.SchleswigHolstein">
+            <summary>
+            Schleswig Holstein - short Federal State SH
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.FederalStatesGermany.Thüringen">
+            <summary>
+            Thuringia - short Federal State TH
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays">
+            <summary>
+            German Holidays
+            Langenscheidt English/German Commission
+            Goes german word to english.
+            Brötchen in english rolls
+            
+            near London an great German Bakery with 150 sale cars.
+            stand in London by Stock change, best yet rolls and pumpernickel.
+            Next German Christmas Market in same Cities in England,
+            Sausages, Frankurter, grilled sausages, (glühwein) mulled wine with alcohol,
+            Frankfurter green sauce.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.NewYear">
+            <summary>
+            Neujahr
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Epiphany">
+            <summary>
+            Heiligen Drei Könige
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ValentinesDay">
+            <summary>
+            Valentins Tag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.RoseMonday">
+            <summary>
+            Rosenmontag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ShroveTuesday">
+            <summary>
+            Fasching Dienstag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.AshWednesday">
+            <summary>
+            Aschermittwoch
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.MaundyThursday">
+            <summary>
+            Gründonnerstag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.GoodFriday">
+            <summary>
+            Karfreitag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.EasterSunday">
+            <summary>
+            Ostern / Eastern / Osterei / Easteregg
+            Oster Sonntag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.EasterMonday">
+            <summary>
+            Oster Montag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.MothersDay">
+            <summary>
+            Muttertag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.DayWork">
+            <summary>
+            1. Mai - Tag der Arbeit
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Ascension">
+            <summary>
+            Christi Himmelfahrt
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.WhitSunday">
+            <summary>
+            Pfingst Sonntag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.WhitMonday">
+            <summary>
+            Pfingst Montag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.CorpusChristi">
+            <summary>
+            Fronleichnam
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.AugsburgPeaceFestival">
+            <summary>
+            Augsbuger Friedenfest
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ThanksgivingDay">
+            <summary>
+            Erntedankfest
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Assumption">
+            <summary>
+            Maria Himmelfahrt
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.DayOfGermanUnity">
+            <summary>
+            Tag der Deutschen Einheit
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Reformation">
+            <summary>
+            Reformationtag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.AllSaints">
+            <summary>
+            Allerheiligen
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.AllSouls">
+            <summary>
+            Allerseelen
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Martinmas">
+            <summary>
+            Martinstag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.MemorialDay">
+            <summary>
+            Volkstrauertag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Deadsunday">
+            <summary>
+            Totensonntag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ImmaculateConception">
+            <summary>
+            Maria Emfängnis
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.RepentanceAndPrayer">
+            <summary>
+            Buß und Bettag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Nicolas">
+            <summary>
+            Nikolaustag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.FirstAdvent">
+            <summary>
+            Erster Advent
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.SecondAdvent">
+            <summary>
+            Zweiter Advent
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ThirdAdvent">
+            <summary>
+            Dritter Advent
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.FourthAdvent">
+            <summary>
+            Vierter Advent
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ChristmasEve">
+            <summary>
+            Heiligabend
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.ChristmasDay">
+            <summary>
+            1. Weihnachtstag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.SecondDayOfChristmas">
+            <summary>
+            2. Weihnachtstag
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.Sylvester">
+            <summary>
+            Sylvester
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays.NoneHoliday">
+            <summary>
+            Kein Feiertag
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GetWorkdays(System.DateTime,System.DateTime)">
+            <summary>
+            Calculates the number of actual working days
+            Berechnet die Anzahl tatsächlicher Arbeitstage
+            </summary>
+            <!-- Author Tipplin -->
+            NOTE: ❌The Gauss Formuale goes incorrect, ❌
+            The gauss formula is incorrect, makes false statements, means deviations
+            
+            use the Meeuw Formuale -Math. Belgium-
+            
+            <!-- Author Tipplin -->
+            <param name="dtBeginDate"></param>
+            <param name="dtEndDate"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.IsHoliday(System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="dtDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GetHolidayName(System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="dtDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GetHolidayDate(Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays,System.Int32)">
+            <summary>
+            Get Holiday Date
+            </summary>
+            <!-- Author Tipplin -->
+            Unchecked Formulare, Gauss Formulare goes uncorrectness,
+            change to Meeuws (Belgian Mathe.) Formulare is correctness
+            <!-- Author Tipplin-->
+            <param name="holiday"></param>
+            <param name="iYear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GetEasterSunday(System.Int32)">
+            <summary>
+            Get Easter Sunday
+            </summary>
+            <!-- Author Tipplin 🧑-->
+            !NOTE! Gauss Formulare goes uncorrectness,
+            next change to Meeuws Formulare is correct.
+            Meeuws mathematic from Belgium.
+            <!-- Author Tipplin 🧑-->
+            <param name="iYear"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.SaturdayIsWorkday">
+            <summary>
+            Saturday is a Workday
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.SundayIsWorkday">
+            <summary>
+            Sunday is a Workday
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.AddHoliday(Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays)">
+            <summary>
+            Add German Holiday
+            </summary>
+            <param name="holiday"></param>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.RemoveHoliday(Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.GermanHolidays)">
+            <summary>
+            
+            </summary>
+            <param name="holiday"></param>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.Worldwide.Holidays.VGFWorldwideHolidays.GermanCalendarCalculator.InitMatrixFederalStates">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.VGFCore">
+            <summary>
+            Class VGFCore - constants, enum, structures
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStandardMessage1">
+            <summary>
+            Constant VGFStandardMessage1 as global in Project.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFTraceFile">
+            <summary>
+            Constant string with Pathname and Folder for all Trace Log Files
+            </summary>
+            <!-- Author Tipplin -->
+            @ sign for unicode sign, so only one \ backward slash in Pathname !
+            / forward slash, see Javascript, HTML, - by Audiocontrol, Videocontrol (Website) as directory who is the Audiofile and Videofile.
+            <!-- Author Tipplin -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFConsoleFile">
+            <summary>
+            Constant string with Pathname and Folder for all Console Log Files
+            </summary>
+            <!-- Author Tipplin -->
+            @ sign for unicode sign, so only one \ backward slash in Pathname !
+            <!-- Author Tipplin -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFSystemFile">
+            <summary>
+            Constant string with Pathname and Folder for all System Log Files
+            </summary>
+            <!-- Author Tipplin -->
+            @ sign for unicode sign, so only one \ backward slash in Pathname !
+            <!-- Author Tipplin -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFFrameworkFile">
+            <summary>
+            Constant string with Pathname and Folder for all Framework Log Files
+            </summary>
+            <!-- Author Tipplin -->
+            @ sign for unicode sign, so only one \ backward slash in Pathname !
+            <!-- Author Tipplin --> 
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFFrameworkLogFile">
+            <summary>
+            For internal Visual Galaxy Framework Log File path
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.process">
+            <summary>
+            .NET Class Process, starts Application with Process.Start(appname) and more
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.dr">
+            <summary>
+            .NET Class DirectoryInfo - Exists Dir...
+            </summary>
+            <!-- Author Tipplinlin 🧑 -->
+             Class Instance
+            <!-- Author Tipplinlin 🧑 -->
+            <remarks>
+            Class Directory
+            pplies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity
+            object to the directory described by the current System.IO.DirectoryInfo object.
+            
+            directorySecurity:
+            An object that describes an ACL entry to apply to 
+            the directory described by the path parameter.
+            SetAccessControl(DirectorySecurity directorySecurity);
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.sw">
+            <summary>
+            .NET Class StreamWriter - write into File
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            .Flush() write complete Block into File.
+            .Flush() everytime before .Close() the File !.
+            if not he close file, but nothing write into file!.
+            DON'T FORGET .Close(); - if so, the File continue open and no access more and can block the System.
+            Tipplin Tip: write .Close(); into try/catch block - finally
+            finally is ultimate free resource, If Exception ot NOT !.
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.sr">
+            <summary>
+            .NET Class StreamReader - read from a File
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.fs">
+            <summary>
+            .NET Class FileStream instance with instancevariable fs.
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            Provides a System.IO.Stream for a file, 
+            supporting synchronous and asynchronous reads and writes.
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.dt">
+            <summary>
+            .NET Class DateTime - Problem is USA to Europe here Germany, 
+            USA last year make leap second minute have now 60 seconds not 59 - old 12:59:59 new 12:00:60 -> 12:01:00
+            Problem by Windows Clock must be everytime syncronize the clock with Windows Time Server -> Option Time+Language
+            Time Server: time.windows.com - every date check the Clock and time - Germany high different was 2 seconds.
+            Tip Tipplin: install the PTB Clock (Atomclock) written in Javascript as Website:https://uhr.ptb.de/
+            Class DateTime:
+            IsLeapYear(int year)
+            DaysInMonth(int year, int month);
+            Show all Class Members with marked classname and push F12
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.id">
+            <summary>
+            Set static instance for Class WindowsIdentity for all other Classes and Methods.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.p">
+            <summary>
+             Set static instance for Class WindowsPrincipal for all other Classes and Methods.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.vai">
+            <summary>
+            Set static instance for AssemblyInfo for current Assembly
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.VGFCore.Timestamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Visual.Galaxy.Framework.VGFCore.VGFGetCurrentTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize">
+            <summary>
+            Individual StringBuilderBufferSize 
+            always have a maximum size of Chararcters.
+            Make sure, that the String is not higher/longer as the StringBufferSize is !.
+            StringBuffers have an strong Value, not variable or maximum Capacity.
+            </summary>
+            <!-- Author 👨Tipplin 👨 -->
+            SizeCharSize is the static chars for an Buffersize:
+            SizeChar1024 are 1024 chars in maxium StringBuilder and so...
+            maximum chars is integer value: 2.147.483.647
+            StandardBuilder sb = new 
+            StringBuilder(StringBuilderBufferSize.SizeChar255, 
+            StringBuilderBufferSize.SizeChar1024);
+            sb.Capacity - StringBuilder automatic to highest value, 
+            if the string is higher as 255 chars.
+            -------------------------------------------------------------------
+            StringBuilder standard is 16 chars internal set.
+            StringBuilder sb = new StringBuilder();
+            -------------------------------------------------------------------
+            <!-- Author 👨Tipplin 👨 -->
+            <remarks>
+            Use only StringBuilder is 3000x faster as string,
+             own CACHE.
+            Use for: Buffers, Sorted Methods, I/O Operations...
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar255">
+            <summary>
+            Buffersize 255 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar1024">
+            <summary>
+            Buffersize 1024 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar2048">
+            <summary>
+            Buffersize 2048 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar4096">
+            <summary>
+            Buffersize 4096 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar8192">
+            <summary>
+            Buffersize 8192 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar16384">
+            <summary>
+            Buffersize 16384 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar32767">
+            <summary>
+            Buffersize 32767 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.VGFStringBuilderBufferSize.SizeChar65535">
+            <summary>
+            Buffersize 65535 chars for StringBuider
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.capacity">
+            <summary>
+            Set capacity for Buffers, like C++ here with 255 
+            </summary>
+            <!-- Author Tipplin -->
+            But is the given buffer capacity greather as 254 -1 no overflow!, StringBuilder he cut him!
+            <!-- Author Tipplin -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.sbb">
+            <summary>
+            Class StringBuilder are 3000x faster as string.
+             StringBuilderCache
+            </summary>
+            <!-- Author TIPPLIN 🧑-->
+            Param capacity is an constant value 254 chars minus 1, minus 1 as safe to overflow!
+            <!-- Author TIPPLIN 🧑-->
+            <remarks>
+            NOW ! 
+            but don't forget 'private' is degree of protection, no access!
+            must set public for outside access. 
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.sb">
+            <summary>
+            StringBuilder expanded
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            String are slower as StringBuilder is very fast.
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            StringBuilder(minimum integer, maximum integer);
+            he expand automatic to highest capacity !.
+            -------------------------------------------------------------------
+            NOW ! 
+            but don't forget 'private' is degree of protection, no access!
+            must set public for outside access.
+            -------------------------------------------------------------------
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.sbr">
+            <summary>
+            Global in Project-Solution.
+            StringBuilder here as expanded, minimum 255 chars and maximum 2048 chars,
+            if minimum string is greather than 255, he expand to maximum automatic.
+            So we have save, that he NOT cut the string after 255 chars.
+            Standard StringBuilder set  16 chars without use expand.
+            StringBuilder(min integer, max integer);
+            StringBuilder is 2000x faster as string by sorted routines.
+            Sorted Routines in System Directive: 
+            System.Collections.Generic
+            Class Stack
+            Quicksort, Bubblesort...
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            For no  conflicts, I have set other instancevariables!.
+            If conflict the compiler make message, before at left side yellow lamp.
+            Visual C# Compiler runs "under the Hood", check syntax and semantics, make helps!
+            if codeline ok!, he precompile the codeline directly, faster backend compile!.
+            If search infos about Keywords and others, push F1 - goes Online to Website.
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            NOW ! 
+            but don't forget 'private' is degree of protection, no access!
+            must set public for outside access.
+            while this set in Class-Head, so Global for all Classes and Methods...
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.volname">
+            <summary>
+            Set StringBuilder with Expand, minimum 255 chars and maximum 1024 chars.
+            if string greather than 255 chars, he automatic expand to maximum!.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCore.fsname">
+            <summary>
+            Instancevariable fsname for native Operation System Function: GetVolumeInformation();
+            
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.#cctor">
+            <summary>
+            Check the License on this Computer
+            <!-- Author Tipplin -->
+            You can set Statements, Logs, Calls, Messages and Validation
+            if class declare static, the Constructor same static, without not allowed!.
+            <!-- Author Tipplin -->
+            </summary>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFExperimentalWinMethod1">
+            <summary>
+            DON'T USE IT ! Experimental
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFGetFrameworkVersionFromRegistry">
+            <summary>
+            Internal Method VGFGetFrameworkVersionFromRegistry
+            </summary>
+            <!-- Author 👨 Tipplin 👨 -->
+            
+            <!-- Author 👨 Tipplin 👨-->
+            <remarks>
+            Check the Frameworkversion on current Computer
+            </remarks>
+            <returns>
+            True or False as string
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFWaitSeconds(System.UInt32,System.String,System.String)">
+            <summary>
+            Method VGFWaitSeconds
+            </summary>
+            <!-- Author 👨Tipplin👨 -->
+            Method with optional pararmeters MessageText and MessageTitle,
+            paramter milliseconds must be have an Value !.
+            See in code asterics operator for an Call or 
+            show MessageBox after Sleep an thread in milliseconds
+            <!-- Author 👨Tipplin👨 -->
+            <param name="milliseconds">Set milliseconds value</param>
+            <param name="MessageText">Optional set Text for MessageBox</param>
+            <param name="MessageTitle">Optional set Title for MessageBox</param>
+            <remarks>
+            Optional Parameters in C# - 
+            string MessageText="" as null value, can be change in Call or in code.
+            </remarks>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFWriteToSystemLogFile(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="LogFileIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFLockApplication">
+            <summary>
+             USE
+            </summary>
+            <!-- Author Tipplin 👨 -->
+            Lock Application, means the User can't close the Application,
+            an I/O Operation is now running, most by multi threads on 64BIT System on multiple CPUkernels
+            CPUKernel starts by 0 to 64, but don't use CPUKernel 0 is the Operation System.
+            GPUKernels for calculation, financial calculation, GPUKernel 1000 faster as the CPU.
+            Move the Operation from CPU to GPU and return.
+            <!-- Author Tipplin 👨 -->
+            <returns>
+            boolean as string true or false
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFComputerName">
+            <summary>
+            Get NetBIOS-Computername
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            use here  Class SystemInformation from .NET Framework 4.8.03752
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            ---------------------------------------------------------------------
+            Use Class SystemInformation from 
+            namespace System.Windows.Forms,
+            here are more then 300 Classes for use!.
+            ---------------------------------------------------------------------
+            Tip: Make your own Webbrowser
+            Class Webbrowser...
+            Create Form - Allows the user to navigate to web pages within a form.
+            Method GoBack():
+            Causes the System.Windows.Forms.WebBrowser control 
+            to navigate to the previous page (if any) in the navigation history.
+            ---------------------------------------------------------------------
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFToAuthorDirectly">
+            <summary>
+             Send directly to Author via URL
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+             
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            If any Problem or Exception in codeparts, 
+            we can send later directly to Author on Website/Webserver or GitHub Connect.
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFWebSiteCommunityInvestigativ">
+            <summary>
+            
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            NOTE: Microsoft Webbrowser Edge 
+            now standalone Application for start directly !
+            See in Code the current Directory!
+            or start with Command Line Tool Console:
+            start msedge
+            start is an Console app, can start JOBS.
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFWebSiteCommunityHelp">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFStartEdgePure">
+            <summary>
+            Start Microsoft Webbrowser EDGE
+            </summary>
+            <returns>
+            boolean string - True/False as string return.
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFToUserDirectlyReturned(System.String)">
+            <summary>
+             Method ToUserDirectlyReturned
+            </summary>
+            <!-- Author Tipplin -->
+             everytime HIDDEN in this Codepart.
+            <!-- Author Tipplin -->
+            <param name="User"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFLeftOf(System.String,System.Char)">
+            <summary>
+            Left of string
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            NOTE: Arrary's always begin with index 0
+            </remarks> 
+            <param name="source"></param>
+            <param name="c"></param>
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFStartMicrosoftWebSite">
+            <summary>
+            Start Microsoft Main Website directly
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 --> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFStartGitHubProjectSite">
+            <summary>
+            Start GitHub Projectsite
+            </summary>
+            <!-- Author Tipplinlin 🧑 -->
+            
+            <!-- Author Tipplinlin 🧑 -->
+            <remarks>
+            Change bool to string, is bool.ToString()
+            while returned bool as string literal,
+            True or False as string.
+            </remarks> 
+            <remarks>
+            
+            </remarks>
+            <returns>
+            returned true or false as Literal String True/False
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsAdmin">
+            <summary>
+            Current User Is Administrator
+            </summary>
+            <!-- Author Tipplinlin 🧑 -->
+            Both instance in Class-Head !.
+            Class WindowsPrincipal
+            Class WindowsIdentity
+            p is the instancevariable with member is class.
+            But note WindowsBuiltInRole is an Enumerator ! no class,
+            so must set in ().
+            <!-- Author Tipplinlin 🧑 -->
+            <remarks>
+            Visual C#
+            Change bool to string by return, is bool.ToString()
+            while returned bool as string literal,
+            True or False as string.
+            </remarks>
+            <returns>
+            Windows 10 Operation System have then 9 Roles in Windows Membership,
+            System-Tool-command: net localgroup - commandline
+            
+            * Administratoren
+            * Benutzer
+            * Distributed COM-Benutzer
+            * Ereignisprotokollleser
+            * Gäste
+            * Hauptbenutzer
+            * Hyper-V-Administratoren
+            * IIS_IUSRS
+            * Kryptografie-Operatoren
+            * Leistungsprotokollbenutzer
+            * Leistungsüberwachungsbenutzer
+            * Netzwerkkonfigurations-Operatoren
+            *
+            * PVGF - Project Visual Galaxy Framework - Benutzerverwaltung
+            * angelegt im System-tool netplwiz.exe unter Benutzer und Gruppe.
+            * netplwiz.exe mit Windows 10 Web Password Tresor all your Web Password are saved.
+            *
+            * Remotedesktopbenutzer
+            * Remoteverwaltungsbenutzer
+            * Replikations-Operator
+            * Sicherungs-Operatoren
+            * Ssh Users
+            * System Managed Accounts Group
+            * WmsOperators
+            * Zugriffssteuerungs-Unterstützungsoperatoren
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsUser">
+            <summary>
+            Is User
+            </summary>
+            <!-- Author Tipplinlin 🧑 -->
+            ! NOTE ! User has no all Rights on Computer as the Administrator.
+            Windows 10 make sure same Folders, User can't open it !.
+            <!-- Author Tipplinlin 🧑 -->
+            <remarks>
+            Change bool to string, is bool.ToString()
+            while returned bool as string literal,
+            True or False as string.
+            normally 0 or 1 as return.
+            </remarks> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsGuest">
+            <summary>
+            Is Guest
+            </summary>
+            <!-- Author Tipplinlin 🧑-->
+            Guest have no rights, same Guest Roles can set in Windows 10.
+            <!-- Author Tipplinlin 🧑-->
+            <remarks>
+            Change bool to string, is bool.ToString()
+            while returned bool as string literal,
+            True or False as string.
+            </remarks> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsAccountOperator">
+            <summary>
+            Account Operator can add User to System with new Account,
+            Administrator same, Users and Groups.
+            While Windows 10 Professional is an Multi User System,
+            one User or more on one Computer/PC.
+            Windows 10 Professionl have  Database 'Resent',
+            for Services, Recovery,
+            Limit Database size 16 Terabyte. (MS SQL Server 2017 524 Terabyte.)
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            
+            </remarks>
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsBackupOperator">
+            <summary>
+            Backup Operator can make Backup, full.
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            
+            <!-- Author Tipplin 🧑 -->
+            <remarks>
+            
+            </remarks> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsReplicatorOperator">
+            <summary>
+            Replicator Operator can make File Replications.
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            File Replication in domain
+            <!-- Author Tipplin 🧑 -->
+            
+            <returns>
+            NOTE: returned True or False as string
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsSystemOperator">
+            <summary>
+            System Operator manage particular computer.
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            particular computer settings
+            <!-- Author Tipplin 🧑 -->
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFIsPrintOperator">
+            <summary>
+            Print Operator can take control of Printer
+            </summary>
+            <!-- Author Tipplin 🧑 -->
+            manage Printer or Printers in Network.
+            <!-- Author Tipplin 🧑 --> 
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFUseFeatureMethod">
+            <summary>
+            
+            </summary>
+            <returns>
+            NOTE: bool true or false here returned as string True or False
+            Method-declaration set string, not bool !.
+            </returns>
+        </member>
+        <member name="M:Visual.Galaxy.Framework.VGFCore.VGFRegisteredUser">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.VGFCoreUrls">
+            <summary>
+            Class VGFCoreUrls 
+            </summary>
+            <!-- Author 👨Tipplin👨 -->
+            
+            <!-- Author 👨Tipplin👨 -->
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.Wuri">
+            <summary>
+            Uri Microsoft Website🌀
+            </summary>
+            <!-- Author 👨Tipplin👨 -->
+            Class Uri form namespace System
+            NOTE: without accessmofi public, all private with degree of protection,
+            private now is standard in Visual C# without set.
+            no access from outside.
+            <!-- Author 👨Tipplin👨 -->
+            <remarks>
+            @ unicode sign, so only one slash !
+            
+            See Microsoft have change the dir for Webbrowser Edge and inside works the Chromium Engine,
+            New is the Translator for Languages, so you can translate Websites and others.
+            New is Virus Scan for all Download Files, TAB Downloads View, cancel Donwload,
+            
+            C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+            
+            Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", wuri.OriginalString);
+            
+            wuri.OrignalString is the string for the Website Microsoft in German.
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.Wuri1">
+            <summary>
+            Microsoft TV Channel 9 with many Video's for all Developer.
+            </summary>
+            <!-- Author 👨Tipplin👨 -->
+            Uri's as constant for OrginalString
+            
+            Attention ! 
+            without access modifier set internal private with degree of protection, 
+            no external access.
+            Either internal or public take.
+            have forgotten by static uri... access modi public.
+            
+            <!-- Author 👨Tipplin👨 -->
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFCommunityInvestigativ">
+            <summary>
+            Our secure 📬mailbox for anonymous messages in case 
+            of rule violations our 🚻 Community Members.
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFCommunityHelp">
+            <summary>
+            Community Helpful+Respectful
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFdevTipplinGitHub">
+            <summary>
+            Website to 👨 Tipplin 👨 by Project Visual Galaxy Framework
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFdevTipplinCommunity">
+            <summary>
+            Website to 👨 Tipplin 👨 by VGF Community
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFdevTipplinKernelTeam">
+            <summary>
+            Website to VGF KernelTeam by 👨 Tipplin 👨
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFdevTigerKernelTeam">
+            <summary>
+            Website to VGF KernelTeam by 🦁 Tiger 🦁
+            </summary>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.VGFdevTipplinMail">
+             <summary>
+              Tipplin E-mail adress for send mail to me!
+             </summary>
+             <!-- Author 👨Tipplin👨  -->
+             Base E-mail-adress
+             <!-- Author 👨Tipplin👨 -->
+             <remarks>
+             For E-Mail Method directly to me as Author.
+             -------------------------------------------------------------------
+             For Developer:
+             -------------------------------------------------------------------
+             All defined Attribute's, 
+             all Attribute have the full set of regular expressions:
+             so you can check/proof the given value/string.
+             
+             namespace System.ComponentModel.DataAnnotations
+             
+             CreditCardAttribute - Mastercard, Visa, American express card
+             (Visa is first one the World.)
+             EmailAddressAttribute - check email adress - allowed/not allowed characters
+             MinLengthAttribute - set the minimum length of a string
+             MaxLengthAttribute - set the maxnimum length of a string
+             PhoneAttribute 
+             UrlAttribute 
+             RangeAttribute 
+            
+             </remarks>
+        </member>
+        <member name="F:Visual.Galaxy.Framework.VGFCoreUrls.MSEdge">
+            <summary>
+            Constant String for start Webbrowser Microsoft Edge directly,
+            Microsoft-Edge official start the Webbrowser Edge:
+            Microsoft-Edge:websitename
+            by start with Process.Start(MSEdge, website);
+            </summary>
+            <!-- Author 👨Tipplin👨 -->
+            NOTE: direct call is different to Internet Explorer,
+            or under console the command start:
+            start is an new console window, without start an new Window while
+            start Website directly:
+            start microsoft-edge:http://www.microsoft.com
+            <!-- Author 👨Tipplin 👨 -->
+            <remarks>
+            In Windows 10 Build 10000, Microsoft Edge Web Browser 
+            with Chrominum Engine have new place in Directory:
+            C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+            direct call msedge at search or console with start msedge or
+            go into dir click on msedge.exe.
+            </remarks>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.LoggerEngine.CLoggerCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Visual.Galaxy.Framework.LoggerEngine.CLoggerCore.VLEEngineLoggingLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VGF.Windows.SystemAbstractions.IMicrosoftWin32Registry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VGF.Windows.SystemAbstractions.IMicrosoftWin32Registry.GetValue(System.String,System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="keyName"></param>
+            <param name="valueName"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

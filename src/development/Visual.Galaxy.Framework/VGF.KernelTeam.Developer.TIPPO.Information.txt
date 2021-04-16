@@ -1,0 +1,862 @@
+﻿			AssemblyInfo.cs with Attributes for use:
+
+			// AssemblyAlgorithmIdAttribute
+            // AssemblyCompanyAttribute  
+            // AssemblyConfigurationAttribute
+            // AssemblyCopyrightAttribute
+            // AssemblyCultureAttribute
+            // AssemblyDefaultAliasAttribute--------------(set Internal Name)
+            // AssemblyDelaySignAttribute
+            // AssemblyDescriptionAttribute
+            // AssemblyFileVersionAttribute---------------(VER_FILEVERSION_STR)
+            // AssemblyFlagsAttribute
+            // AssemblyInfo
+            // AssemblyInformationalVersionAttribute------(VER_PRODUCTVERSION_STR)
+            // AssemblyKeyFileAttribute
+            // AssemblyKeyNameAttribute
+            // AssemblyLoadEventArgs
+            // AssemblyLoadEventHandler
+            // AssemblyMetadataAttribute
+            // AssemblyName
+            // AssemblyNameProxy
+            // AssemblyProductAttribute
+            // AssemblySignatureKeyAttribute
+            // AssemblyTitleAttribute
+            // AssemblyTrademarkAttribute
+            // AssemblyVersionAttribute
+            //
+            // [assembly:NeutralResourcesLanguageAttribute("en-US")]
+            // sind keine andere Sprachen-resoucen vorhanden, schaltet automatisch um englisch-US.
+            //
+            // Ist die gegenwärtige nur in internal geschrieben, sind Klasse und Methoden 'HIDDEN'
+            // und werden nicht angezeigt, keine Benutzung.
+            // Sollen die Klassen und Methoden in einer anderen Assembly sichtbar sein,
+            // setzt man dieses Attribute:
+            // [assembly:InternalsVisibleTo("FriendAssemblyname")]
+            //
+            // mit using System.Security;
+            // [assembly:SecurityCritical]
+            //
+            // [assembly:SecurityRules(SecurityRuleSet.Level1)]
+            // [assembly:SecurityRules(SecurityRuleSet.Level2)]
+            // Obfuscate current the Assembly and true set for, the Assembly is private!
+			// two Assembly Folder: 
+			// \private --- the assembly to Application only, Developer want not for others.
+			// \shared ---- the assembly is free for others.
+			// gcutil.exe - SDKTool - assembly install in global cache
+			// [assembly: ObfuscateAssembly(true)]
+			//
+            // ObfuscateAssemblyAttribute - Standard Verschleierung der Assembly - gegen decompile
+            //
+            // 51Degrees Mobile Experts UK Source:
+            //
+            // [assembly:PreApplicationStartMethod(typeof(namespace.PreApplicationStart), "Start")]
+            // namespace <name>
+            // {
+            //      public static class PreApplicationStart
+            //      {
+            //
+            //          public static void Start()
+            //          {
+            //
+            //          }
+            //      }
+            // }
+            //
+            //
+            // ACHTUNG ! Microsoft Azure muss installiert sein, sonst droht Ausnahme!
+            // #if AZURE
+            // using Microsoft.Azure;
+            // using Microsoft.Azure.StorageClient;
+            // using Microsoft.Azure.ServiceRuntime;
+            // #endif
+			// Ist in einer Assembly eine Klasse geschrieben worden für native Methoden aufzurufen,
+			// plus the Attribute [SuppressSecurityAttribute] dann sind alle statischen Methoden mit einem
+			// Schutzgrad versehen, der Zugriff wird verweigert aus einer anderen Assembly.
+			// TIPPO Versuch next: mit Attribute [InternalsVisible("FriendAssemblyname")]
+			// [SuppressSecurityAttribute]
+			// class SafeNativeMethods
+			// {
+			//
+			// }
+			// using static VGFGlobal.VGFCoreGlobal.SafeNativeMethods;
+			//
+			///// <summary>
+///         Hält den aktuellen Thread während des angegebenen Zeitraums an.
+///       </summary>
+/// <param name="timeout">
+///           Der Zeitraum, während dessen der Thread angehalten wird.
+///            Wenn der Wert des <paramref name="millisecondsTimeout" />-Arguments <see cref="F:System.TimeSpan.Zero" /> lautet, gibt der Thread den Rest seines Zeitanteils an einen beliebigen Thread mit gleicher Priorität ab, der für die Ausführung bereit ist.
+///            Sind keine anderen Threads mit gleicher Priorität vorhanden, die ausgeführt werden können, wird die Ausführung des aktuellen Threads nicht angehalten.
+///         </param>
+/// <exception cref="T:System.ArgumentOutOfRangeException">
+///             Der Wert von <paramref name="timeout" /> ist negativ und nicht gleich <see cref="F:System.Threading.Timeout.Infinite" /> in Millisekunden oder größer als <see cref="F:System.Int32.MaxValue" /> Millisekunden.
+///           </exception>
+public static void Sleep(TimeSpan timeout)
+{
+	long num = (long)timeout.TotalMilliseconds;
+	if (num < -1 || num > 2147483647)
+	{
+		throw new ArgumentOutOfRangeException("timeout", Environment.GetResourceString("ArgumentOutOfRange_NeedNonNegOrNegative1"));
+	}
+	Sleep((int)num);
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+// incomplete while Windows 10 has more than this Windows Membership
+// Windows 10 is Multi User System now! (at Professional >) that's means,
+// one user or more on one Computer. (Have a user database -HIDDEN)
+// Windows 10 Professional Edition is a Workstation.
+// Add User - Administrator or the Account Operator
+// Windows 10 October Update with more Network Libraries - part native and Assemblies
+// Windows 10 Server Client DLL - !NOTE! Have License??? Connection to Server.
+// WINSTA.dll - Winstation Library Connection Network / Server
+// ServerLicensingOpenA(...);
+// WinStationOpenServerA
+//
+//
+/*Administratoren
+*Benutzer (User)
+*Distributed COM-Benutzer
+*Ereignisprotokollleser
+*Gäste (Guest)
+*Hauptbenutzer (Power User)
+*Hyper-V-Administratoren
+*IIS_IUSRS
+*Kryptografie-Operatoren
+*Leistungsprotokollbenutzer
+*Leistungsüberwachungsbenutzer
+*Netzwerkkonfigurations-Operatoren
+*Remotedesktopbenutzer
+*Remoteverwaltungsbenutzer
+*Replikations-Operator
+*Sicherungs-Operatoren (Backup Operator)
+*Ssh Users
+*System Managed Accounts Group
+*WmsOperators
+* failed same Members Microsoft SQL Server 2017 Operators
+* Microsoft Windows 10 and SQL Server same LogIn or specified SQL LogIn
+//
+public enum WindowsBuiltInRole
+{
+	/// <summary>
+	///         Administratoren haben vollständigen und uneingeschränkten Zugriff auf den Computer oder die Domäne.
+	///       </summary>
+	Administrator = 544,
+	/// <summary>
+	///         Benutzer werden daran gehindert, versehentliche oder absichtliche systemweite Änderungen vornehmen.
+	///          Benutzer können daher zertifizierte Anwendungen, jedoch nicht von den meisten Legacyanwendungen ausgeführt werden.
+	///       </summary>
+	User, // 545
+	/// <summary>
+	///         Gäste sind mehr eingeschränkt als Benutzer.
+	///       </summary>
+	Guest,
+	/// <summary>
+	///         Hauptbenutzer verfügen die meisten administrative Berechtigungen mit einigen Einschränkungen.
+	///          Daher können Hauptbenutzer Legacyanwendungen, zusätzlich zu den zertifizierten Anwendungen ausgeführt werden.
+	///       </summary>
+	PowerUser,
+	/// <summary>
+	///         Kontooperatoren verwalten die Benutzerkonten auf einem Computer oder einer Domäne.
+	///       </summary>
+	AccountOperator,
+	/// <summary>
+	///         Systemoperatoren verwalten einen bestimmten Computer.
+	///       </summary>
+	SystemOperator,
+	/// <summary>
+	///         Druck-Operatoren können einen Drucker steuern.
+	///       </summary>
+	PrintOperator,
+	/// <summary>
+	///         Sicherungsoperatoren können Sicherheitsrichtlinien für den Zweck, sichern oder Wiederherstellen von Dateien überschreiben.
+	///       </summary>
+	BackupOperator,
+	/// <summary>
+	///         Replikationsdienste unterstützen die Dateireplikation in einer Domäne.
+	///       </summary>
+	Replicator
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/// <summary>
+///         Definiert eine Gruppe häufig verwendeter Sicherheits-IDs (SIDs).
+///       </summary>
+public enum WellKnownSidType
+{
+	/// <summary>
+	///         Gibt eine null-SID.
+	///       </summary>
+	NullSid = 0,
+	/// <summary>
+	///         Gibt eine SID, die allen entspricht.
+	///       </summary>
+	WorldSid = 1,
+	/// <summary>
+	///         Gibt eine lokale SID.
+	///       </summary>
+	LocalSid = 2,
+	/// <summary>
+	///         Gibt eine SID, die der Besitzer oder Ersteller eines Objekts entspricht.
+	///       </summary>
+	CreatorOwnerSid = 3,
+	/// <summary>
+	///         Gibt eine SID, die der Erstellergruppe eines Objekts entspricht.
+	///       </summary>
+	CreatorGroupSid = 4,
+	/// <summary>
+	///         Gibt einen Ersteller-Besitzer-Server SID an.
+	///       </summary>
+	CreatorOwnerServerSid = 5,
+	/// <summary>
+	///         Gibt einen Creator Group Server SID.
+	///       </summary>
+	CreatorGroupServerSid = 6,
+	/// <summary>
+	///         Gibt eine SID für die Windows NT-Autorität.
+	///       </summary>
+	NTAuthoritySid = 7,
+	/// <summary>
+	///         Gibt eine SID für ein DFÜ-Konto.
+	///       </summary>
+	DialupSid = 8,
+	/// <summary>
+	///         Gibt eine SID für ein Netzwerkkonto an.
+	///          Diese SID wird dem Prozess eines Tokens bei der Anmeldung über ein Netzwerk hinzugefügt.
+	///       </summary>
+	NetworkSid = 9,
+	/// <summary>
+	///         Gibt eine SID für einen Batchprozess.
+	///          Diese SID wird dem Prozess eines Tokens hinzugefügt, bei der Anmeldung als Stapelverarbeitungsauftrag.
+	///       </summary>
+	BatchSid = 10,
+	/// <summary>
+	///         Gibt eine SID für ein interaktives Konto an.
+	///          Diese SID wird dem Prozess eines Tokens bei der interaktiven Anmeldung hinzugefügt.
+	///       </summary>
+	InteractiveSid = 11,
+	/// <summary>
+	///         Gibt eine SID für einen Dienst.
+	///          Diese SID wird dem Prozess eines Tokens bei der Anmeldung als Dienst hinzugefügt.
+	///       </summary>
+	ServiceSid = 12,
+	/// <summary>
+	///         Gibt eine SID für das anonyme Konto.
+	///       </summary>
+	AnonymousSid = 13,
+	/// <summary>
+	///         Gibt einen Proxy-SID an.
+	///       </summary>
+	ProxySid = 14,
+	/// <summary>
+	///         Gibt eine SID für einen Enterprise-Controller.
+	///       </summary>
+	EnterpriseControllersSid = 0xF,
+	/// <summary>
+	///         Gibt eine SID für sich selbst.
+	///       </summary>
+	SelfSid = 0x10,
+	/// <summary>
+	///         Gibt eine SID für einen authentifizierten Benutzer.
+	///       </summary>
+	AuthenticatedUserSid = 17,
+	/// <summary>
+	///         Gibt eine SID für beschränkten Code.
+	///       </summary>
+	RestrictedCodeSid = 18,
+	/// <summary>
+	///         Gibt eine SID, die ein Terminalserver-Konto entspricht.
+	///       </summary>
+	TerminalServerSid = 19,
+	/// <summary>
+	///         Gibt eine SID, die Remoteanmeldungen entspricht.
+	///       </summary>
+	RemoteLogonIdSid = 20,
+	/// <summary>
+	///         Gibt eine SID, die Anmelde-IDs entspricht.
+	///       </summary>
+	LogonIdsSid = 21,
+	/// <summary>
+	///         Gibt eine SID, die dem lokalen System entspricht.
+	///       </summary>
+	LocalSystemSid = 22,
+	/// <summary>
+	///         Gibt eine SID, die einem lokalen Dienst entspricht.
+	///       </summary>
+	LocalServiceSid = 23,
+	/// <summary>
+	///         Gibt eine SID, die einem Netzwerkdienst entspricht.
+	///       </summary>
+	NetworkServiceSid = 24,
+	/// <summary>
+	///         Gibt eine SID, die dem Domänenkonto entspricht.
+	///       </summary>
+	BuiltinDomainSid = 25,
+	/// <summary>
+	///         Gibt eine SID, die dem Administratorkonto entspricht.
+	///       </summary>
+	BuiltinAdministratorsSid = 26,
+	/// <summary>
+	///         Gibt eine SID, die integrierten Benutzerkonten entspricht.
+	///       </summary>
+	BuiltinUsersSid = 27,
+	/// <summary>
+	///         Gibt eine SID, die dem Gastkonto entspricht.
+	///       </summary>
+	BuiltinGuestsSid = 28,
+	/// <summary>
+	///         Gibt eine SID, die Gruppe der Hauptbenutzer entspricht.
+	///       </summary>
+	BuiltinPowerUsersSid = 29,
+	/// <summary>
+	///         Gibt eine SID, die die Operatoren Konto entspricht.
+	///       </summary>
+	BuiltinAccountOperatorsSid = 30,
+	/// <summary>
+	///         Gibt eine SID, die Gruppe der System-Operatoren entspricht.
+	///       </summary>
+	BuiltinSystemOperatorsSid = 0x1F,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Druck-Operatoren entspricht.
+	///       </summary>
+	BuiltinPrintOperatorsSid = 0x20,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe "Sicherungsoperatoren" entspricht.
+	///       </summary>
+	BuiltinBackupOperatorsSid = 33,
+	/// <summary>
+	///         Gibt eine SID, die der Replicator-Konto übereinstimmt.
+	///       </summary>
+	BuiltinReplicatorSid = 34,
+	/// <summary>
+	///         Gibt eine SID an, die vor entsprichtWindows 2000 -kompatiblen Konten.
+	///       </summary>
+	BuiltinPreWindows2000CompatibleAccessSid = 35,
+	/// <summary>
+	///         Gibt eine SID, die Remotedesktopbenutzer entspricht.
+	///       </summary>
+	BuiltinRemoteDesktopUsersSid = 36,
+	/// <summary>
+	///         Gibt eine SID, die Gruppe der Netzwerk-Operatoren entspricht.
+	///       </summary>
+	BuiltinNetworkConfigurationOperatorsSid = 37,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Administratoren entspricht.
+	///       </summary>
+	AccountAdministratorSid = 38,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Gastkonten entspricht.
+	///       </summary>
+	AccountGuestSid = 39,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Kerberos-Ziel entspricht.
+	///       </summary>
+	AccountKrbtgtSid = 40,
+	/// <summary>
+	///         Gibt eine SID, die der Administratorgruppe der Domäne entspricht.
+	///       </summary>
+	AccountDomainAdminsSid = 41,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Benutzer übereinstimmt.
+	///       </summary>
+	AccountDomainUsersSid = 42,
+	/// <summary>
+	///         Gibt eine SID, die der Gästegruppe der Domäne entspricht.
+	///       </summary>
+	AccountDomainGuestsSid = 43,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Computerkonten entspricht.
+	///       </summary>
+	AccountComputersSid = 44,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Controller entspricht.
+	///       </summary>
+	AccountControllersSid = 45,
+	/// <summary>
+	///         Gibt eine SID, die die Gruppe der Administratoren Zertifikat entspricht.
+	///       </summary>
+	AccountCertAdminsSid = 46,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Schemaadministratoren entspricht.
+	///       </summary>
+	AccountSchemaAdminsSid = 47,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Organisationsadministratoren entspricht.
+	///       </summary>
+	AccountEnterpriseAdminsSid = 48,
+	/// <summary>
+	///         Gibt eine SID, die der Gruppe der Richtlinienadministratoren entspricht.
+	///       </summary>
+	AccountPolicyAdminsSid = 49,
+	/// <summary>
+	///         Gibt eine SID, die das RAS- und IAS-Server-Konto entspricht.
+	///       </summary>
+	AccountRasAndIasServersSid = 50,
+	/// <summary>
+	///         Gibt eine SID vorhanden ist, wenn das Microsoft NTLM-Authentifizierungspaket der Client authentifiziert.
+	///       </summary>
+	NtlmAuthenticationSid = 51,
+	/// <summary>
+	///         Gibt eine SID vorhanden ist, wenn das Microsoft Digest-Authentifizierungspaket der Client authentifiziert.
+	///       </summary>
+	DigestAuthenticationSid = 52,
+	/// <summary>
+	///         Gibt eine SID vorhanden ist, wenn das Authentifizierungspaket sicheren Kanal (SSL/TLS) der Client authentifiziert.
+	///       </summary>
+	SChannelAuthenticationSid = 53,
+	/// <summary>
+	///         Gibt eine SID vorhanden ist, wenn der Benutzer von authentifizierten innerhalb der Gesamtstruktur oder über eine Vertrauensstellung, die nicht die Option für selektive Authentifizierung aktiviert.
+	///          Wenn diese SID vorhanden ist, wird <see cref="F:System.Security.Principal.WellKnownSidType.OtherOrganizationSid" /> nicht vorhanden sein.
+	///       </summary>
+	ThisOrganizationSid = 54,
+	/// <summary>
+	///         Gibt eine SID vorhanden ist, wenn der Benutzer authentifiziert, die über eine Gesamtstruktur mit der Option ausgewählte Authentifizierung aktiviert.
+	///          Wenn diese SID vorhanden ist, wird <see cref="F:System.Security.Principal.WellKnownSidType.ThisOrganizationSid" /> nicht vorhanden sein.
+	///       </summary>
+	OtherOrganizationSid = 55,
+	/// <summary>
+	///         Gibt eine SID, die einem Benutzer ermöglicht, eingehende Gesamtstruktur-Vertrauensstellungen erstellen.
+	///          Es wird das Token der Benutzer hinzugefügt, die ein Mitglied der integrierten Gruppe Erstellungen eingehender Gesamtstruktur Vertrauensstellung in der Stammdomäne der Gesamtstruktur sind.
+	///       </summary>
+	BuiltinIncomingForestTrustBuildersSid = 56,
+	/// <summary>
+	///         Gibt eine SID, die die Gruppe der Benutzer, die Remotezugriff übereinstimmt auf Protokollierung von Leistungsindikatoren auf diesem Computer zu planen.
+	///       </summary>
+	BuiltinPerformanceMonitoringUsersSid = 57,
+	/// <summary>
+	///         Gibt eine SID, die die Gruppe von Benutzern an, die Remotezugriff auf den Computer zu überwachen.
+	///       </summary>
+	BuiltinPerformanceLoggingUsersSid = 58,
+	/// <summary>
+	///         Gibt eine SID, die die Windows-Autorisierungszugriffsgruppe entspricht.
+	///       </summary>
+	BuiltinAuthorizationAccessSid = 59,
+	/// <summary>
+	///         Gibt an, dass eine SID in einem Server vorhanden ist, die Lizenzen für Terminalserver ausstellen kann.
+	///       </summary>
+	WinBuiltinTerminalServerLicenseServersSid = 60,
+	/// <summary>
+	///         Gibt die maximal definierte SID in der <see cref="T:System.Security.Principal.WellKnownSidType" /> Enumeration.
+	///       </summary>
+	MaxDefined = 60
+}
+
+
+/// <summary>
+///         Gibt den Typ des Windows-Kontos verwendet.
+///       </summary>
+public enum WindowsAccountType
+{
+	/// <summary>
+	///         Ein Standardbenutzerkonto.
+	///       </summary>
+	Normal,
+	/// <summary>
+	///         Ein Windows-Gastkonto.
+	///       </summary>
+	Guest,
+	/// <summary>
+	///         Ein Windows-Systemkonto.
+	///       </summary>
+	System,
+	/// <summary>
+	///         Ein anonymes Konto.
+	///       </summary>
+	Anonymous
+}
+
+
+
+/// <summary>
+///         Definiert die Berechtigungen für das Benutzerkonto, das dem Zugriffstoken zugeordnet ist.
+///       </summary>
+public enum TokenAccessLevels
+{
+	/// <summary>
+	///         Der Benutzer kann ein primäres Token an einen Prozess anhängen.
+	///       </summary>
+	AssignPrimary = 0x1,
+	/// <summary>
+	///         Der Benutzer kann das Token duplizieren.
+	///       </summary>
+	Duplicate = 0x2,
+	/// <summary>
+	///         Der Benutzer kann die Identität eines Clients annehmen.
+	///       </summary>
+	Impersonate = 0x4,
+	/// <summary>
+	///         Der Benutzer kann das Token abfragen.
+	///       </summary>
+	Query = 0x8,
+	/// <summary>
+	///         Der Benutzer kann die Tokenquelle abfragen.
+	///       </summary>
+	QuerySource = 0x10,
+	/// <summary>
+	///         Der Benutzer kann Berechtigungen im Token aktivieren oder deaktivieren.
+	///       </summary>
+	AdjustPrivileges = 0x20,
+	/// <summary>
+	///         Der Benutzer kann die Attribute der Gruppen im Token ändern.
+	///       </summary>
+	AdjustGroups = 0x40,
+	/// <summary>
+	///         Der Benutzer kann den Standardbesitzer, die primäre Gruppe oder die besitzerverwaltete Zugriffssteuerungsliste (DACL) des Tokens ändern.
+	///       </summary>
+	AdjustDefault = 0x80,
+	/// <summary>
+	///         Der Benutzer kann den Sitzungsbezeichner des Tokens anpassen.
+	///       </summary>
+	AdjustSessionId = 0x100,
+	/// <summary>
+	///         Der Benutzer verfügt über Standardleseberechtigungen und die <see cref="F:System.Security.Principal.TokenAccessLevels.Query" />-Berechtigung für das Token.
+	///       </summary>
+	Read = 0x20008,
+	/// <summary>
+	///         Der Benutzer verfügt über Standardschreibberechtigungen und die Berechtigungen <see cref="F:System.Security.Principal.TokenAccessLevels.AdjustPrivileges" />, <see cref="F:System.Security.Principal.TokenAccessLevels.AdjustGroups" /> und <see cref="F:System.Security.Principal.TokenAccessLevels.AdjustDefault" /> für das Token.
+	///       </summary>
+	Write = 0x200E0,
+	/// <summary>
+	///         Der Benutzer hat uneingeschränkten Zugriff auf das Token.
+	///       </summary>
+	AllAccess = 0xF01FF,
+	/// <summary>
+	///         Der maximale Wert, der für die <see cref="T:System.Security.Principal.TokenAccessLevels" />-Enumeration zugewiesen werden kann.
+	///       </summary>
+	MaximumAllowed = 0x2000000
+}
+
+
+/// <summary>
+///         Gibt an, wie Haupt-und Identitätsobjekte für eine Anwendungsdomäne erstellt werden sollen.
+///          Die Standardeinstellung ist <see langword="UnauthenticatedPrincipal" />.
+///       </summary>
+public enum PrincipalPolicy
+{
+	/// <summary>
+	///         Principal- und Identitätsobjekte Objekte für die nicht authentifizierte Entität sollte erstellt werden.
+	///          Besitzt eine nicht authentifizierte Entität <see cref="P:System.Security.Principal.GenericIdentity.Name" /> festlegen auf eine leere Zeichenfolge ("") und <see cref="P:System.Security.Principal.GenericIdentity.IsAuthenticated" /> festgelegt <see langword="false" />.
+	///       </summary>
+	UnauthenticatedPrincipal,
+	/// <summary>
+	///         Keine Prinzipal oder Identity-Objekte sollte erstellt werden.
+	///       </summary>
+	NoPrincipal,
+	/// <summary>
+	///         Principal- und Identitätsobjekte Objekten, die das Betriebssystem-Token, das dem aktuellen Ausführungsthread zugeordneten erstellt werden soll, und die zugehörigen Betriebssystemgruppen Rollen zugeordnet werden soll.
+	///       </summary>
+	WindowsPrincipal
+}
+
+using System.Security.Principal
+
+/// <summary>
+///         Stellt einen Benutzer oder eine Gruppe Konto dar.
+///       </summary>
+class NTAccount 
+
+/// <summary>
+///         Stellt eine Sicherheits-ID (SID) dar und bietet Marshalling und Vergleichsoperationen für SIDs.
+///       </summary>
+class SecurityIdentifier
+
+/// <summary>
+///         Stellt einen Windows-Benutzer dar.
+///       </summary>
+class WindowsIdentity
+
+/// <summary>
+///         Stellt den Windows-Benutzer vor dem Identitätswechsel dar.
+///       </summary>
+class WindowsImpersonationContext
+
+/// <summary>
+///         Die Windows-Gruppenmitgliedschaft eines Windows-Benutzers prüfen können.
+///       </summary>
+class WindowsPrincipal
+ * 
+ */
+
+ //         Der Benutzername der Person, die bei Windows angemeldet ist.
+	///       </returns>
+	public static string UserName
+	{
+		[SecuritySafeCritical]
+		get
+		{
+			new EnvironmentPermission(EnvironmentPermissionAccess.Read, "UserName").Demand();
+			StringBuilder stringBuilder = new StringBuilder(256);
+			int nSize = stringBuilder.Capacity;
+			if (Win32Native.GetUserName(stringBuilder, ref nSize))
+			{
+				return stringBuilder.ToString();
+			}
+			return string.Empty;
+		}
+	}
+
+/// <summary>
+	///         Ruft den NetBIOS-Namen dieses lokalen Computers ab.
+	///       </summary>
+	/// <returns>
+	///         Eine Zeichenfolge mit dem Namen dieses Computers.
+	///       </returns>
+	/// <exception cref="T:System.InvalidOperationException">
+	///             Der Name dieses Computers kann nicht abgerufen werden.
+	///           </exception>
+	public static string MachineName
+	{
+		[SecuritySafeCritical]
+		get
+		{
+			new EnvironmentPermission(EnvironmentPermissionAccess.Read, "COMPUTERNAME").Demand();
+			StringBuilder stringBuilder = new StringBuilder(256);
+			int bufferSize = 256;
+			if (Win32Native.GetComputerName(stringBuilder, ref bufferSize) == 0)
+			{
+				throw new InvalidOperationException(GetResourceString("InvalidOperation_ComputerName"));
+			}
+			return stringBuilder.ToString();
+		}
+	}
+
+
+
+/// <summary>
+	///         Ruft ein <see cref="T:System.Version" />-Objekt ab, das die Nummern für Haupt- und Nebenversion, Build und Revision der Common Language Runtime beschreibt.
+	///       </summary>
+	/// <returns>
+	///         Ein Objekt, das die Version der Common Language Runtime anzeigt.
+	///       </returns>
+	public static Version Version => new Version(4, 0, 30319, 42000);
+
+
+/// <summary>
+	///         Ruft den Netzwerkdomänennamen ab, der dem aktuellen Benutzer zugeordnet ist.
+	///       </summary>
+	/// <returns>
+	///         Der Netzwerkdomänenname, der dem aktuellen Benutzer zugeordnet ist.
+	///       </returns>
+	/// <exception cref="T:System.PlatformNotSupportedException">
+	///             Das Betriebssystem unterstützt nicht das Abrufen des Netzwerkdomänennamens.
+	///           </exception>
+	/// <exception cref="T:System.InvalidOperationException">
+	///             Der Netzwerkdomänenname kann nicht abgerufen werden.
+	///           </exception>
+	public static string UserDomainName
+	{
+		[SecuritySafeCritical]
+		get
+		{
+			new EnvironmentPermission(EnvironmentPermissionAccess.Read, "UserDomain").Demand();
+			byte[] array = new byte[1024];
+			int sidLen = array.Length;
+			StringBuilder stringBuilder = new StringBuilder(1024);
+			uint domainNameLen = (uint)stringBuilder.Capacity;
+			byte userNameEx = Win32Native.GetUserNameEx(2, stringBuilder, ref domainNameLen);
+			if (userNameEx == 1)
+			{
+				string text = stringBuilder.ToString();
+				int num = text.IndexOf('\\');
+				if (num != -1)
+				{
+					return text.Substring(0, num);
+				}
+			}
+			domainNameLen = (uint)stringBuilder.Capacity;
+			if (!Win32Native.LookupAccountName(null, UserName, array, ref sidLen, stringBuilder, ref domainNameLen, out int _))
+			{
+				int lastWin32Error = Marshal.GetLastWin32Error();
+				throw new InvalidOperationException(Win32Native.GetMessage(lastWin32Error));
+			}
+			return stringBuilder.ToString();
+		}
+	}
+
+
+/// <summary>
+	///         Gibt ein Zeichenfolgenarray mit den Namen der logischen Laufwerke des aktuellen Computers zurück.
+	///       </summary>
+	/// <returns>
+	///         Ein Array von Zeichenfolgen, in dem jedes Element den Namen eines logischen Laufwerks enthält.
+	///          Wenn z. B. die Festplatte das erste logische Laufwerk eines Computers ist, lautet das erste zurückgegebene Element "C:\".
+	///       </returns>
+	/// <exception cref="T:System.IO.IOException">
+	///             Ein E/A-Fehler tritt auf.
+	///           </exception>
+	/// <exception cref="T:System.Security.SecurityException">
+	///             Der Aufrufer verfügt nicht über die erforderlichen Berechtigungen.
+	///           </exception>
+	[SecuritySafeCritical]
+	public static string[] GetLogicalDrives()
+	{
+		new EnvironmentPermission(PermissionState.Unrestricted).Demand();
+		int logicalDrives = Win32Native.GetLogicalDrives();
+		if (logicalDrives == 0)
+		{
+			__Error.WinIOError();
+		}
+		uint num = (uint)logicalDrives;
+		int num2 = 0;
+		while (num != 0)
+		{
+			if ((num & 1) != 0)
+			{
+				num2++;
+			}
+			num >>= 1;
+		}
+		string[] array = new string[num2];
+		char[] array2 = new char[3]
+		{
+			'A',
+			':',
+			'\\'
+		};
+		num = (uint)logicalDrives;
+		num2 = 0;
+		while (num != 0)
+		{
+			if ((num & 1) != 0)
+			{
+				array[num2++] = new string(array2);
+			}
+			num >>= 1;
+			array2[0] += '\u0001';
+		}
+		return array;
+	}
+
+
+
+
+/// <summary>
+	///         Erstellt, ändert oder löscht eine Umgebungsvariable, die im aktuellen Prozess oder im Registrierungsschlüssel des für den aktuellen Benutzer oder den lokalen Computer reservierten Windows-Betriebssystems gespeichert ist.
+	///       </summary>
+	/// <param name="variable">
+	///           Der Name einer Umgebungsvariablen.
+	///         </param>
+	/// <param name="value">
+	///           Ein Wert, der <paramref name="variable" /> zugewiesen werden soll.
+	///         </param>
+	/// <param name="target">
+	///           Einer der Enumerationswerte, der den Standort der Umgebungsvariablen angibt.
+	///         </param>
+	/// <exception cref="T:System.ArgumentNullException">
+	///             <paramref name="variable" /> ist <see langword="null" />.
+	///           </exception>
+	/// <exception cref="T:System.ArgumentException">
+	///             <paramref name="variable" /> enthält eine leere Zeichenfolge („“), ein anfängliches Hexadezimalzeichen 0 (0x00) oder ein Gleichheitszeichen ("=").
+	///
+	///             - oder - 
+	///
+	///             Die Länge von <paramref name="variable" /> ist größer gleich 32.767 Zeichen.
+	///
+	///             - oder - 
+	///
+	///             <paramref name="target" /> ist kein Member der <see cref="T:System.EnvironmentVariableTarget" />-Enumeration.
+	///
+	///             - oder - 
+	///
+	///             <paramref name="target" /> ist gleich <see cref="F:System.EnvironmentVariableTarget.Machine" /> oder gleich <see cref="F:System.EnvironmentVariableTarget.User" />, und die Länge von <paramref name="variable" /> ist größer gleich 255.
+	///
+	///             - oder - 
+	///
+	///             <paramref name="target" /> ist gleich <see cref="F:System.EnvironmentVariableTarget.Process" />, und die Länge von <paramref name="value" /> ist größer gleich 32,767.
+	///
+	///             - oder - 
+	///
+	///             Während der Ausführung dieses Vorgangs ist ein Fehler aufgetreten.
+	///           </exception>
+	/// <exception cref="T:System.Security.SecurityException">
+	///             Der Aufrufer hat nicht die erforderliche Berechtigung zum Ausführen dieses Vorgangs.
+	///           </exception>
+	[SecuritySafeCritical]
+	public static void SetEnvironmentVariable(string variable, string value, EnvironmentVariableTarget target)
+	{
+		if (target == EnvironmentVariableTarget.Process)
+		{
+			SetEnvironmentVariable(variable, value);
+		}
+		else
+		{
+			CheckEnvironmentVariableName(variable);
+			if (variable.Length >= 1024)
+			{
+				throw new ArgumentException(GetResourceString("Argument_LongEnvVarName"));
+			}
+			new EnvironmentPermission(PermissionState.Unrestricted).Demand();
+			if (string.IsNullOrEmpty(value) || value[0] == '\0')
+			{
+				value = null;
+			}
+			switch (target)
+			{
+			case EnvironmentVariableTarget.Machine:
+				using (RegistryKey registryKey2 = Registry.LocalMachine.OpenSubKey("System\\CurrentControlSet\\Control\\Session Manager\\Environment", true))
+				{
+					if (registryKey2 != null)
+					{
+						if (value == null)
+						{
+							registryKey2.DeleteValue(variable, false);
+						}
+						else
+						{
+							registryKey2.SetValue(variable, value);
+						}
+					}
+				}
+				break;
+			case EnvironmentVariableTarget.User:
+				if (variable.Length >= 255)
+				{
+					throw new ArgumentException(GetResourceString("Argument_LongEnvVarValue"));
+				}
+				using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Environment", true))
+				{
+					if (registryKey != null)
+					{
+						if (value == null)
+						{
+							registryKey.DeleteValue(variable, false);
+						}
+						else
+						{
+							registryKey.SetValue(variable, value);
+						}
+					}
+				}
+				break;
+			default:
+				throw new ArgumentException(GetResourceString("Arg_EnumIllegalVal", (int)target));
+			}
+			IntPtr value2 = Win32Native.SendMessageTimeout(new IntPtr(65535), 26, IntPtr.Zero, "Environment", 0u, 1000u, IntPtr.Zero);
+			bool flag = value2 == IntPtr.Zero;
+		}
+	}
+
+	// ACHTUNG ! fehler hier escape zeichen vergessen n == \n - newline
+	// VS Meldung ; erwartet
+	VGFCoreGlobal.Message += "Exception-Source" + ex.Source + "\";
+
+
+	-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Windows 10 Build 19043.928 - 21H1 - 2021 1.Halbjahr nur ein Build erhöht.
+	Windows 10 Build 21354 - 21H2 - 2. Halbjahr in development
+	Windows 10 SDK für Entwickler Build 20313 - 2021 - 17.03.2021
+
+	Microsoft übergibt Programmiersprache Visual C# an .NET Foundation zur Weiterentwicklung z.Z. an Visual C# 10.0
+	Microsoft Windows Betriebssystem drei Programmiersprachen geschrieben mit dem Visual Studio next:
+	Visual C++, Visual C#, RUST - teile in .NET, teile in RUST wegen mehr Sicherheit gegen Sicherheitslücken in der Sprache.
+
+	Migration Visual Studio Project-Solution to .NET 5.0 Framework, so look it that same Assemblies does't in standard options.
+	simplesample: 
+	System.Windows.Forms with 300 Classes, Class Webbrowser for your written own Web-Browser, SystemInformation all about Hardware, Window, Username, Computername...
+	have bind in maked using System.Windows.form, no problem !.
+
+	------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
