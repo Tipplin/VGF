@@ -70,44 +70,6 @@
 ##### Bronce Members
 ##### http://www.linux-foundation.org
 ----
-### Windows Info
-----
-##### Windows NT 4.0 inside 64 BIT - OS - Father Dave Cutler - 
-##### Windows On Windows Functions,
-##### Functions-Switches.
-##### At Time by IBM all Operation Systems ONLY 64 BIT, with Partnership Microsoft,
-##### runs .NET Framework or Java Runtime Enviroment on IBM Computers.)
-##### Da das Windows 10 mit Visual Studio geschrieben wurde ist, mit .NET und dem .NET Framework 4.7 in Abhängigkeit !.
-#### Quellcode-Aufbau: 
-##### Erste Windows 10 - 26% .NET Code, COM+, Win32API, unmanaged Code C++, managed Code C#.
-##### Heute ca. 40000 Quellcode-dateien ! 70 Gigabyte!
-
-----
-## Microsoft and Cray Partnership:
-##### CRAY Supercomputer:
-##### Microsoft Azure Cloud goes on CRAY
-##### CRAY Supercomputer Programming-Language is CHAPEL see on GitHub !
-----
-### INFO: 
-----
-##### German Weather Service have - 2 Systems - CRAY Supercomputer XC-40 -
-##### One is Work, and the other for fall out.
-##### The German Law Maker say, the Information must be public for All.
-##### Take connect for Developer and People Weather Information System as Queries.
-----
-##### Microsoft on GitHub
-
-
-
-----
-#### Microsoft VISIONS: (Microsoft Future Vision Video only Insiders new Hardware 5-10 Years)
-#### Microsoft Researcher's USA haben ein Gerät entwickelt um Parkinson Kranke zu helfen,
-#### Band am Handgelenk - BAMBOO BAND -, gibt Impluse ab an die Nerven und Gehirn, zittern vorbei, 
-
-----
-### Microsoft New Headquarter Campus 2023
-#### https://www.theverge.com/2017/11/29/16714290/microsoft-new-headquarters-redmond-seattle
-----
 #### Oracle Supports Windows 10 mit Java, Java Runtime Enviroment, 
 #### Oracle Java Mission Control Center
 Java auch für dynamische Programmiersprachen nutzbar, 
