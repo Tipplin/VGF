@@ -1,6 +1,6 @@
 ----
-## TIPPO's  Task-List for Visual Studio
-### Universal   -   for Everybody yet !. 
+## Tipplin - Task-List for Visual Studio
+### Universal for Everybody yet !. 
 ### No Translate in English.
 ----
 - ##### gesetzt in Visual Studio, ansprungbar: - Deutsch - Aufgabenliste einblenden lassen -
