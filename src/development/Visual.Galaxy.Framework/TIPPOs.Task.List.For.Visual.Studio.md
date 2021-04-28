@@ -40,7 +40,7 @@
 ----
 ####  Christian Kurs
 ##### mein entwickler nickname ist 'Tipplin'  
-##### Visual .NET #/C++ Developer'S Commentaries 
+##### Visual .NET #/C++ Developer's Commentaries 
 ##### zu einen Codeteil oder Codestelle.
 #### SAFE
 ##### Code ist sicher
@@ -81,7 +81,6 @@
 > but we can open with FeatureSwitcher.
 - FEATURE_EXPERIMENTAL
 > Class, Method, Property most stand in FeatureLab.
-> Microsoft Expertimental Lab
 - VERSION_COMPATIBILTY_INCOMPATIBLE
  > by .NET Frameworks
  > app written in 4.8, 5.0 and component in 4.8, 5.0
