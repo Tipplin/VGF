@@ -95,50 +95,7 @@
 
 - SUPPORTED_ALL_FX
 > all Operation Systems and .NET Framework
-> Windows Operation System
-> bridges to Apple macOS, iOS, tvOS, watchOS
-> bridge to Google Android
-> bridge to IBM AIX, z/mainframes,
-> IBM Computer System ONLY 64BIT !!! 
-----
-## SUPPORTED_PARTITIALLY_OS_FX
-### only operation system: Windows 10
-----
-### Windows XP, Vista now not supported !!!
-### both have no new Instruction Code (Processor).
-### Windows Vista have a lot of Errors inside !. DON'T USE IT !
-### Official: Technical Uncorrectness!
-----
-## SUPPORTED_NOT_OS_FX
-#### this Operation System and Framework NOT SUPPORTED !!!.
-#### Microsoft Operation System Windows Vista
-#### Windows Vista is OUT!
-#### Technical Uncorrectness and to many Bugs inside.
-#### Badest Windows !
-----
-## TIPPLIN: 
-#### The best are Windows NT 4.0, Windows 2000 (NT 5), Windows 7 (NT 6) and Windows 10 (NT 10)
-#### ! Windows NT 4.0 inside 64BIT Functions - Father David Cutler.
-----
-## FUTURE INFO
-#### same Vendors change to 64BIT, NO more 32BIT !.
-#### IBM yet! - No 32BIT System!
-----
-## Apple
-#### Apple and Intel is out!
-#### Apple Info for Developer, please write for 64BIT Applications in Future,
-#### vNEXT Apple OS's 64BIT Only!
-#### Apple Computer new with AMD next with own Processors
-----
-#### Microsoft Windows 64 BIT, have a Directory for 32 BIT for execute 32 BIT Applications.
-#### In slow steps Windows 10 goes only on 64 System, 32 BIT System is out!
-----
-#### Windows 10 SDK more 128 BIT Functions.
-#### Windows 10 SDK with inside samples in Headerfiles and complete Functions for diredtly use !
-#### VersionHelper.h - bool IsWindows10OrHigher()
-#### Same Function are secured with an cookie, anti attack, anti insert bad code.
-#### _security_cookie at begin by Function
-----
+
 
 
 
