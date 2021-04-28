@@ -38,8 +38,8 @@
 #### UnresolvedMergeConf
 ##### unschlüssig - aufgeben - vermelzen
 ----
-#### TIPPO 
-##### mein entwickler nickname für Christian 'Tipplin' Kurs - 
+####  Christian Kurs
+##### mein entwickler nickname ist 'Tipplin'  
 ##### Visual .NET #/C++ Developer'S Commentaries 
 ##### zu einen Codeteil oder Codestelle.
 #### SAFE
@@ -71,28 +71,20 @@
 
 - FAULTNESS
 > Code, Codeteil ist fehlerfrei.
-
 - FAULTY (full of mistakes)
 > Fehlerhafter Code, Codeteil
-
 - OBSOLETE
 > to OLD, delete next time in new release
-
 - FEATURE_INTEGRATED
 > Prototype for next Release, but NOT ready ! (No Functionality !)
 > Generall all Features stands off in this release,
 > but we can open with FeatureSwitcher.
-
 - FEATURE_EXPERIMENTAL
 > Class, Method, Property most stand in FeatureLab.
 > Microsoft Expertimental Lab
- 
- - VERSION_COMPATIBILTY_INCOMPATIBLE
+- VERSION_COMPATIBILTY_INCOMPATIBLE
  > by .NET Frameworks
- > app written in 4.7 and component in 4.7.1
- > both in 4.7.1 or so...
- > with Message from Visual Studio.
-
+ > app written in 4.8, 5.0 and component in 4.8, 5.0
 - SUPPORTED_ALL_FX
 > all Operation Systems and .NET Framework
 
