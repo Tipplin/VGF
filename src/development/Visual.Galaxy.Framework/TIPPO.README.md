@@ -14,7 +14,8 @@
 
 
 ----
-##### General develop in Unicode - https://www.unicode.org - Handbook to Unicode Version 13.0.0 -
+##### General develop in Unicode Handbook to Unicode Version 13.0.0 -
+##### https://www.unicode.org 
 ----
 ### Information for Visual Studio Developer:
 ----
