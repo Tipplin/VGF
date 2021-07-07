@@ -239,15 +239,6 @@ OPPURE L'USO O ALTRE RACCOLTE DEL SOFTWARE.
 //# Start Date: 2016/01/01 - 17:00 - Ground Leaning -Initial
 //#
 //#---------------------------------------------------------------------------
-//# Freeze Date: 
-//# (FREEZE: like Microsoft - stopp develop, no more codes into project,
-//# - but develop goes on - compiling to R T M )
-//# Microsoft Developer's have all one or more Platform's for Project's.
-//# Microsoft Office, Project, Team Foundation Server... 
-//# Microsoft Build Server - all Developer save they code here, test OK! 
-//# Build Server bundles that and compile a Daily Build - 
-//# like Windows 10 Desktop - B 15002 - 09.01.2017.
-//# --------------------------------------------------------------------------
 //#
 //# ! NOTE ! Develop are going on, new an features in later build.
 //#
