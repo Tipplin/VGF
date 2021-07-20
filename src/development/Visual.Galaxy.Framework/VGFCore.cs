@@ -702,65 +702,6 @@ namespace Visual.Galaxy.Framework
             _ = VFLMsgBox(VGFStandardMessage1, "Visual Galaxy Framework - License", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
         }
 
-
-        /// <summary>
-        /// DON'T USE IT ! Experimental
-        /// </summary>
-        /// <returns></returns>
-        internal static bool VGFExperimentalWinMethod1()
-        {
-
-            return false;
-
-
-            /*
-            private readonly static string baseString = @"Text";
-
-        /// <summary>
-        /// Unlimited string
-        /// </summary>
-        public readonly static string UnlimitedString;
-
-        /// <summary>
-        /// Static constructor
-        /// </summary>
-        static MessageString()
-        {
-            for (int counter = 0; counter < 35; counter++)
-            {
-                UnlimitedString += baseString;
-            }
-        }
-
-        /// <summary>
-        /// Limited version of the string
-        /// </summary>
-        public static string LimitedString =>
-           UnlimitedString.Length > 65536
-           ? UnlimitedString.Substring(0, 65535)
-           : UnlimitedString;
-    }
-
-
-IntPtr result = IntPtr.Zero;
-
-// Send 0x052C to Progman. This message directs Progman to spawn a 
-// WorkerW behind the desktop icons. If it is already there, nothing 
-// happens.
-W32.SendMessageTimeout(progman, 
-                       0x052C, 
-                       new IntPtr(0), 
-                       IntPtr.Zero, 
-                       W32.SendMessageTimeoutFlags.SMTO_NORMAL, 
-                       1000, 
-                       out result);
-
-            */
-        }
-
-
-
-
         /// <summary>
         /// Internal Method VGFGetFrameworkVersionFromRegistry
         /// </summary>
